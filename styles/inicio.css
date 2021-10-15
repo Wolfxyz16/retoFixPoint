@@ -3,6 +3,20 @@
     margin: 0;
 }
 
+.logos-estaticos {
+    max-width: 30vw;
+}
+
+.logos-estaticos img {
+    max-width: 15em;
+    height: auto;
+}
+
+#logo-fp, #logo-picofuentes, #logo-fixpoint {
+    max-width: 25em;
+    height: auto;
+}
+
 .cabecera {
     display: flex;
     justify-content: space-between;
