@@ -1,3 +1,36 @@
+header{
+    display: flex;
+    align-items: flex-end;
+    gap: 20vw;
+}
+
+#fp{
+    height: 50px;
+    width: 50px;
+}
+#pico_frentes{
+    height: 50px;
+    width: 150px;
+
+}
+#logo{
+    height: 100px;
+    width: 500px;
+}
+#usuario{
+    height: 50px;
+    width: 50px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    background-image: url("/img/usuario.png");
+    background-size: cover;
+    margin-left: 10vw;
+}
+#pregunta_titulo{
+    font-size: 50px;
+
+}
 #vision_objetivo{
     display: flex;
     justify-content: space-around;
@@ -9,12 +42,31 @@
     justify-content: space-around;
     
 }
-#form_map > form{
-    margin-right: 250px;
-   display: grid;
-   grid-template-columns: 100px 100px;
-   gap: 100px;
-
+#form_map > #formulario{
+    text-align: center;
+}
+#form_map > #formulario >form{
+    margin-right: 50px;
+    display: grid;
+    grid-template-columns: 125px 125px;
+    gap: 100px;
+    row-gap: 0px;
+    margin-left: 25px;
+   
+}
+#form_map > #formulario > form >h3{
+    text-align: center;
+}
+#que_es{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    background-color: #EEC51F;
+    padding: 20px;
+}
+#que_es > img{
+    width:300px;
+    height:200px;
 }
 .img_con_texto{
     position: relative;
@@ -41,5 +93,9 @@
     width:400px;
     height:300px;
 }
+iframe{
+    margin-left: 50px;
+}
+
 
 
