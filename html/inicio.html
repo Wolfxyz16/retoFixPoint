@@ -4,46 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P&aacute;gina principal</title>
+    <link rel="stylesheet" href="../styles/inicio.css">
+    <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
+    <title>Fix Point-P&aacute;gina principal</title>
 </head>
 <body>
     <header class="cabecera">
-        <img src="" alt="logo fp" class="logo-fp">
-        <img src="" alt="logo pico fuentes" id="logo-picofuentes">
-        <img src="" alt="logo fixpoint" id="logo-fixpoint">
-        <img src="" alt="iniciar sesion" id="login">
+        <section class="contenedor-logo" id="contenedor-logo1">
+            <img src="../img/logo_fp.png" alt="logo fp" id="logo-fp">
+            <img src="../img/logo_picofrentes.png" alt="logo picofrentes" id="logo-picofrentes">
+        </section>
+        <section class="contenedor-logo" id="contenedor-logo2">
+            <a href="../html/inicio.html"><img src="../img/logo_fixpoint.png" alt="logo fixpoint" class="logo-fixpoint"></a>
+        </section>
+        <section class="contenedor-logo" id="contenedor-logo3">
+            <a href=""><img src="../img/user.png" alt="iniciar sesion" id="logo-user"></a>
+        </section>
     </header>
 
-    <main>
-
+    <main class="cuerpo">
+        
         <article class="slider">
-            
+
         </article>
 
         <article class="accesos">
-            <section class="biblioteca-boton">
-                <h2>Biblioteca</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, quos.</p>
-            </section>
+            <a href="">
+                <section class="biblioteca caja">
+                    <img src="../img/bibliotecatest.png" alt="Imagen biblioteca">
+                    <section class="caja-texto">
+                        <h2>Biblioteca</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum dignissimos rem incidunt fugiat consectetur labore, consequuntur molestias aspernatur officia velit, voluptatem, culpa repellendus excepturi.</p>
+                    </section>
+                </section>
+            </a>
             
-            <section class="manuales-boton">
-                <h2>Manuales</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, quibusdam?</p>
-            </section>
+            <a href="">
+                <section class="manuales caja">
+                    <img src="../img/bibliotecatest.png" alt="Imagen manuales">
+                    <section class="caja-texto">
+                        <h2>Manuales</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos expedita ullam quis! Molestiae a autem necessitatibus ex eaque facere atque iusto delectus, ut tempore sapiente.</p>
+                    </section>
+                </section>
+            </a>
 
-            <section class="sobrenosotros-boton">
-                <h2>Sobre Nosotros</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, laborum?<</p>
-            </section>
+            <a href="">
+                <section class="sobrenosotros caja">
+                    <img src="../img/bibliotecatest.png" alt="Imagen sobre nosotros">
+                    <section class="caja-texto">
+                        <h2>Sobre Nosotros</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora praesentium similique ipsa facere quasi iure fugiat, necessitatibus odio impedit placeat dolores, itaque quaerat ut soluta!</p>
+                    </section>
+                </section>
+            </a>
         </article>
 
     </main>
 
-    <footer>
-        <img src="" alt="logo-fixpoint" class="logo-fp">
-        <span>email@email.com</span>
-        <span>659 659 659</span>
-        <span>C/ Mayor 6 12A</span>
+    <footer class="pie">
+        <img src="../img/logo_fixpoint.png" alt="logo-fixpoint" class="logo-fixpoint">
+        <ul class="info-pie">
+            <li>email@email.com</li>
+            <li>659 659 659</li>
+            <li>C/ Mayor 6 12A</li>
+        </ul>
     </footer>
 </body>
 </html>
