@@ -15,3 +15,5 @@ GRUPO 3 FORMADO POR :
 <li name='FixPointBueno-4' rgb='3036A6' r='48' g='54' b='166' > #3036A6 morado </li>
 <li name='FixPointBueno-5' rgb='777DF2' r='119' g='125' b='242' > #777DF2 morado pastel </li>
 </ul> 
+
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
