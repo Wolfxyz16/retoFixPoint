@@ -25,3 +25,17 @@
 .filtroAlf{
     margin-right: 60px;
 }
+#anadirManual{
+    background: linear-gradient(145deg, #FFEA96, #EEC51F );
+    color: black;
+    border-radius: 2em;
+}
+#anadirManual:hover{
+    opacity: 0.6;
+    text-decoration: none;
+}
+#filtro {
+    background: linear-gradient(145deg, #FFEA96, #EEC51F );
+    color: black;
+    border-radius: 1em;
+}
