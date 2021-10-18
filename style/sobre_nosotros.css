@@ -1,27 +1,145 @@
-.img_con_texto{
-    position: relative;
+@font-face {
+    font-family: fuenteFixpoint;
+    src: url(/tonus-sans-heavy-italic.otf) format("opentype");
+  }
+body{
+    font-family: fuenteFixpoint;
+}
+header{
+    display: flex;
+    align-items: flex-end;
+    gap: 300px;
+}
+
+#fp{
+    height: 50px;
+    width: 50px;
+}
+
+#pico_frentes{
+    height: 50px;
+    width: 150px;
+
+}
+
+#logo{
+    height: 100px;
+    width: 500px;
+}
+
+#usuario{
+    height: 50px;
+    width: 50px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    background-image: url("/img/usuario.png");
+    background-size: cover;
+    margin-left: 100px;
+}
+
+#pregunta_titulo{
+    font-size: 50px;
+
+}
+
+#vision_objetivo{
+    display: flex;
+    justify-content: space-around;
     
 }
 
-.titulo {
-    position: absolute;
-    top: 10px;
-    left: 100px;
-    text-shadow: -4px 1px  #edc41f;;
+#form_map{
+    display: flex;
+    padding-top: 100px;
+    justify-content: space-around;
+    
 }
 
-.texto{
-    position: absolute;
-    top: 50px;
-    left: 10px;
-    right: 1200px;
+#form_map > #formulario{
+    text-align: center;
+}
+
+#form_map > #formulario >form{
+    margin-right: 50px;
+    display: grid;
+    grid-template-columns: 125px 125px;
+    gap: 100px;
+    row-gap: 0px;
+    margin-left: 25px;
+
+   
+}
+
+#form_map > #formulario > form >h3{
+    text-align: center;
+}
+
+#que_es{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    background-color: #EEC51F;
+    padding: 20px;
     text-align: justify;
-
 }
-.img_con_texto > img{
-    opacity: 0.3;
+
+
+
+#que_es > img{
     width:300px;
     height:200px;
+    margin-left: 50px;
+}
+
+.img_con_texto{
+    position: relative;
+    border: thick solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
+.img_con_texto > img{
+    opacity: 1;
+    width:400px;
+    height:300px;
+    transition: .5s ease;
+}
+.mensaje {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 20%;
+    width: 100%;
+    opacity: 1;
+    transition: .5s ease;
+    background-color: rgb(255, 234, 150, 0.9);
+    transition: .5s ease; 
+  }
+  .texto{
+      visibility: hidden;
+      opacity: 0;
+      text-align: justify;
+      margin-left: 10px;
+      width: 95%;
+  
+  }
+  .img_con_texto:hover .mensaje {
+    height: 100%;
+  
+  }
+  .img_con_texto:hover .texto{
+    opacity: 1;
+    visibility: visible;
+    transition: .5s ease 0.5s ;
+  }
+
+iframe{
+    margin-left: 50px;
+    max-width:400px;
+    height:300px;
+    border: none;
+}
+#formulario:focus input{
+    color: tomato;
+}
