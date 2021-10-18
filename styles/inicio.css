@@ -1,4 +1,10 @@
+@font-face {
+    font-family: fuenteFixpoint;
+    src: url(/tonus-sans-heavy-italic.otf) format("opentype");
+}
+
 * {
+    font-family: fuenteFixpoint;
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -82,7 +88,7 @@
 }
 
 .caja img {
-    width: 100%;
+    width: 100.2%;
     height: 100%;
 }
 
