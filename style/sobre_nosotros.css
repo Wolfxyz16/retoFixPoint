@@ -1,7 +1,7 @@
 header{
     display: flex;
     align-items: flex-end;
-    gap: 20vw;
+    gap: 300px;
 }
 
 #fp{
@@ -25,7 +25,7 @@ header{
     border: none;
     background-image: url("/img/usuario.png");
     background-size: cover;
-    margin-left: 10vw;
+    margin-left: 100px;
 }
 #pregunta_titulo{
     font-size: 50px;
