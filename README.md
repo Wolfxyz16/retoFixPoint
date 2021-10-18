@@ -6,3 +6,5 @@ GRUPO 3 FORMADO POR :
 -Eneko Vilamor
 -Ekaitz Martin
 -Yeray Li Loaiza
+
+La fuente usada es: Tonus Sans Heavy Italic
