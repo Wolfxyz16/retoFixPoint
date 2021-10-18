@@ -1,0 +1,27 @@
+.parteSuperior{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.titulo{
+    margin-left: 690px;
+}
+.buscador{
+    margin-left: auto;
+}
+.filtros{
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+    gap: 480px;
+    margin-top: 30px;
+}
+.filtroTipo{
+    margin-left: 50px;
+}
+
+.filtroAlf{
+    margin-right: 60px;
+}
