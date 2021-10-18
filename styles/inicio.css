@@ -65,6 +65,20 @@
     width: 30em;
     height: 18em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 0.5s;
+}
+
+.caja:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.59);
+}
+
+.caja:hover .caja-texto {
+    height: 35%;
+}
+
+.caja:hover .caja-texto > p {
+    opacity: 1;
+    transition: opacity .5s ease .1s;
 }
 
 .caja img {
@@ -75,10 +89,16 @@
 .caja-texto {
     position: absolute;
     width: 100%;
-    height: 5em;
+    height: 3em;
     bottom: 0;
     left: 0;
+    transition: height 0.5s;
     background-color: #EEC51F;
+    text-align: center;
+}
+
+.caja-texto > p {
+    opacity: 0;
 }
 
 .accesos {
