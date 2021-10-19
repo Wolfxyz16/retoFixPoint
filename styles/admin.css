@@ -1,3 +1,14 @@
+@media Screen and (max-width:334px) {
+    body * {
+        display:none;
+    }
+    body::after {
+        color:red;
+        font-size: 2em;
+        content: "No se puede mostrar la página en un dispositivo tan pequeño";
+    }
+}
+
 @font-face {
     font-family: fuenteFixpoint;
     src: url(/tonus-sans-heavy-italic.otf) format("opentype");
@@ -93,7 +104,9 @@ main {
 }
 
 .tabla {
-    background-color: khaki;
+    border: black solid thick;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #777DF2;
     margin: 1em;
     flex: 70%;
     display: flex;
