@@ -1,0 +1,84 @@
+@font-face {
+    font-family: fuenteFixpoint;
+    src: url(/tonus-sans-heavy-italic.otf) format("opentype");
+}
+
+* {
+    font-family: fuenteFixpoint;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+}
+
+.cabecera {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+}
+
+.contenedor-logo {
+    width: 30vw;
+    min-width: 15vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#contenedor-logo1 {
+    justify-content: flex-start;
+    margin-left: 5em;
+}
+
+#contenedor-logo3 {
+    justify-content: flex-end;
+    margin-right: 5em;
+}
+
+#logo-fp, #logo-picofrentes {
+    max-width: 5em;
+    height: auto;
+}
+
+#logo-user {
+    max-width: 3em;
+    height: auto;
+}
+
+.logo-fixpoint {
+    max-width: 16em;
+    height: auto;
+}
+
+main {
+    display: flex;
+    gap: 1em;
+}
+
+.menu {
+    background-color: aquamarine;
+    flex: 1 1 auto;
+}
+
+.menu > * {
+    margin: 1em 1em 1em 1em;
+}
+
+.botones {
+    list-style-type: none;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1em;
+    align-items: center;
+}
+
+.botones {
+
+}
+
+.tabla {
+    background-color: khaki;
+    flex: 3 3 auto;
+}
