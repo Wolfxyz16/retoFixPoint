@@ -1,0 +1,129 @@
+@media Screen and (max-width:334px) {
+    body * {
+        display:none;
+    }
+    body::after {
+        color:red;
+        font-size: 2em;
+        content: "No se puede mostrar la página en un dispositivo tan pequeño";
+    }
+}
+
+@font-face {
+    font-family: fuenteFixpoint;
+    src: url(/tonus-sans-heavy-italic.otf) format("opentype");
+}
+
+* {
+    font-family: fuenteFixpoint;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+}
+
+.cabecera {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+}
+
+.contenedor-logo {
+    width: 30vw;
+    min-width: 15vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#contenedor-logo1 {
+    justify-content: flex-start;
+    margin-left: 5em;
+}
+
+#contenedor-logo3 {
+    justify-content: flex-end;
+    margin-right: 5em;
+}
+
+#logo-fp, #logo-picofrentes {
+    max-width: 5em;
+    height: auto;
+}
+
+#logo-user {
+    max-width: 3em;
+    height: auto;
+}
+
+.logo-fixpoint {
+    max-width: 16em;
+    height: auto;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.menu {
+    flex: auto;
+}
+
+.menu > * {
+    margin: 1em;
+    text-align: center;
+}
+
+.botones-container {
+    list-style-type: none;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1em;
+    align-items: center;
+}
+
+.botones {
+    font-size: large;
+    padding: 0.5em;
+    width: 10em;
+    background-color: #EEC51F;
+    transition: background-color .2s ease;
+}
+
+.botones:active {
+    background-color: whitesmoke;
+}
+
+.botones:hover {
+    background-color: #FFEA96;
+    cursor: pointer;
+}
+
+.tabla {
+    border: black solid thick;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #777DF2;
+    margin: 1em;
+    flex: 70%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.navegacion-container {
+    align-items: flex-end;
+    text-align: center;
+}
+
+.navegacion {
+    background-color: #EEC51F;
+    transition: background-color .2s ease;
+}
+
+.navegacion:hover {
+    background-color: #FFEA96;
+    cursor: pointer;
+}
