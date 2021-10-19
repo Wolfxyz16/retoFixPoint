@@ -1,0 +1,133 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: fuentefixpoint;
+}
+@font-face {
+    font-family: fuenteFixpoint;
+    src: url(/tonus-sans-heavy-italic.otf) format("opentype");
+  }
+.cabecera {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+}
+
+.contenedor-logo {
+    width: 30vw;
+    min-width: 15vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#contenedor-logo1 {
+    justify-content: flex-start;
+    margin-left: 5em;
+}
+
+#contenedor-logo3 {
+    justify-content: flex-end;
+    margin-right: 5em;
+}
+
+#logo-fp, #logo-picofrentes {
+    max-width: 5em;
+    height: auto;
+}
+
+#logo-user {
+    max-width: 3em;
+    height: auto;
+}
+
+.logo-fixpoint {
+    max-width: 16em;
+    height: auto;
+}
+footer{
+    width: 100%;
+    height:10% ;
+    background-color: #695E33;
+    display: flex;
+    color:#EEC51F ;
+    gap:8em;
+    justify-content: flex-start;
+    font-size: large;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.contenedor_final_pagina{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   gap: 1em;
+}
+.contenedor_iniciosesion{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column wrap;
+    text-align: center;
+    align-content: center;
+    
+}
+.titulo{
+    font-size: 50px;
+    
+}
+form{
+    width: 30%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    text-align: center;
+    align-content:center;
+    font-size: 30px;
+    gap: 10px;
+}
+.botones{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    text-align: center;
+    align-content: center;
+    gap: 50px;
+}
+
+.recuadro{
+    width: 70%;
+    height: 10%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+   margin-left: 15%;
+}
+.registro{
+    width: 40%;
+    height: 50%;
+    background-color:#EEC51F ;    
+    border-color: #EEC51F;  
+    font-family: fuentefixpoint;
+    font-size: 25px;
+}
+.iniciar{
+    width: 40%;
+    height: 50%;
+    background-color:#EEC51F ;
+    border-color: #EEC51F;
+    font-family: fuentefixpoint;
+    font-size:  25px;
+}
