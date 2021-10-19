@@ -40,17 +40,33 @@
     border-radius: 1em;
 }
 .cartica{
-    background-color: burlywood;
+    background-color: rgb(255, 234, 150, 0.9);
     width: 300px;
     height: 300px;
     margin-top: 50px;
     margin-left: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    border-radius: 1em;
     align-items: center;
+    border: solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-img{
-    width: 200px;
-    height: 200px;
+.cartica > img{
+    opacity: 0.5;
+    width:300px;
+    height:300px;
+    position: absolute;
+}
+#loquete > button {
+    background: linear-gradient(145deg, #FFEA96, #EEC51F );
+    color: black;
+    border-radius: 2em;
+}
+#loquete {
+    margin-bottom: 10px;
+    font-weight: bolder;
+    opacity: 1;
+    background-color: white;
 }
