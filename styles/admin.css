@@ -52,6 +52,33 @@
     height: auto;
 }
 
-.menu ul {
-    
+main {
+    display: flex;
+    gap: 1em;
+}
+
+.menu {
+    background-color: aquamarine;
+    flex: 1 1 auto;
+}
+
+.menu > * {
+    margin: 1em 1em 1em 1em;
+}
+
+.botones {
+    list-style-type: none;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1em;
+    align-items: center;
+}
+
+.botones {
+
+}
+
+.tabla {
+    background-color: khaki;
+    flex: 3 3 auto;
 }
