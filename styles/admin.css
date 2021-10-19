@@ -54,19 +54,20 @@
 
 main {
     display: flex;
+    justify-content: center;
     gap: 1em;
 }
 
 .menu {
-    background-color: aquamarine;
-    flex: 1 1 auto;
+    flex: auto;
 }
 
 .menu > * {
-    margin: 1em 1em 1em 1em;
+    margin: 1em;
+    text-align: center;
 }
 
-.botones {
+.botones-container {
     list-style-type: none;
     display: flex;
     flex-flow: column nowrap;
@@ -75,10 +76,24 @@ main {
 }
 
 .botones {
+    font-size: large;
+    padding: 0.5em;
+    width: 10em;
+    background-color: #EEC51F;
+    transition: background-color .2s ease;
+}
 
+.botones:active {
+    background-color: whitesmoke;
+}
+
+.botones:hover {
+    background-color: #FFEA96;
+    cursor: pointer;
 }
 
 .tabla {
     background-color: khaki;
-    flex: 3 3 auto;
+    margin: 1em;
+    flex: 70%;
 }
