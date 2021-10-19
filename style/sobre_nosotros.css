@@ -5,11 +5,13 @@
 body{
     font-family: fuenteFixpoint;
     background-color: #ebe1c9;
+    margin: 0;
 }
 header{
     display: flex;
     align-items: flex-end;
     gap: 300px;
+
 }
 
 #fp{
@@ -27,6 +29,7 @@ header{
     height: 100px;
     width: 500px;
 }
+
 
 #usuario{
     height: 50px;
@@ -100,7 +103,9 @@ header{
     color: black;
     border-radius: 2em;
     font-family: fuenteFixpoint;
+    transition: all 0.2s ease-in-out;
 }
+
 
 
 
@@ -153,3 +158,30 @@ iframe{
     border: none;
     
 }
+footer{
+  display: inline-flex;
+    margin: 0;
+    bottom: 0;
+    width: 100%;
+    gap: 100px;
+    background-color: #695E33;
+    color: rgb(216, 204, 204);
+    align-items: center;
+    justify-content: space-around;
+}
+footer > img{
+    
+    height: 100px;
+    width: 300px;
+}
+#horario{
+    text-align: center;
+}
+table{
+   border-collapse: collapse;
+}
+tr{
+    border-bottom: solid 3px #FFEA96;
+    border-top: solid 3px #FFEA96;
+ }
+ 
