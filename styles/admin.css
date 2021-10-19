@@ -96,4 +96,21 @@ main {
     background-color: khaki;
     margin: 1em;
     flex: 70%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.navegacion-container {
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.navegacion {
+    background-color: #EEC51F;
+    transition: background-color .2s ease;
+}
+
+.navegacion:hover {
+    background-color: #FFEA96;
+    cursor: pointer;
 }
