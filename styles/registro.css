@@ -24,6 +24,8 @@
     border-radius: 2em;
     font-family: fuenteFixpoint;
     transition: all 0.2s ease-in-out;
+    height: 30px;
+    width: 80px;
 }
 
 #registro >form{
