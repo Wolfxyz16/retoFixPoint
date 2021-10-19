@@ -87,6 +87,7 @@ main {
 }
 
 .botones {
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     font-size: large;
     padding: 0.5em;
     width: 10em;
@@ -104,13 +105,17 @@ main {
 }
 
 .tabla {
-    border: black solid thick;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #777DF2;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    border: black solid medium;
+    background-color: #FFEA96;
     margin: 1em;
     flex: 70%;
     display: flex;
     flex-flow: column nowrap;
+}
+
+tr {
+    text-align: center;
 }
 
 .navegacion-container {
@@ -119,11 +124,11 @@ main {
 }
 
 .navegacion {
-    background-color: #EEC51F;
+    padding: 0.2em;
     transition: background-color .2s ease;
 }
 
 .navegacion:hover {
-    background-color: #FFEA96;
+    background-color: #EEC51F;
     cursor: pointer;
 }
