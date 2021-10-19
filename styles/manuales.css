@@ -54,19 +54,19 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .cartica > img{
-    opacity: 0.5;
     width:300px;
     height:300px;
-    position: absolute;
 }
-#loquete > button {
+.loquete > button {
     background: linear-gradient(145deg, #FFEA96, #EEC51F );
     color: black;
     border-radius: 2em;
 }
-#loquete {
+.loquete {
     margin-bottom: 10px;
     font-weight: bolder;
-    opacity: 1;
-    background-color: white;
+    background-color: transparent;
+    position: absolute;
+    text-shadow: 2px 0 0 #FFEA96, -2px 0 0 #FFEA96, 0 2px 0 #FFEA96, 0 -2px 0 #FFEA96, 1px 1px #FFEA96, -1px -1px 0 #FFEA96, 1px -1px 0 #FFEA96, -1px 1px 0 #fff;
 }
+
