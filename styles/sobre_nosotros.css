@@ -88,10 +88,7 @@ header{
     grid-template-columns: 125px 125px;
     gap: 100px;
     row-gap: 10px;
-    margin-left: 25px;
- 
-
-   
+    margin-left: 25px; 
 }
 
 #form_map > #formulario > form >h3{
