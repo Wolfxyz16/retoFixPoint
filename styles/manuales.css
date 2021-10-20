@@ -1,3 +1,32 @@
+@font-face {
+    font-family: fuenteFixpoint;
+    src: url(/tonus-sans-heavy-italic.otf) format("opentype");
+}
+body{
+    font-family: fuenteFixpoint;
+    background-color: #ebe1c9;
+    margin: 0;
+}
+header{
+    display: flex;
+    align-items: flex-end;
+    gap: 300px;
+}
+
+#fp{
+    height: 50px;
+    width: 50px;
+}
+
+#pico_frentes{
+    height: 50px;
+    width: 150px;
+}
+
+#logo{
+    height: 100px;
+    width: 500px;
+}
 .parteSuperior{
     display: inline-flex;
     justify-content: center;
@@ -69,4 +98,30 @@
     position: absolute;
     text-shadow: 2px 0 0 #FFEA96, -2px 0 0 #FFEA96, 0 2px 0 #FFEA96, 0 -2px 0 #FFEA96, 1px 1px #FFEA96, -1px -1px 0 #FFEA96, 1px -1px 0 #FFEA96, -1px 1px 0 #fff;
 }
-
+footer{
+    display: inline-flex;
+      margin: 0;
+      bottom: 0;
+      width: 100%;
+      gap: 100px;
+      margin-top: 5em;
+      background-color: #695E33;
+      color: rgb(216, 204, 204);
+      align-items: center;
+      justify-content: space-around;
+  }
+  footer > img{
+      
+      height: 100px;
+      width: 300px;
+  }
+  #horario{
+      text-align: center;
+  }
+  table{
+     border-collapse: collapse;
+  }
+  tr{
+      border-bottom: solid 3px #FFEA96;
+      border-top: solid 3px #FFEA96;
+   }
