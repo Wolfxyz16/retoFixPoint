@@ -85,6 +85,7 @@ header{
 .cartica > img{
     width:300px;
     height:300px;
+    border-radius: 1em;
 }
 .loquete > button {
     background: linear-gradient(145deg, #FFEA96, #EEC51F );
@@ -125,3 +126,79 @@ footer{
       border-bottom: solid 3px #FFEA96;
       border-top: solid 3px #FFEA96;
    }
+
+   @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+   
+    #pico_frentes{
+        height: 25px;
+        width: 50px;
+    }
+    #fp{
+        height: 25px;
+        width: 25px;
+    }
+    #logo{
+        height: 50px;
+        width: 150px;
+        margin-left: 20px;
+    }
+    #usuario{
+        margin-left: 40px;
+        width: 50px;
+        height: 50px;
+    }
+    header{
+        gap: 0px;
+        align-items: center;
+    }
+    footer > img{
+        width: 100px;
+        height: 30px;
+    }
+    footer {
+        width: 100%;
+        gap: 10px;
+        font-size: 10px;
+    }
+    body{
+        font-size: 10px;
+    }
+    .titulo{
+        margin-left: 120px;
+    }
+    .buscador{
+        margin-left: 20px;
+        width: 105px;
+    }
+    .buscador > form > input{
+        width: 57px;
+        height: 15px;
+        font-size: 10px;
+    }
+    .buscador > form > button{
+        width: 45px;
+        height: 15px;
+        font-size: 10px;
+    }
+    .filtros{
+        width: auto;
+        gap: 50px;
+    }
+    .filtroTipo{
+        margin-left: 10px;
+    }
+    .btnManual > button{
+        width: 80px;
+        height: 40px;
+    }
+    .cartica{
+        width: 140px;
+        height: 150px;
+        margin-left: 20px;
+    }
+    .cartica >img{
+        width: 140px;
+        height: 100%;
+        border-radius: 1em;
+    }
+    }
