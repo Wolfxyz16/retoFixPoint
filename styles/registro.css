@@ -29,8 +29,8 @@ header{
 }
 
 #usuario{
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
     outline: none;
     background-color: transparent;
     border: none;
@@ -67,21 +67,24 @@ header{
 #registro >form{
     margin-right: 25px;
     display: grid;
-    grid-template-columns: 125px 125px;
-    gap: 100px;
+    grid-template-columns: 125px 180px;
+    gap: 10px;
     row-gap: 10px;
     margin-left: 25px;   
 }
+
 footer{
+    
     display: inline-flex;
-      margin: 0;
-      bottom: 0;
-      width: 100%;
-      gap: 100px;
-      background-color: #695E33;
-      color: rgb(216, 204, 204);
-      align-items: center;
-      justify-content: space-around;
+    margin: 0;
+    bottom: 0;
+    width: 100%;
+    gap: 100px;
+    background-color: #695E33;
+    color: rgb(216, 204, 204);
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
   }
   
   footer > img{
