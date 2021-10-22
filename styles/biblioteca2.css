@@ -1,0 +1,363 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: fuentefixpoint;
+}
+@font-face {
+    font-family: fuenteFixpoint;
+    src: url(/tonus-sans-heavy-italic.otf) format("opentype");
+  }
+  .grid-contenedor{
+      display: grid;
+      grid-template:   
+       "header" 10%
+      "contenedor-uno" 20%
+      "herramientas" 90%
+      "final" 5%
+      "footer" 10%
+       ;
+  }
+  .cabecera {
+    display: grid;
+    grid-template: 
+    "logo1 logo4"100%/
+    70%     30%;
+    justify-items:center;
+    align-items: center;
+    background-color: cadetblue;
+    grid-area: header;
+ 
+}
+.logo1{
+    grid-area: logo1;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    margin-bottom: 5%;
+}
+.imagenfixpoint{
+    width: 65%;
+    height: 20%;
+    margin-left: 40%;
+}
+.logo4{
+    grid-area: logo4;
+    display: grid;
+    justify-items:center;
+    align-items: center;
+    width: 40%;
+    height: 40%;
+    margin-right: 10%;
+}
+.imagenusuario{
+    width: 40%;
+    height: 40%;
+    margin-top: 20%;
+    
+}
+
+.contenedor_uno{
+    display: grid;
+    background-color:coral;
+    width: 100%;
+    grid-area: contenedor-uno;
+    grid-template: 
+    "titulo     titulo"40%
+    "buscador   buscador"20%
+    "tipos      ordenar" 40%/
+    50%         50%;
+}
+h1{
+    grid-area: titulo;
+    color: black;
+    text-shadow: -2px 0px 0px #EEC51F;
+    font-size: 25px;
+    margin-left: 5%;
+}
+.contenedor_buscar{
+    grid-area: buscador;
+    background-color:#3036A6;
+    width: 55%;
+    border-radius: 0.4em;
+    grid-column: 1 / span 2;
+    margin-left: 20%;
+}
+.buscador{
+    height: 90%;
+    width: 70%;
+    border-radius: 0.4em;
+}
+.buscar_boton{
+    width: 28%;
+    height: 90%;
+    border-radius: 0.4em;
+}
+.tipos_herramientas{
+    grid-area: tipos;
+    border-radius: 0.5em;
+    background-color: #EEC51F;
+    height: 50%;
+    width: 80%;
+    font-weight: bolder;
+    margin-top: 8%;
+    margin-left: 5%;
+
+}
+.ordenar_por{
+    grid-area: ordenar;
+    font-size: 13px;
+    width: 100%;
+    text-align: center;
+    margin-top: 8%;
+}
+.A-Z{
+    background-color: #EEC51F;
+    border-radius: 0.5em;
+    width: 50%;
+    text-align: center;
+    height: 70%;
+    font-weight: bolder;
+    margin-left: 2%;
+}
+.herramientas{
+    display: grid; 
+    background-color:darkkhaki;
+    width: 100%;
+    justify-items: center;
+    grid-area: herramientas;
+
+}
+.contenedor_final_pagina{
+    width: 100%;
+    /* height: 20%; */
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center;
+   gap: 1em; */
+   grid-area: final;
+   background-color:darkorchid;
+}
+
+footer{
+    width: 100%;
+    /* height:10% ; */
+    background-color: #695E33;
+    /* display: flex; */
+    color:#EEC51F ;
+    /* gap:8em;
+    justify-content: flex-start; */
+    font-size: large;
+    align-items: center;
+    grid-area: footer;
+}
+
+@media (min-width: 600px){
+    .grid-contenedor{
+        grid-template: 
+        "header         header"10%
+        "contenedor-uno contenedor-uno"20%
+        "herramientas   herramientas"80%
+        "final           final"10%
+        "footer          footer" 10%/
+        50%                 50%
+        ;
+
+    }
+    .cabecera{
+        grid-template: 
+        "logo1 logo4"100%/
+        70%     30%;
+    }
+    .logo1{
+        grid-area: logo1;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        width: 90%;
+        height: 50%;
+        margin-bottom: 5%;
+    }
+    .logo4{
+        grid-area: logo4;
+        display: grid;
+        justify-items:center;
+        align-items: center;
+        width: 40%;
+        height: 40%;
+        margin-right: 10%;
+        margin-bottom: 10%;
+    }
+    .contenedor_uno{
+        display: grid;
+        background-color:coral;
+        width: 100%;
+        grid-area: contenedor-uno;
+        grid-template: 
+        "titulo     titulo   buscador"40%
+        "tipos      .        ordenar"20%/
+        40%         20%         40%;
+    }
+    h1{
+        grid-area: titulo;
+        color: black;
+        text-shadow: -2px 0px 0px #EEC51F;
+        margin-left: 5%;
+    }
+    .contenedor_buscar{
+        grid-area: buscador;
+        background-color:#3036A6;
+        width: 70%;
+        height: 35%;
+        border-radius: 0.4em;
+        padding: 0.2em;
+        margin-top: 5%;
+    }
+    .tipos_herramientas{
+        grid-area: tipos;
+        border-radius: 0.5em;
+        background-color: #EEC51F;
+        height: 90%;
+        width: 80%;
+        font-weight: bolder;
+        margin-top: 8%;
+        margin-left: 5%;
+        font-size: 20px;
+    
+    }
+    .ordenar_por{
+        grid-area: ordenar;
+        font-size: 22px;
+        width: 100%;
+        text-align: center;
+        margin-top: 8%;
+       height: 50%;
+    }
+    .A-Z{
+        background-color: #EEC51F;
+        border-radius: 0.5em;
+        width: 50%;
+        text-align: center;
+        height: 170%;
+        font-weight: bolder;
+        margin-left: 2%;
+        font-size: 20px;
+    }
+    
+}
+
+@media (min-width: 800px){
+    .grid-contenedor{
+        grid-template: 
+        "header          header           header          header" 10%
+        "contenedor-uno  contenedor-uno   contenedor-uno  contenedor-uno" 20%
+        "herramientas    herramientas     herramientas    herramientas" 95%
+        "final           final            final           final"10%
+        "footer          footer           footer          footer"10% /
+        25%               25%               25%             25%
+        ;
+
+    }
+    .cabecera{
+        grid-template: 
+        "logo1  logo4"100%/
+        60%      40%;
+    }
+    .logo1{
+        grid-area: logo1;
+        display: grid;
+        width: 70%;
+        height: 50%;
+    }
+    .imagenfixpoint{
+        width: 45%;
+        height: 40%;
+        margin-left: 70%;
+        margin-top: 2%;
+    }
+    .logo4{
+        grid-area: logo4;
+        display: grid;
+        width: 30%;
+        height: 20%;
+        margin-bottom: 15%;
+
+    }
+    .imagenusuario{
+        width: 25%;
+        height: 40%;
+        margin-left: 90%;
+    }
+    .contenedor_uno{
+        display: grid;
+        background-color:coral;
+        width: 100%;
+        grid-area: contenedor-uno;
+        grid-template: 
+        "titulo     titulo   buscador"40%
+        "tipos      .        ordenar"20%/
+        40%         20%         40%;
+    }
+    h1{
+        grid-area: titulo;
+        color: black;
+        text-shadow: -2px 0px 0px #EEC51F;
+        margin-left: 5%;
+        font-size: 35px;
+    }
+    .contenedor_buscar{
+        grid-area: buscador;
+        background-color:#3036A6;
+        width: 60%;
+        height: 55%;
+        border-radius: 0.4em;
+        padding: 0.2em;
+        margin-top: 7%;
+    }
+    .buscador{
+        height: 90%;
+        width: 70%;
+        border-radius: 0.4em;
+    }
+    .buscar_boton{
+        width: 28%;
+        height: 90%;
+        border-radius: 0.4em;
+    }
+    .tipos_herramientas{
+        grid-area: tipos;
+        border-radius: 0.5em;
+        background-color: #EEC51F;
+        height: 100%;
+        width: 50%;
+        font-weight: bolder;
+        margin-top: 8%;
+        margin-left: 5%;
+        font-size: 15px;
+        text-align: center;
+    
+    }
+    .ordenar_por{
+        grid-area: ordenar;
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+        margin-top: 8%;
+       height: 50%;
+    }
+    .A-Z{
+        background-color: #EEC51F;
+        border-radius: 0.5em;
+        width: 30%;
+        text-align: center;
+        height: 200%;
+        font-weight: bolder;
+        margin-left: 2%;
+        font-size: 15px;
+    }
+    
+
+}
