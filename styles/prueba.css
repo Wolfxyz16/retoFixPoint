@@ -89,26 +89,56 @@ header {
 }
 
 #manuales{
+    margin: 6%;
     grid-area: manuales;
     display: grid;
-    grid-template-columns: repeat(4, 0.5fr);
-    grid-template-rows: repeat(4, 0.5fr);
-    background-color: chartreuse;
-    gap: 1%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 4%;
 }
 
 #manuales > section{
-  width: 20%;
-  height: 20%;
-  border-radius: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
   border: solid;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 #manuales > section > img{
   width: 100%;
   height: 100%;
-  border-radius: 1;
+  border-radius: 1em;
+  opacity: 0.7;
 }
-  
+
+#manuales > section > section{
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  align-self: flex-end;
+  justify-items: center;
+  margin-bottom: 2%;
+  text-shadow: 2px 0 0 #FFEA96, -2px 0 0 #FFEA96, 0 2px 0 #FFEA96, 0 -2px 0 #FFEA96, 1px 1px #FFEA96, -1px -1px 0 #FFEA96, 1px -1px 0 #FFEA96, -1px 1px 0 #fff;
+}
+
+#descarga {
+  background: linear-gradient(145deg, #FFEA96, #EEC51F );
+  border: solid;
+  color: black;
+  border-radius: 2em;
+}
+
+#descarga:hover{
+  transition: 0.3s ease all;
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
 footer {
     grid-area: my-footer;
   }
