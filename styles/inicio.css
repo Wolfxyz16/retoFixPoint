@@ -11,35 +11,29 @@
     color: black;
 }
 
+/******************************** HEADER *********************************/
+
 .cabecera {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: space-between;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
     align-items: center;
-    height: 12vh;
+    padding: 2em 0 2em 0;
 }
 
 .contenedor-logo {
-    width: 30vw;
-    min-width: 15vw;
-    height: auto;
     display: flex;
     justify-content: center;
 }
 
 #contenedor-logo1 {
-    justify-content: flex-start;
-    margin-left: 5em;
+    justify-content: left;
 }
 
-#contenedor-logo3 {
-    justify-content: flex-end;
-    margin-right: 5em;
-}
-
-#logo-fp, #logo-picofrentes {
-    max-width: 5em;
-    height: auto;
+#contenedor-logo2 {
+    justify-content: right;
+    position: absolute;
+    right: 5vw;
 }
 
 #logo-user {
@@ -52,6 +46,7 @@
     height: auto;
 }
 
+/******************************** BODY *********************************/
 .cuerpo {
     display: flex;
     flex-flow: column nowrap;
