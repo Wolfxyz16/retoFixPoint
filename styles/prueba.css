@@ -91,9 +91,25 @@ header {
 #manuales{
     grid-area: manuales;
     display: grid;
-    
+    grid-template-columns: repeat(4, 0.5fr);
+    grid-template-rows: repeat(4, 0.5fr);
+    background-color: chartreuse;
+    gap: 1%;
 }
-  footer {
+
+#manuales > section{
+  width: 20%;
+  height: 20%;
+  border-radius: 1;
+  border: solid;
+}
+#manuales > section > img{
+  width: 100%;
+  height: 100%;
+  border-radius: 1;
+}
+  
+footer {
     grid-area: my-footer;
   }
 
