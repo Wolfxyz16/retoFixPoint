@@ -10,59 +10,51 @@ body{
 header{
     display: flex;
     align-items: flex-end;
-    gap: 300px;
-
-}
-
-#fp{
-    height: 50px;
-    width: 50px;
-}
-
-#pico_frentes{
-    height: 50px;
-    width: 150px;
-
+    justify-content: center;
+    width: 100%;
+    position: relative;
 }
 
 #logo{
     height: 100px;
     width: 500px;
+    margin-top: 1%;
 }
 
 
 #usuario{
     height: 50px;
     width: 50px;
-    outline: none;
     background-color: transparent;
     border: none;
     background-image: url("/img/usuario.png");
     background-size: cover;
-    margin-left: 100px;
+    position: absolute;
+    right: 20px;
 }
 
 #pregunta_titulo{
     font-size: 50px;
-    margin-top: 50px;
+    margin-top: 2.604167%; /* 50px/1920 */
     
 }
 #que_es{
     display: flex;
     justify-content: space-around;
-    margin-bottom: 50px;
+    margin-bottom: 2.604167%; /* 50px/1920 */
     background-color: #EEC51F;
-    padding: 20px;
+    padding: 1.041667%; /* 20px/1920 */
     text-align: justify;
-    margin-top: -40px;
+    margin-top: -2.083333%; /* -40px/1920 */
+    width: 100%;
 }
 
 
 
 #que_es > img{
-    width:300px;
-    height:200px;
-    margin-left: 50px;
+    width:300px; 
+    height: 200px;
+    margin-left: 4.62963%; /* 50px/1080 */
 }
 
 #vision_objetivo{
@@ -70,42 +62,6 @@ header{
     justify-content: space-around;
     
 }
-
-#form_map{
-    display: flex;
-    padding-top: 100px;
-    justify-content: space-around;
-    
-}
-
-#form_map > #formulario{
-    text-align: center;
-}
-
-#form_map > #formulario >form{
-    margin-right: 25px;
-    display: grid;
-    grid-template-columns: 125px 125px;
-    gap: 100px;
-    row-gap: 10px;
-    margin-left: 25px; 
-}
-
-#form_map > #formulario > form >h3{
-    text-align: center;
-    
-}
-#Enviar, #Borrar{
-    background: linear-gradient(145deg, #FFEA96, #EEC51F );
-    color: black;
-    border-radius: 2em;
-    font-family: fuenteFixpoint;
-    transition: all 0.2s ease-in-out;
-}
-
-
-
-
 .img_con_texto{
     position: relative;
     border: thick solid black;
@@ -115,7 +71,7 @@ header{
 
 .img_con_texto > img{
     opacity: 1;
-    width:400px;
+    width: 400px;
     height:300px;
     transition: .5s ease;
 }
@@ -148,6 +104,39 @@ header{
     transition: .5s ease 0.5s ;
   }
 
+#form_map{
+    display: flex;
+    padding-top: 5.208333%; /* 100px/1920 */
+    justify-content: space-around;
+    margin-bottom: 3%;
+    
+}
+
+#form_map > #formulario{
+    text-align: center;
+}
+
+#form_map > #formulario >form{
+    margin-right: 25px; 
+    display: grid;
+    grid-template-columns: 125px 125px;
+    gap: 100px;
+    row-gap: 10px; 
+    margin-left: 25px; 
+}
+
+#form_map > #formulario > form >h3{
+    text-align: center;
+    
+}
+#Enviar, #Borrar{
+    background: linear-gradient(145deg, #FFEA96, #EEC51F );
+    color: black;
+    border-radius: 2em;
+    font-family: fuenteFixpoint;
+    transition: all 0.2s ease-in-out;
+}
+
 iframe{
  
     width:400px;
@@ -156,7 +145,7 @@ iframe{
     
 }
 footer{
-  display: inline-flex;
+    display: inline-flex;
     margin: 0;
     bottom: 0;
     width: 100%;
@@ -165,11 +154,25 @@ footer{
     color: rgb(216, 204, 204);
     align-items: center;
     justify-content: space-around;
-}
-footer > img{
     
+}
+#fp_pico_frentes{
+    display: flex;
+    flex-direction: column;
+}
+#logo_footer{
     height: 100px;
     width: 300px;
+}
+#fp{
+    height: 50px;
+    width: 50px;
+}
+
+#pico_frentes{
+    height: 50px;
+    width: 150px;
+
 }
 #horario{
     text-align: center;
@@ -181,4 +184,85 @@ tr{
     border-bottom: solid 3px #FFEA96;
     border-top: solid 3px #FFEA96;
  }
+
+ @media (min-width:320px) and (max-width:480px) {
+    #logo{
+        height: 50px;
+        width: 250px;
+    }
+    #pregunta_titulo{
+        font-size: 35px;
+        
+    }
+    #que_es{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #que_es >img{
+        margin-bottom: 1%;
+      }
+    #vision_objetivo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      
+    }
+    .img_con_texto{
+        width: 320px;
+        height: 350px;
+        margin-top: 50px;
+    }
+
+
+    .img_con_texto > img{
+        width: 320px;
+        height: 350px;
+    }
+    #form_map{
+        flex-direction: column;
+        
+    }
+    iframe{
+ 
+        width: 320px;
+        height: 350px;
+        border: none;
+        align-self: center;
+        justify-content: center;
+        
+    }
+    footer{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: none;
+        gap: 0;
+       
+    }
+    #fp_pico_frentes{
+        display: flex;
+        flex-direction: column-reverse;
+       
+    }
+    #logos_fp{
+        display: flex;
+        align-items: flex-end;
+        justify-content: end;
+        width: 100%;
+        position: relative;
+    
+    }
+    #fp{
+        height: 75px;
+        width: 75px;
+    }
+    
+    #pico_frentes{
+        height: 75px;
+        width: 150px;
+    
+
+ }
+}   
  
