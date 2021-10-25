@@ -24,34 +24,30 @@ body{
     "my-footer"
 }
 
-header {
-    grid-area: my-header;
+header{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-#fp{
-    height: 60px;
-    width: 60px;
-}
-
-#pico_frentes{
-    height: 50px;
-    width: 100px;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    position: relative
 }
 
 #logo{
-    margin-left: 25%;
     height: 100%;
-    width: 450px;
+    width: 40%;
+    margin-top: 1%;
 }
 
 #usuario{
-    height: 70%;
-    margin-left: 27%;
-    width: 70px;
+    height: 100%;
+    width: 6%;
+    outline: none;
+    background-color: transparent;
+    border: none;
     background-image: url("/img/usuario.png");
+    background-size: cover;
+    position: absolute;
+    right: 2%;
 }
 
 #parteSuperior {
@@ -63,7 +59,8 @@ header {
 }
 
 .buscador{
-
+  position: absolute;
+  right: 1%;
 }
 
 #filtros{
@@ -89,7 +86,7 @@ header {
 }
 
 #manuales{
-    margin: 6%;
+    margin: 3%;
     grid-area: manuales;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -143,9 +140,15 @@ footer {
     grid-area: my-footer;
   }
 
+  footer > img{
+    width: 20%;
+    height: 20%;
+  }
+
+
   @media (min-width: 600px) and (max-width: 1000px) {
-    main {
-      grid-template-columns: 200px 1fr 200px;
+    body {
+      grid-template-columns: 100%;
       grid-template-rows: 150px
         0.2fr
         0.2fr
@@ -156,23 +159,67 @@ footer {
         "parte-Superior"
         "filtros"
         "manuales"
-        "my-footer my-footer"
+        "my-footer"
     }
+
   }
 
-@media (min-width: 1001px) {
-  main {
-    grid-template-columns: 200px 1fr 200px;
-    grid-template-rows: 200px
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    body {
+      grid-template-columns: 100%;
+      grid-template-rows: 80px
         0.2fr
         0.2fr
         1fr
         100px;
-    grid-template-areas:
-      "my-header"
-      "parte-Superior"
-      "filtros"
-      "manuales"
-      "my-footer"
+      grid-template-areas:
+        "my-header"
+        "parte-Superior"
+        "filtros"
+        "manuales"
+        "my-footer";
+    }
+
+    header{
+      justify-content: space-between;
+    }
+
+    #logo{
+      width: 50%;
+      height: 70%;
+    }
+
+    #usuario{
+      width: 17%;
+      height: 70%;
+    }
+
+    #parteSuperior{
+      justify-content: space-between;
+      height: 50%;
+    }
+
+    .buscador{
+      font-size: 10px;
+      text-align: end;
+      width: 57%;
+    }
+
+    .buscador > input{
+      width: 40%;
+    }
+  
+    #filtros{
+      font-size: 10px;
+      gap: 13%;
+    }
+
+    #manuales{
+      font-size: 10px;
+    }
+
+    #manuales > section > section > button{
+      font-size: 10px;
+    }
   }
-}
