@@ -18,7 +18,7 @@ window.onload = function () {
 
         slides[slideIndex - 1].style.display = "block";
 
-        setTimeout(mostrarSlider, 2000);
+        setTimeout(mostrarSlider, 5000);
     }
 
 }
