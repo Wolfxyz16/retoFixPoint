@@ -9,48 +9,6 @@ body,html{
     font-family: fuenteFixpoint;
     src: url(/tonus-sans-heavy-italic.otf) format("opentype");
   }
-.cabecera {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: space-between;
-    align-items: center;
-    height: 12vh;
-}
-
-.contenedor-logo {
-    width: 30vw;
-    min-width: 15vw;
-    height: auto;
-    display: flex;
-    justify-content: center;
-}
-
-#contenedor-logo1 {
-    justify-content: flex-start;
-    margin-left: 5em;
-}
-
-#contenedor-logo3 {
-    justify-content: flex-end;
-    margin-right: 5em;
-}
-
-#logo-fp, #logo-picofrentes {
-    max-width: 5em;
-    height: auto;
-}
-
-#logo-user {
-    max-width: 3em;
-    height: auto;
-}
-
-.logo-fixpoint {
-    max-width: 16em;
-    height: auto;
-    padding: 0.5em;
-}
-
 .contenedor_uno{
     display: grid;
     grid-template-columns:25% 25% 25% 25%;

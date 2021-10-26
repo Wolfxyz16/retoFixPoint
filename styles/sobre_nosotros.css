@@ -7,31 +7,6 @@ body{
     background-color: #ebe1c9;
     margin: 0;
 }
-header{
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    width: 100%;
-    position: relative;
-}
-
-#logo{
-    height: 100px;
-    width: 500px;
-    margin-top: 1%;
-}
-
-
-#usuario{
-    height: 50px;
-    width: 50px;
-    background-color: transparent;
-    border: none;
-    background-image: url("/img/usuario.png");
-    background-size: cover;
-    position: absolute;
-    right: 20px;
-}
 
 #pregunta_titulo{
     font-size: 50px;

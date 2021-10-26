@@ -24,31 +24,7 @@ body{
     "my-footer"
 }
 
-header{
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    width: 100%;
-    position: relative
-}
 
-#logo{
-    height: 100%;
-    width: 40%;
-    margin-top: 1%;
-}
-
-#usuario{
-    height: 100%;
-    width: 6%;
-    outline: none;
-    background-color: transparent;
-    border: none;
-    background-image: url("/img/usuario.png");
-    background-size: cover;
-    position: absolute;
-    right: 2%;
-}
 
 #parteSuperior {
     grid-area: parte-Superior;

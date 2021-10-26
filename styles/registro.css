@@ -7,37 +7,6 @@ body{
     background-color: #ebe1c9;
     margin: 0;
 }
-header{
-    display: flex;
-    align-items: flex-end;
-    gap: 300px;
-}
-
-#fp{
-    height: 50px;
-    width: 50px;
-}
-
-#pico_frentes{
-    height: 50px;
-    width: 150px;
-}
-
-#logo{
-    height: 100px;
-    width: 500px;
-}
-
-#usuario{
-    height: 80px;
-    width: 80px;
-    outline: none;
-    background-color: transparent;
-    border: none;
-    background-image: url("/img/usuario.png");
-    background-size: cover;
-    margin-left: 100px;
-}
 #registrarse{
     width: 100%;
     height: 100%;
