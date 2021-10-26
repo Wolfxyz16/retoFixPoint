@@ -1,4 +1,6 @@
-
+a {
+    text-decoration: none;
+}
 /* FOOTER */
 .pie {
     display: flex;
