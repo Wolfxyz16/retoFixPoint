@@ -7,7 +7,6 @@ GRUPO 3 FORMADO POR :
 -Ekaitz Martin
 -Yeray Li Loaiza
 
-La fuente usada es: Tonus Sans Heavy Italic
 
 <ul>
   <li name='FixPointBueno-1' rgb='EEC51F' r='238' g='197' b='31' > #EEC51F amarillo </li>
