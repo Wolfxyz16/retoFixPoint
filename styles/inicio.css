@@ -34,21 +34,12 @@ a {
     justify-content: center;
 }
 
-#contenedor-logo1 {
-    justify-content: left;
-}
-#contenedor-logo2 {
-    justify-content: right;
-    position: absolute;
-    right: 5vw;
-}
-
 #logo-user {
     max-width: 3em;
     height: auto;
 }
 
-.logo-fixpoint {
+#logo-fixpoint {
     max-width: 16em;
     height: auto;
 }
