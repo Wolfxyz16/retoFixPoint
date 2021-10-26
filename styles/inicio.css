@@ -17,6 +17,8 @@ a {
     color: black;
 }
 
+/******************************** HEADER *********************************/
+
 .cabecera {
     position:sticky;
     background-color: mediumaquamarine;
@@ -24,30 +26,21 @@ a {
     grid-template-columns: repeat(2, auto);
     justify-content: space-between;
     align-items: center;
-    height: 12vh;
+    padding: 2em 0 2em 0;
 }
 
 .contenedor-logo {
-    width: 30vw;
-    min-width: 15vw;
-    height: auto;
     display: flex;
     justify-content: center;
 }
 
 #contenedor-logo1 {
-    justify-content: flex-start;
-    margin-left: 5em;
+    justify-content: left;
 }
-
-#contenedor-logo3 {
-    justify-content: flex-end;
-    margin-right: 5em;
-}
-
-#logo-picofrentes {
-    max-width: 5em;
-    height: auto;
+#contenedor-logo2 {
+    justify-content: right;
+    position: absolute;
+    right: 5vw;
 }
 
 #logo-user {
