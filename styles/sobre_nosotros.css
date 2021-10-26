@@ -7,31 +7,6 @@ body{
     background-color: #ebe1c9;
     margin: 0;
 }
-header{
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    width: 100%;
-    position: relative;
-}
-
-#logo{
-    height: 100px;
-    width: 500px;
-    margin-top: 1%;
-}
-
-
-#usuario{
-    height: 50px;
-    width: 50px;
-    background-color: transparent;
-    border: none;
-    background-image: url("/img/usuario.png");
-    background-size: cover;
-    position: absolute;
-    right: 20px;
-}
 
 #pregunta_titulo{
     font-size: 50px;
@@ -112,20 +87,29 @@ header{
     
 }
 
-#form_map > #formulario{
+#formulario_entero{
     text-align: center;
-}
-
-#form_map > #formulario >form{
-    margin-right: 25px; 
-    display: grid;
-    grid-template-columns: 125px 125px;
-    gap: 100px;
-    row-gap: 10px; 
     margin-left: 25px; 
+    margin-right: 125px; 
 }
 
-#form_map > #formulario > form >h3{
+#formulario{
+    display: grid;
+    grid-template-columns: 125px 200px;
+    gap: 2%;
+    row-gap: 6%; 
+    
+    align-content: center;
+}
+#botones_form{
+    display: flex;
+    gap: 5%;
+    margin-top: 5%;
+    justify-content: center;
+    
+}
+
+#formulario_entero >h3{
     text-align: center;
     
 }
@@ -135,6 +119,7 @@ header{
     border-radius: 2em;
     font-family: fuenteFixpoint;
     transition: all 0.2s ease-in-out;
+    text-align: center;
 }
 
 iframe{
@@ -224,8 +209,21 @@ tr{
         flex-direction: column;
         
     }
+   
+    
+#formulario_entero {
+    margin: 0 auto;
+}
+#formulario{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
     iframe{
- 
+        margin-top: 10%;
         width: 320px;
         height: 350px;
         border: none;

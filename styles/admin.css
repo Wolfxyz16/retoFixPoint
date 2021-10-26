@@ -27,46 +27,6 @@ html {
     width: 100%;
 }
 
-/* CABECERA */
-.cabecera {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 12vh;
-}
-
-.contenedor-logo {
-    width: 30vw;
-    min-width: 15vw;
-    height: auto;
-    display: flex;
-    justify-content: center;
-}
-
-#contenedor-logo1 {
-    justify-content: flex-start;
-    margin-left: 5em;
-}
-
-#contenedor-logo3 {
-    justify-content: flex-end;
-    margin-right: 5em;
-}
-
-#logo-fp, #logo-picofrentes {
-    max-width: 5em;
-    height: auto;
-}
-
-#logo-user {
-    max-width: 3em;
-    height: auto;
-}
-
-.logo-fixpoint {
-    max-width: 16em;
-    height: auto;
-}
 
 /* MAIN */
 main {
