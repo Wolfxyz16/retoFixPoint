@@ -9,46 +9,52 @@ body,html{
     font-family: fuenteFixpoint;
     src: url(/tonus-sans-heavy-italic.otf) format("opentype");
   }
-.cabecera {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: space-between;
+  .grid-contenedor{
+      display: grid;
+      grid-template: 
+      "header"10%
+      "contenedorinicio"
+      "footer";
+  }
+  .cabecera {
+    position:sticky;
+
+    display: flex;
+    flex-flow: row nowrap;
+    
+    justify-content: center;
     align-items: center;
-    height: 12vh;
+
+    width: 100%;
+
+    padding: 2em 0 2em 0;
 }
 
 .contenedor-logo {
-    width: 30vw;
-    min-width: 15vw;
-    height: auto;
+    flex: 1 1 100%;
     display: flex;
+}
+
+#contenedor-logo-fixpoint {
     justify-content: center;
 }
 
-#contenedor-logo1 {
-    justify-content: flex-start;
-    margin-left: 5em;
-}
-
-#contenedor-logo3 {
+#contenedor-logo-user {
     justify-content: flex-end;
-    margin-right: 5em;
-}
-
-#logo-fp, #logo-picofrentes {
-    max-width: 5em;
-    height: auto;
 }
 
 #logo-user {
     max-width: 3em;
     height: auto;
+
+    margin-right: 1em;
 }
 
-.logo-fixpoint {
+#logo-fixpoint {
     max-width: 16em;
     height: auto;
 }
+.imagenusuario{width: 40%;height: 40%; margin-top: 20%;}
 footer{
     width: 100%;
     height:10% ;
