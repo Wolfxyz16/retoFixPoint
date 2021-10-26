@@ -10,6 +10,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     height: 100vh;
+    background-color: #ebe1c9;
 }
 
 a {
