@@ -1,0 +1,266 @@
+@font-face {
+    font-family: fuenteFixpoint;
+    src: url(/tonus-sans-heavy-italic.otf) format("opentype");
+  }
+body{
+    font-family: fuenteFixpoint;
+    background-color: #ebe1c9;
+    margin: 0;
+}
+
+#pregunta_titulo{
+    font-size: 50px;
+    margin-top: 2.604167%; /* 50px/1920 */
+    
+}
+#que_es{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2.604167%; /* 50px/1920 */
+    background-color: #EEC51F;
+    padding: 1.041667%; /* 20px/1920 */
+    text-align: justify;
+    margin-top: -2.083333%; /* -40px/1920 */
+    width: 100%;
+}
+
+
+
+#que_es > img{
+    width:300px; 
+    height: 200px;
+    margin-left: 4.62963%; /* 50px/1080 */
+}
+
+#vision_objetivo{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.img_con_texto{
+    position: relative;
+    border: thick solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.img_con_texto > img{
+    opacity: 1;
+    width: 400px;
+    height:300px;
+    transition: .5s ease;
+}
+.mensaje {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 20%;
+    width: 100%;
+    opacity: 1;
+    transition: .5s ease;
+    background-color: rgb(255, 234, 150, 0.9);
+    transition: .5s ease; 
+  }
+  .texto{
+      visibility: hidden;
+      opacity: 0;
+      text-align: justify;
+      margin-left: 10px;
+      width: 95%;
+  
+  }
+  .img_con_texto:hover .mensaje {
+    height: 100%;
+  
+  }
+  .img_con_texto:hover .texto{
+    opacity: 1;
+    visibility: visible;
+    transition: .5s ease 0.5s ;
+  }
+
+#form_map{
+    display: flex;
+    padding-top: 5.208333%; /* 100px/1920 */
+    justify-content: space-around;
+    margin-bottom: 3%;
+    
+}
+
+#formulario_entero{
+    text-align: center;
+    margin-left: 25px; 
+    margin-right: 125px; 
+}
+
+#formulario{
+    display: grid;
+    grid-template-columns: 125px 200px;
+    gap: 2%;
+    row-gap: 6%; 
+    
+    align-content: center;
+}
+#botones_form{
+    display: flex;
+    gap: 5%;
+    margin-top: 5%;
+    justify-content: center;
+    
+}
+
+#formulario_entero >h3{
+    text-align: center;
+    
+}
+#Enviar, #Borrar{
+    background: linear-gradient(145deg, #FFEA96, #EEC51F );
+    color: black;
+    border-radius: 2em;
+    font-family: fuenteFixpoint;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
+
+iframe{
+ 
+    width:400px;
+    height:300px;
+    border: none;
+    
+}
+footer{
+    display: inline-flex;
+    margin: 0;
+    bottom: 0;
+    width: 100%;
+    gap: 100px;
+    background-color: #695E33;
+    color: rgb(216, 204, 204);
+    align-items: center;
+    justify-content: space-around;
+    
+}
+#fp_pico_frentes{
+    display: flex;
+    flex-direction: column;
+}
+#logo_footer{
+    height: 100px;
+    width: 300px;
+}
+#fp{
+    height: 50px;
+    width: 50px;
+}
+
+#pico_frentes{
+    height: 50px;
+    width: 150px;
+
+}
+#horario{
+    text-align: center;
+}
+table{
+   border-collapse: collapse;
+}
+tr{
+    border-bottom: solid 3px #FFEA96;
+    border-top: solid 3px #FFEA96;
+ }
+
+ @media (min-width:320px) and (max-width:480px) {
+    #logo{
+        height: 50px;
+        width: 250px;
+    }
+    #pregunta_titulo{
+        font-size: 35px;
+        
+    }
+    #que_es{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #que_es >img{
+        margin-bottom: 1%;
+      }
+    #vision_objetivo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      
+    }
+    .img_con_texto{
+        width: 320px;
+        height: 350px;
+        margin-top: 50px;
+    }
+
+
+    .img_con_texto > img{
+        width: 320px;
+        height: 350px;
+    }
+    #form_map{
+        flex-direction: column;
+        
+    }
+   
+    
+#formulario_entero {
+    margin: 0 auto;
+}
+#formulario{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    iframe{
+        margin-top: 10%;
+        width: 320px;
+        height: 350px;
+        border: none;
+        align-self: center;
+        justify-content: center;
+        
+    }
+    footer{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: none;
+        gap: 0;
+       
+    }
+    #fp_pico_frentes{
+        display: flex;
+        flex-direction: column-reverse;
+       
+    }
+    #logos_fp{
+        display: flex;
+        align-items: flex-end;
+        justify-content: end;
+        width: 100%;
+        position: relative;
+    
+    }
+    #fp{
+        height: 75px;
+        width: 75px;
+    }
+    
+    #pico_frentes{
+        height: 75px;
+        width: 150px;
+    
+
+ }
+}   
+ 
