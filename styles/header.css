@@ -1,0 +1,26 @@
+/******************************** HEADER *********************************/
+
+.cabecera {
+    position:sticky;
+    background-color: mediumaquamarine;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 0 2em 0;
+}
+
+.contenedor-logo {
+    display: flex;
+    justify-content: center;
+}
+
+#logo-user {
+    max-width: 3em;
+    height: auto;
+}
+
+#logo-fixpoint {
+    max-width: 16em;
+    height: auto;
+}
