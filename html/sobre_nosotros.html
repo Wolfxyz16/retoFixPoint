@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/sobre_nosotros.css">
     <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
     <title>Sobre Nosotros</title>
 </head>
@@ -78,25 +79,30 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.8682280791436!2d-2.484362084562394!3d41.766498779231206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd44d2e709876957%3A0x469c9525026cc4ad!2sCentro%20Integrado%20De%20Formaci%C3%B3n%20Profesional%20Pic%C3%B3%20Frentes!5e0!3m2!1ses!2ses!4v1634292876084!5m2!1ses!2ses" allowfullscreen:"" loading="lazy"></iframe>
     </div>
 </body>
-<footer>    
-    <div id="fp_pico_frentes">
-        <img src="/img/fixpoint_logo.png" alt="logo" id="logo_footer">
-        <div id="logos_fp">
-            <img src="/img/fp.png" alt="fp" id="fp">
-            <img src="/img/pico_frentes_logo.png" alt="pico_frentes" id="pico_frentes">
-        </div>
-    </div>
-    <div id="direccion">
-        <h3>Direccion</h3>
-        <p>C.I.F.P Pico Frentes <br> Manrique de Lara s/n <br>Soria, 42004 Spain <br>975 23 94 43</p>
+<footer class="pie">
+    <div class="logos-footer container-footer">
+        <img src="../img/logo_picofrentes.png" alt="Logo del Centro Pico Frentes" class="imagen-footer">
+        <img src="../img/logo_fp.png" alt="Logo de Formarci&oacute;n profesional" class="imagen-footer">
     </div>
     
-    <div id="horario">
-        <h3>Horario</h3>
-        <table>
+    <ul class="info-footer container-footer">
+        <a href="mailto:email@email.com" target="_blank">
+            <li>email@email.com</li>
+        </a>
+        <a href="tel:0034659659659" target="_blank">
+            <li>659 659 659</li>
+        </a>
+        <a href="https://www.google.es/maps/place/Centro+Integrado+De+Formaci%C3%B3n+Profesional+Pic%C3%B3+Frentes/@41.7665028,-2.4843674,17z/data=!3m1!4b1!4m5!3m4!1s0xd44d2e709876957:0x469c9525026cc4ad!8m2!3d41.7664988!4d-2.4821734"
+            target="_blank">
+            <li>Calle Gervasio Manrique de Lara, 42004 Soria</li>
+        </a>
+    </ul>
+
+    <div class="horario container-footer">
+        <table class="tabla-horario">
             <tr>
-              <td>Lunes</td>
-              <td>10:00–15:00</td>
+                <td>Lunes</td>
+                <td>10:00–15:00</td>
             </tr>
             <tr>
                 <td>Martes</td>
@@ -115,16 +121,11 @@
                 <td>10:00–14:05</td>
             </tr>
             <tr>
-                <td>Sabado</td>
+                <td>Fin de semana</td>
                 <td>Cerrado/Closed</td>
             </tr>
-            <tr>
-                <td>Domingo</td>
-                <td>Cerrado/Closed</td>
-            </tr>
-          </table>
+        </table>
     </div>
-   
 </footer>
    
 </html>
