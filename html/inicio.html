@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/inicio.css">
+    <link rel="stylesheet" href="../styles/header.css">
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
     <script src="../js/slider.js"></script>
     <title>Fix Point-P&aacute;gina principal</title>
@@ -14,11 +15,12 @@
 <body>
     <header>
         <div class="cabecera">
-            <section class="contenedor-logo" id="contenedor-logo2">
+            <section class="contenedor-logo"></section>
+            <section class="contenedor-logo" id="contenedor-logo-fixpoint">
                 <a href="../html/inicio.html"><img src="../img/logo_fixpoint.png" alt="logo fixpoint"
-                        class="logo-fixpoint"></a>
+                        id="logo-fixpoint"></a>
             </section>
-            <section class="contenedor-logo" id="contenedor-logo3">
+            <section class="contenedor-logo" id="contenedor-logo-user">
                 <a href=""><img src="../img/user.png" alt="iniciar sesion" id="logo-user"></a>
             </section>
         </div>
@@ -80,11 +82,16 @@
     </main>
 
     <footer class="pie">
-        <img src="../img/logo_fixpoint.png" alt="logo-fixpoint" class="logo-fixpoint">
         <ul class="info-pie">
-            <li>email@email.com</li>
-            <li>659 659 659</li>
-            <li>C/ Mayor 6 12A</li>
+            <a href="mailto:email@email.com" target="_blank">
+                <li>email@email.com</li>
+            </a>
+            <a href="tel:0034659659659" target="_blank">
+                <li>659 659 659</li>
+            </a>
+            <a href="https://www.google.es/maps/place/Centro+Integrado+De+Formaci%C3%B3n+Profesional+Pic%C3%B3+Frentes/@41.7665028,-2.4843674,17z/data=!3m1!4b1!4m5!3m4!1s0xd44d2e709876957:0x469c9525026cc4ad!8m2!3d41.7664988!4d-2.4821734" target="_blank">
+                <li>Calle Gervasio Manrique de Lara, 42004 Soria</li>
+            </a>
         </ul>
     </footer>
 </body>
