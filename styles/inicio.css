@@ -99,31 +99,3 @@ a {
     flex-flow: row wrap;
     justify-content: space-around;
 }
-
-
-/* FOOTER */
-.pie {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, auto);
-    align-items: center;
-
-    position: static;
-    bottom: 0;
-
-    background-color: #695E33;
-    width: 100%;
-}
-
-.pie>* {
-    text-align: center;
-}
-
-.info-pie {
-    list-style: none;
-    text-align: left;
-}
-
-.info-pie li {
-    display: inline;
-    margin: 0.75em;
-}
