@@ -1,0 +1,78 @@
+a {
+    text-decoration: none;
+}
+/* FOOTER */
+.pie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: static;
+    bottom: 0;
+
+    background-color: #695E33;
+    width: 100%;
+}
+
+.container-footer {
+    flex: 1 1 100%;
+    margin: 1em;
+}
+
+/* LOGOS */
+
+.logos-footer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.imagen-footer {
+    max-width: 40%;
+    height: auto;
+}
+
+/* DATA BRO */
+
+.info-footer {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+
+    display: flex;
+    gap: 1em;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-footer li {
+    display: inline;
+}
+
+
+/* HORARIO */
+
+.horario {
+    display: flex;
+    justify-content: center;
+}
+
+.tabla-horario {
+    display: flex;
+    flex-flow: row wrap;
+    border-collapse: collapse;
+}
+
+.tabla-horario td {
+    border-bottom: solid medium black;
+    margin: 2px 0 2px 0;
+}
+
+.tabla-horario tr:nth-child(odd) {
+    background-color: #eec51fb3;
+}
+
+@media (min-width:320px) and (max-width:615px) {
+    .logos-footer {display: none;}
+}

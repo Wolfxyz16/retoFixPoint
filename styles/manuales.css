@@ -1,22 +1,18 @@
 @font-face {
-    font-family: fuenteFixpoint;
-    src: url(/tonus-sans-heavy-italic.otf) format("opentype");
+  font-family: fuenteFixpoint;
+  src: url(/tonus-sans-heavy-italic.otf) format("opentype");
 }
 
-body{
-    font-family: fuenteFixpoint;
-    background-color: #ebe1c9;
-    margin: 0 auto;
-    max-width: 100%;
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100px
-    0.2fr
-    0.2fr
-    1fr
-    100px;
-    grid-template-areas:
+body {
+  font-family: fuenteFixpoint;
+  background-color: #ebe1c9;
+  margin: 0 auto;
+  max-width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100px 0.2fr 0.2fr 1fr 100px;
+  grid-template-areas:
     "my-header"
     "parte-Superior"
     "filtros"
@@ -24,53 +20,79 @@ body{
     "my-footer"
 }
 
-
-
-#parteSuperior {
-    grid-area: parte-Superior;
-    display: inline-flex;
-    margin-top: 5%;
-    justify-content: center;
-    height: 20%;
+header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  position: relative
 }
 
-.buscador{
+#logo {
+  height: 100%;
+  width: 40%;
+  margin-top: 1%;
+}
+
+#usuario {
+  height: 100%;
+  width: 6%;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  background-image: url("/img/usuario.png");
+  background-size: cover;
+  position: absolute;
+  right: 2%;
+}
+
+#parteSuperior {
+  grid-area: parte-Superior;
+  display: inline-flex;
+  margin-top: 5%;
+  justify-content: center;
+  height: 20%;
+}
+
+.buscador {
   position: absolute;
   right: 1%;
 }
 
-#filtros{
-    grid-area: filtros;
-    width: 100%;
-    display: inline-flex;
-    justify-content: space-between;
+#filtros {
+  grid-area: filtros;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
 }
 
-#anadirManual{
-    background: linear-gradient(145deg, #FFEA96, #EEC51F );
-    color: black;
-    border-radius: 2em;
+#anadirManual {
+  background: linear-gradient(145deg, #FFEA96, #EEC51F);
+  color: black;
+  border-radius: 2em;
 }
-#anadirManual:hover{
-    opacity: 0.6;
-    text-decoration: none;
+
+#anadirManual:hover {
+  opacity: 0.6;
+  text-decoration: none;
 }
+
 #filtro {
-    background: linear-gradient(145deg, #FFEA96, #EEC51F );
-    color: black;
-    border-radius: 1em;
+  background: linear-gradient(145deg, #FFEA96, #EEC51F);
+  color: black;
+  border-radius: 1em;
 }
 
-#manuales{
-    margin: 3%;
-    grid-area: manuales;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 4%;
+#manuales {
+  margin: 3%;
+  grid-area: manuales;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 4%;
 }
 
-#manuales > section{
+#manuales>section {
   width: 100%;
   height: 100%;
   border-radius: 1em;
@@ -80,14 +102,14 @@ body{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#manuales > section > img{
+#manuales>section>img {
   width: 100%;
   height: 100%;
   border-radius: 1em;
   opacity: 0.7;
 }
 
-#manuales > section > section{
+#manuales>section>section {
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -100,102 +122,84 @@ body{
 }
 
 #descarga {
-  background: linear-gradient(145deg, #FFEA96, #EEC51F );
+  background: linear-gradient(145deg, #FFEA96, #EEC51F);
   border: solid;
   color: black;
   border-radius: 2em;
 }
 
-#descarga:hover{
+#descarga:hover {
   transition: 0.3s ease all;
   box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
 
-footer {
-    grid-area: my-footer;
+@media (min-width: 600px) and (max-width: 1000px) {
+  body {
+    grid-template-columns: 100%;
+    grid-template-rows: 150px 0.2fr 0.2fr 1fr 100px;
+    grid-template-areas:
+      "my-header"
+      "parte-Superior"
+      "filtros"
+      "manuales"
+      "my-footer"
   }
 
-  footer > img{
-    width: 20%;
-    height: 20%;
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 0.2fr 0.2fr 1fr 100px;
+    grid-template-areas:
+      "my-header"
+      "parte-Superior"
+      "filtros"
+      "manuales"
+      "my-footer";
   }
 
-
-  @media (min-width: 600px) and (max-width: 1000px) {
-    body {
-      grid-template-columns: 100%;
-      grid-template-rows: 150px
-        0.2fr
-        0.2fr
-        1fr
-        100px;
-      grid-template-areas:
-        "my-header"
-        "parte-Superior"
-        "filtros"
-        "manuales"
-        "my-footer"
-    }
-
+  header {
+    justify-content: space-between;
   }
 
-
-  @media (min-width: 320px) and (max-width: 480px) {
-    body {
-      grid-template-columns: 100%;
-      grid-template-rows: 80px
-        0.2fr
-        0.2fr
-        1fr
-        100px;
-      grid-template-areas:
-        "my-header"
-        "parte-Superior"
-        "filtros"
-        "manuales"
-        "my-footer";
-    }
-
-    header{
-      justify-content: space-between;
-    }
-
-    #logo{
-      width: 50%;
-      height: 70%;
-    }
-
-    #usuario{
-      width: 17%;
-      height: 70%;
-    }
-
-    #parteSuperior{
-      justify-content: space-between;
-      height: 50%;
-    }
-
-    .buscador{
-      font-size: 10px;
-      text-align: end;
-      width: 57%;
-    }
-
-    .buscador > input{
-      width: 40%;
-    }
-  
-    #filtros{
-      font-size: 10px;
-      gap: 13%;
-    }
-
-    #manuales{
-      font-size: 10px;
-    }
-
-    #manuales > section > section > button{
-      font-size: 10px;
-    }
+  #logo {
+    width: 50%;
+    height: 70%;
   }
+
+  #usuario {
+    width: 17%;
+    height: 70%;
+  }
+
+  #parteSuperior {
+    justify-content: space-between;
+    height: 50%;
+  }
+
+  .buscador {
+    font-size: 10px;
+    text-align: end;
+    width: 57%;
+  }
+
+  .buscador>input {
+    width: 40%;
+  }
+
+  #filtros {
+    font-size: 10px;
+    gap: 13%;
+  }
+
+  #manuales {
+    font-size: 10px;
+  }
+
+  #manuales>section>section>button {
+    font-size: 10px;
+  }
+}
