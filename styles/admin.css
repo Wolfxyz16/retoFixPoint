@@ -1,0 +1,102 @@
+@media Screen and (max-width:334px) {
+    body * {
+        display:none;
+    }
+    body::after {
+        color:red;
+        font-size: 2em;
+        content: "No se puede mostrar la página en un dispositivo tan pequeño";
+    }
+}
+
+@font-face {
+    font-family: fuenteFixpoint;
+    src: url(/tonus-sans-heavy-italic.otf) format("opentype");
+}
+
+* {
+    font-family: fuenteFixpoint;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: black;
+}
+
+html {
+    width: 100%;
+}
+
+
+/* MAIN */
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.menu {
+    flex: 1 1 auto;
+}
+
+.menu h2 {
+    padding: 1em;
+}
+
+.tabla {
+    flex: 3 3 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: black solid medium;
+    background-color: #FFEA96;
+    margin: 1em;
+    width: 75em;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.botones-container {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    gap: 1em;
+}
+
+.botones {
+    font-size: large;
+    padding: 0.5em;
+    width: 10em;
+    background-color: #EEC51F;
+    transition: background-color .2s ease;
+}
+
+.botones:active {
+    background-color: whitesmoke;
+}
+
+.botones:hover {
+    background-color: #FFEA96;
+    cursor: pointer;
+}
+
+tr {
+    text-align: center;
+}
+
+.navegacion-container {
+    align-items: flex-end;
+    text-align: center;
+}
+
+.navegacion {
+    padding: 0.2em;
+    transition: background-color .2s ease;
+}
+
+.navegacion:hover {
+    background-color: #EEC51F;
+    cursor: pointer;
+}
