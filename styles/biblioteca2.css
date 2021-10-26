@@ -12,7 +12,7 @@ body,html{
       "contenedor-uno" 20%
       "herramientas" 120%
       "final" 5%
-      "footer" 10%
+      "footer" 30%
        ;
   }
   .cabecera {
@@ -22,7 +22,6 @@ body,html{
     70%     30%;
     justify-items:center;
     align-items: center;
-    background-color: cadetblue;
     grid-area: header;
  
 }
@@ -43,13 +42,12 @@ body,html{
     align-items: center;
     width: 40%;
     height: 40%;
-    margin-right: 10%;
+    margin-left: 60%;
 }
 .imagenusuario{width: 40%;height: 40%; margin-top: 20%;}
 
 .contenedor_uno{
     display: grid;
-    background-color:coral;
     width: 100%;
     grid-area: contenedor-uno;
     grid-template: 
@@ -67,11 +65,11 @@ h1{
 }
 .contenedor_buscar{
     grid-area: buscador;
-    background-color:#3036A6;
     width: 60%;
     border-radius: 0.4em;
     grid-column: 1 / span 2;
     margin-left: 20%;
+    background-color: #777DF2;
 }
 .buscador{height: 90%;width: 70%;border-radius: 0.4em;
 }
@@ -108,7 +106,6 @@ h1{
 }
 .herramientas{
     display: grid; 
-    background-color:darkkhaki;
     width: 100%;
     justify-items: center;
     grid-area: herramientas;
@@ -156,7 +153,6 @@ a{text-decoration: none;color: white;}
 .contenedor_final_pagina{
     width: 100%;
    grid-area: final;
-   background-color:darkorchid;
    display: grid;
    grid-template: 
    "contenedor-a"100%;
@@ -184,10 +180,9 @@ footer{
     width: 100%;
     background-color: #695E33;
     color:#EEC51F ;
-    font-size: large;
-    align-items: center;
     grid-area: footer;
 }
+
 @media (min-width: 600px){
     .grid-contenedor{
         grid-template: 
@@ -195,7 +190,7 @@ footer{
         "contenedor-uno contenedor-uno"20%
         "herramientas   herramientas"80%
         "final           final"10%
-        "footer          footer" 10%/
+        "footer          footer" 30%/
         50%                 50%;
     }
     .cabecera{
@@ -219,12 +214,10 @@ footer{
         align-items: center;
         width: 40%;
         height: 40%;
-        margin-right: 10%;
         margin-bottom: 10%;
     }
     .contenedor_uno{
         display: grid;
-        background-color:coral;
         width: 100%;
         grid-area: contenedor-uno;
         grid-template: 
@@ -240,7 +233,6 @@ footer{
     }
     .contenedor_buscar{
         grid-area: buscador;
-        background-color:#3036A6;
         width: 70%;
         height: 35%;
         border-radius: 0.4em;
@@ -338,7 +330,7 @@ footer{
         "contenedor-uno  contenedor-uno   contenedor-uno  contenedor-uno" 20%
         "herramientas    herramientas     herramientas    herramientas" 95%
         "final           final            final           final"10%
-        "footer          footer           footer          footer"10% /
+        "footer          footer           footer          footer"30% /
         25%               25%               25%             25%
         ;
 
@@ -350,11 +342,10 @@ footer{
     }
     .logo1{ grid-area: logo1; display: grid; width: 70%; height: 50%; margin-bottom: 6%; }
     .imagenfixpoint{width: 45%;height: 40%;margin-left: 70%;margin-top: 2%;}
-    .logo4{ grid-area: logo4; display: grid; width: 30%; height: 20%; margin-bottom: 15%;}
+    .logo4{ grid-area: logo4; display: grid; width: 25%; height: 20%;}
     .imagenusuario{ width: 25%; height: 40%; margin-left: 90%;}
     .contenedor_uno{
         display: grid;
-        background-color:coral;
         width: 100%;
         grid-area: contenedor-uno;
         grid-template: 
@@ -371,7 +362,6 @@ footer{
     }
     .contenedor_buscar{
         grid-area: buscador;
-        background-color:#3036A6;
         width: 60%;
         height: 55%;
         border-radius: 0.4em;
