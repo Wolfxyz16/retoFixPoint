@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/popup.css">
+    </head>
+    <body>            
+            
+            <!-- Trigger/Open The Modal -->
+            <button id="myBtn"></button>
+            
+            <!-- The Modal -->
+            <section id="myModal" class="modal">
+            
+              <!-- Modal content -->
+              <section class="modal-content">
+                <span class="close">&times;</span>
+                <section>
+                  <div id="wrapper">
+                    <div id="container">
+                      
+                      <div id="signup" onclick="loginMostrar()">Sign Up</div>
+                      <div id="login" onclick="registroMostrar()">Log In</div>
+                      
+                       <div id="signup-form">
+                          <input type="text" placeholder="Your Email Address" class="input"><br />
+                          <input type="text" placeholder="Choose a Username" class="input"><br />
+                          <input type="password" placeholder="Choose a Password" class="input"><br />
+                          <div id="btn" onclick="vaciar()">Create account</div>
+                       </div>
+                      
+                      <div id="login-form">
+                          <input type="text" placeholder="Email or Username" class="input"><br />
+                          <input type="password" placeholder="Password" class="input"><br />
+                          <div id="btn">log in</div>
+                          <span><a href="#">I forgot my username or password.</a></span>
+                       </div>
+                      
+                    </div>
+                  </div>
+                </section>
+              </section>
+              <script src="/js/popup.js"></script>
+            </section>
+    </body>
+</html>
