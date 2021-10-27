@@ -4,11 +4,13 @@ body,html{
     width: 100%;
     height: 100%;
     font-family: fuentefixpoint;
+    
 }
 @font-face {
     font-family: fuenteFixpoint;
     src: url(/tonus-sans-heavy-italic.otf) format("opentype");
   }
+  /*----CONTENEDOR GENERAL---*/
   .grid-contenedor{
       display: grid;
       grid-template: 
@@ -16,7 +18,15 @@ body,html{
       "contenedorinicio"50%
       "footer"30%/
       100%;
+      background: rgb(236, 236, 236);
+     visibility: hidden;
   }
+  /*ventana popup*/
+  form:target{
+    visibility: visible;
+    opacity: 1;
+  }
+  /*---HEADER---*/
   .cabecera {
     position:sticky;
     grid-area: header;
@@ -57,72 +67,94 @@ body,html{
 }
 .imagenusuario{width: 40%;height: 40%; margin-top: 20%;}
 
-
-.contenedor_iniciosesion{
+/*----FORMULARIO INICIAR SESION---*/
+form{
     grid-area: contenedorinicio;
     display: grid;
     grid-template: 
-    "botones"10%
-    "correo"
-    "pass"
-    "botones2";
-
-    
+    "botones"25%
+    "correo"25%
+    "pass"25%
+    "botones2"25%;
+    width: 80%;
+    height: 60%;
+    margin-left: 10%;
+    background-color:#FFEA96;
+    justify-items: center;
+    align-items: center;
+    transition-duration:2s ;
+    visibility: visible;
+    box-shadow: -1px -1px 149px -10px rgba(0,0,0,0.73);
+    border-radius: 15px 15px 13px 13px / 13px 13px 16px 16px;
 }
-
- 
-form{
-
-}
-
+/*---DIV DE LOS INPUTS---*/
 .botones{
     grid-area: botones;
     width: 100%;
-    height: 30%;
+    height: 100%;
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
     text-align: center;
     align-content: center;
-    gap: 50px;
+ 
 }
 .botones2{
     grid-area: botones2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    height: 70%;
 }
+/*---ENUNCIADOS---*/
 .correo{
     grid-area: correo;
+    font-size: 15px;
+    width: 70%;
+    height: 70%;
 }
 .pass{
     grid-area: pass;
-}
-/*
-.recuadro{
+    font-size: 15px;
     width: 70%;
-    height: 10%;
-    border-width: 5px;
+    height: 70%;
+}
+/*---CUADRO DE TEXTO--*/
+.recuadro{
+    width: 100%;
+    height: 50%;
+    border-width: 2px;
     border-style: solid;
     border-color: black;
-   margin-left: 15%;
 }
-.registro{
-    width: 40%;
-    height: 50%;
-    background-color:#EEC51F ;    
-    border-color: #EEC51F;  
+/*---INPUTS--*/
+.boton{
+    background-color:#777DF2  ;
+    height: 100%;width: 50%;
+    border-color:#777DF2   ;
     font-family: fuentefixpoint;
-    font-size: 25px;
+    font-size: 15px;border-radius: 15px 0px 0px 0px / 13px 0px 0px 8px;
 }
-.iniciar{
-    width: 40%;
-    height: 50%;
-    background-color:#EEC51F ;
-    border-color: #EEC51F;
+.botonn{
+    background-color:#777DF2  ;
+    height: 100%;width: 50%;
+    border-color:#777DF2   ;
     font-family: fuentefixpoint;
-    font-size:  25px;
+    font-size: 15px;
+    border-radius: 0px 15px 0px 0px / 0px 13px 0px 8px;
 }
+.boton2{
+    background-color: #777DF2;
+    font-family: fuentefixpoint;
+    width: 30%;
+    height: 80%;
+    margin-top: 2%;
+}
+
 a {
     text-decoration: none;
-} */
+} 
 /* FOOTER */
 .pie {
     display: flex;
@@ -199,5 +231,23 @@ a {
     .logos-footer {display: none;}
 }
 @media (min-width:600px){
-
+form{ margin-left: 10%; height: 85%;}
+.correo{font-size: 20px;}
+.pass{font-size: 20px;}
+.boton{font-size: 22px;}
+.boton2{font-size: 22px;}
+}
+@media (min-width:800px){
+form{ margin-left: 10%; height: 100%;}
+.grid-contenedor{
+    grid-template: 
+    "header"20%
+    "contenedorinicio"60%
+    "footer"10%/
+    100%;
+}
+.correo{font-size: 25px;}
+.pass{font-size: 25px;}
+.boton2{font-size: 20px; width: 20%;height: 70%;}
+.recuadro{width: 90%;height: 40%;}
 }
