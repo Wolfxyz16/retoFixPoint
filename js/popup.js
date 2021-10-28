@@ -31,6 +31,7 @@ formRegistro.style.display="none";
 registrarse.style = ("background", "none");
 
 function loginMostrar(){
+  vaciar();
  formRegistro.style.display="none";
   formLogin.style.display="";
   registrarse.style = ("background", "none");
@@ -38,6 +39,7 @@ function loginMostrar(){
 };
 
 function registroMostrar(){
+  vaciar();
   formRegistro.style.display="";
   formLogin.style.display="none";
   login.style = ("background", "none");
