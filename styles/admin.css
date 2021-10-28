@@ -1,14 +1,3 @@
-@media Screen and (max-width:334px) {
-    body * {
-        display:none;
-    }
-    body::after {
-        color:red;
-        font-size: 2em;
-        content: "No se puede mostrar la página en un dispositivo tan pequeño";
-    }
-}
-
 @font-face {
     font-family: fuenteFixpoint;
     src: url(/fonts/tonus-sans-regular.otf) format("opentype");
