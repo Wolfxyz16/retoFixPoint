@@ -100,3 +100,13 @@ a {
     flex-flow: row wrap;
     justify-content: space-around;
 }
+@media (max-width:470px) {
+    .caja-texto > p {
+        display: none;
+
+    }
+    .caja:hover .caja-texto {
+        height: 3em;
+    }
+
+}

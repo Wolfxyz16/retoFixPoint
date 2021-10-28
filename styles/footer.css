@@ -1,5 +1,11 @@
+@font-face {
+    font-family: FixpointLigera;
+    src: url(/fonts/tonus-sans-regular.otf) format("opentype");
+}
 a {
+    font-family: FixpointLigera;
     text-decoration: none;
+    color: black;
 }
 /* FOOTER */
 .pie {
