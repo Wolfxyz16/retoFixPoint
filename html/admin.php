@@ -37,10 +37,6 @@
 
         <section class="tabla-container">
 
-            <table id="tabla-data" class="tabla">
-                <?php include_once('../php/select-data.php');?>
-            </table>
-
             <table id="tabla-herramientas" class="tabla">
                 <?php include_once('../php/select-herramientas.php');?>
             </table>
