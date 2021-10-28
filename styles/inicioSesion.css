@@ -1,6 +1,6 @@
 @font-face {
     font-family: fuenteFixpoint;
-    src: url(/fonts/tonus-sans-heavy-italic.otf) format("opentype");
+    src: url(/fonts/tonus-sans-regular.otf) format("opentype");
   }
 *{font-family: fuenteFixpoint;}
 body,html{
@@ -20,7 +20,7 @@ body,html{
       "contenedorinicio"50%
       "footer"30%/
       100%;
-      background: rgb(236, 236, 236);
+      background-color: #ebe1c9;
      visibility: hidden;
   }
   /*ventana popup*/
