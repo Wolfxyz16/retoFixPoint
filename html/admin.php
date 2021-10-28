@@ -38,23 +38,23 @@
         <section class="tabla-container">
 
             <table id="tabla-data" class="tabla">
-                <?php include('../php/select-data.php');?>
+                <?php include_once('../php/select-data.php');?>
             </table>
 
             <table id="tabla-herramientas" class="tabla">
-                <?php include('../php/select-herramientas.php');?>
+                <?php include_once('../php/select-herramientas.php');?>
             </table>
 
             <table id="tabla-usuarios" class="tabla">
-                <?php include('../php/select-usuarios.php');?>
+                <?php include_once('../php/select-usuarios.php');?>
             </table>
 
             <table id="tabla-manuales" class="tabla">
-                <?php include('../php/select-manuales.php');?>
+                <?php include_once('../php/select-manuales.php');?>
             </table>
 
             <table id="tabla-alquileres" class="tabla">
-                <?php include('../php/select-alquileres.php');?>
+                <?php include_once('../php/select-alquileres.php');?>
             </table>
 
             <section class="navegacion-container">
