@@ -27,8 +27,8 @@ var registrarse=document.getElementById("signup");
 var boton=document.getElementById("btn");
 var input=document.getElementsByClassName("input");
 
-formLogin.style.display="none";
-login.style = ("background", "none");
+formRegistro.style.display="none";
+registrarse.style = ("background", "none");
 
 function loginMostrar(){
  formRegistro.style.display="none";
