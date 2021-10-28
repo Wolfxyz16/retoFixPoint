@@ -1,17 +1,17 @@
 <?php
-    include('conexion.php');
+    include_once('conexion.php');
 
-    $query = 'SELECT * FROM usuarios';
+    $query = 'SELECT * FROM alquileres';
 
     try{
         $consulta = $conexion->prepare($query);
         $consulta -> execute();
-        $usuarios = $consulta -> fetchAll();
+        $alquileres = $consulta -> fetchAll();
     } catch(PDOException $e) {
         echo '<script>console.log("' . $e->getMessage() .'");</script>';
     }
 
-    foreach ($usuarios as $usuario) {
+    foreach ($alquileres as $alquiler) {
         echo '<tr>';
         echo '<td>' . $usuario['name'] . '</td>';
         echo '<td>' . $usuario['surname'] . '</td>';

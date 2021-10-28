@@ -1,7 +1,7 @@
 <?php
-    include('conexion.php');
+    include_once('conexion.php');
 
-    $query = 'SELECT * FROM data';
+    $query = 'SELECT * FROM usuarios';
 
     try{
         $consulta = $conexion->prepare($query);
