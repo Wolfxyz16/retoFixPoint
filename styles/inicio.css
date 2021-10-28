@@ -100,3 +100,8 @@ a {
     flex-flow: row wrap;
     justify-content: space-around;
 }
+
+#logo-user-btn{
+    background: transparent;
+    border: none;
+}
