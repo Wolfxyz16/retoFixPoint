@@ -145,7 +145,7 @@ CREATE TABLE `usuarios` (
   `name` varchar(25) NOT NULL,
   `surname` varchar(100) NOT NULL,
   `mail` varchar(100) NOT NULL,
-  `password` varchar(16) NOT NULL
+  `password` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -153,7 +153,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`cod_user`, `name`, `surname`, `mail`, `password`) VALUES
-(1, 'Administrador', 'Administrador', 'admin', 'adminfixpoint');
+(1, 'Administrador', 'Administrador', 'admin', '527a16f01a7530ee9e4f52d3d2d7907fbfdd90c6be3e91516df17a8d97803c7580c8092eb57c6b38193f1e865948fd51b552d17d201a28ad5542cb6debb4378f');
 
 --
 -- Índices para tablas volcadas

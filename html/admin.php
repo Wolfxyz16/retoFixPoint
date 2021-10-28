@@ -35,49 +35,28 @@
             </ul>
         </section>
 
-        <section class="tabla">
-            <table>
-                <tr>
-                    <th>PRUEBA</th>
-                    <th>PRUEBA</th>
-                    <th>PRUEBA</th>
-                    <th>PRUEBA</th>
-                    <th>PRUEBA</th>
-                </tr>
+        <section class="tabla-container">
 
-                <tr>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                </tr>
-
-                <tr>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                </tr>
-                
-                <tr>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                </tr>
-                
-                <tr>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                </tr>
-                
+            <table id="tabla-data" class="tabla">
+                <?php include('../php/select-data.php');?>
             </table>
+
+            <table id="tabla-herramientas" class="tabla">
+                <?php include('../php/select-herramientas.php');?>
+            </table>
+
+            <table id="tabla-usuarios" class="tabla">
+                <?php include('../php/select-usuarios.php');?>
+            </table>
+
+            <table id="tabla-manuales" class="tabla">
+                <?php include('../php/select-manuales.php');?>
+            </table>
+
+            <table id="tabla-alquileres" class="tabla">
+                <?php include('../php/select-alquileres.php');?>
+            </table>
+
             <section class="navegacion-container">
                 <a href="#" class="anterior navegacion">&laquo; Anterior</a>
                 <a href="#" class="siguiente navegacion">Siguiente &raquo;</a>

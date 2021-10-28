@@ -11,20 +11,21 @@
 
 @font-face {
     font-family: fuenteFixpoint;
-    src: url(/tonus-sans-heavy-italic.otf) format("opentype");
+    src: url(/fonts/tonus-sans-regular.otf) format("opentype");
 }
 
-* {
-    font-family: fuenteFixpoint;
+body {
+    width: 100%;
     padding: 0;
     margin: 0;
     text-decoration: none;
     box-sizing: border-box;
     color: black;
+    background-color: #ebe1c9;
 }
 
-html {
-    width: 100%;
+* {
+    font-family: fuenteFixpoint;
 }
 
 
@@ -44,7 +45,7 @@ main {
     padding: 1em;
 }
 
-.tabla {
+.tabla-container {
     flex: 3 3 auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: black solid medium;
@@ -60,7 +61,7 @@ main {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    width: 100%;
+    width: 90%;
     text-align: center;
     gap: 1em;
 }
