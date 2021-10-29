@@ -1,13 +1,15 @@
 # retoFixPoint
-Aplicacion web para el alquiler y mantenimineto de herramientas basada en la filosofia FixPoint
+<h1>FIXPOINT</h1>
+<p>Aplicacion web para el alquiler y mantenimineto de herramientas basada en la filosofia FixPoint</p>
 
-GRUPO 3 FORMADO POR :
--Shania Bencomo
--Eneko Vilamor
--Ekaitz Martin
--Yeray Li Loaiza
+<ul>
+  <p>GRUPO 3 FORMADO POR :</p>
+    <li>Shania Bencomo</li>
+    <li>Eneko Vilamor</li>
+    <li>Ekaitz Martin</li>
+    <li>Yeray Li Loaiza</li>
+</ul>
 
-La fuente usada es: Tonus Sans Heavy Italic
 
 <ul>
   <li name='FixPointBueno-1' rgb='EEC51F' r='238' g='197' b='31' > #EEC51F amarillo </li>

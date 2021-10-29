@@ -1,0 +1,40 @@
+/******************************** HEADER *********************************/
+
+.cabecera {
+    position: sticky;
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 2em 0 2em 0;
+}
+
+.contenedor-logo {
+    flex: 1 1 100%;
+    display: flex;
+}
+
+#contenedor-logo-fixpoint {
+    justify-content: center;
+}
+
+#contenedor-logo-user {
+    justify-content: flex-end;
+}
+
+#logo-user {
+    max-width: 3em;
+    height: auto;
+
+    margin-right: 1em;
+}
+
+#logo-fixpoint {
+    max-width: 16em;
+    height: auto;
+}

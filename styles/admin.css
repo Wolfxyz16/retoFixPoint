@@ -1,89 +1,65 @@
-@media Screen and (max-width:334px) {
-    body * {
-        display:none;
-    }
-    body::after {
-        color:red;
-        font-size: 2em;
-        content: "No se puede mostrar la página en un dispositivo tan pequeño";
-    }
-}
-
 @font-face {
     font-family: fuenteFixpoint;
-    src: url(/tonus-sans-heavy-italic.otf) format("opentype");
+    src: url(/fonts/tonus-sans-regular.otf) format("opentype");
+}
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: black;
+    background-color: #ebe1c9;
 }
 
 * {
     font-family: fuenteFixpoint;
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    color: black;
 }
 
-.cabecera {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: space-between;
-    align-items: center;
-    height: 12vh;
+.visible {
+    visibility: visible;
 }
 
-.contenedor-logo {
-    width: 30vw;
-    min-width: 15vw;
-    height: auto;
-    display: flex;
-    justify-content: center;
+.hidden{
+    visibility: hidden;
 }
 
-#contenedor-logo1 {
-    justify-content: flex-start;
-    margin-left: 5em;
-}
-
-#contenedor-logo3 {
-    justify-content: flex-end;
-    margin-right: 5em;
-}
-
-#logo-fp, #logo-picofrentes {
-    max-width: 5em;
-    height: auto;
-}
-
-#logo-user {
-    max-width: 3em;
-    height: auto;
-}
-
-.logo-fixpoint {
-    max-width: 16em;
-    height: auto;
-}
-
+/* MAIN */
 main {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     gap: 1em;
 }
 
 .menu {
-    flex: auto;
+    flex: 1 1 auto;
 }
 
-.menu > * {
+.menu h2 {
+    padding: 1em;
+}
+
+.tabla-container {
+    flex: 3 3 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: black solid medium;
+    background-color: #FFEA96;
     margin: 1em;
-    text-align: center;
+    width: 75em;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 .botones-container {
     list-style-type: none;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 90%;
+    text-align: center;
     gap: 1em;
-    align-items: center;
 }
 
 .botones {
@@ -103,14 +79,8 @@ main {
     cursor: pointer;
 }
 
-.tabla {
-    border: black solid thick;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #777DF2;
-    margin: 1em;
-    flex: 70%;
-    display: flex;
-    flex-flow: column nowrap;
+tr {
+    text-align: center;
 }
 
 .navegacion-container {
@@ -119,11 +89,11 @@ main {
 }
 
 .navegacion {
-    background-color: #EEC51F;
+    padding: 0.2em;
     transition: background-color .2s ease;
 }
 
 .navegacion:hover {
-    background-color: #FFEA96;
+    background-color: #EEC51F;
     cursor: pointer;
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +9,6 @@
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
     <title>MODO ADMIN</title>
 </head>
-
 <body>
     <header>
         <div class="cabecera">
@@ -30,63 +28,38 @@
             <h2>MODO ADMIN</h2>
             <ul class="botones-container">
                 <li class="enlace">
-                    <button type="button" value="Herramientas" class="botones" id="herramientas-boton">Herramientas</input>
+                    <button type="button" value="Herramientas" class="boton visible" id="boton-herramientas">Herramientas</input>
                 </li>
                 <li class="enlace">
-                    <button type="button" value="Usuarios" class="botones" id="usuarios-boton">Usuarios</button>
+                    <button type="button" value="Usuarios" class="boton hidden" id="boton-usuarios">Usuarios</button>
                 </li>
                 <li class="enlace">
-                    <button type="button" value="Manuales" class="botones" id="manuales-boton">Manuales</input>
+                    <button type="button" value="Manuales" class="boton hidden" id="boton-manuales">Manuales</input>
                 </li>
                 <li class="enlace">
-                    <button type="button" value="Alquileres" class="botones" id="Alquileres-boton">Alquileres</input>
+                    <button type="button" value="Alquileres" class="boton hidden" id="boton-alquileres">Alquileres</input>
                 </li>
             </ul>
         </section>
 
-        <section class="tabla">
-            <table>
-                <tr>
-                    <th>PRUEBA</th>
-                    <th>PRUEBA</th>
-                    <th>PRUEBA</th>
-                    <th>PRUEBA</th>
-                    <th>PRUEBA</th>
-                </tr>
+        <section class="tabla-container">
 
-                <tr>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                </tr>
-
-                <tr>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                </tr>
-
-                <tr>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                </tr>
-
-                <tr>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                    <td>prueba</td>
-                </tr>
-
+            <table id="tabla-herramientas" class="tabla">
+                <?php include_once('../php/selects-tabla-admin/select-herramientas.php');?>
             </table>
+
+            <table id="tabla-usuarios" class="tabla">
+                <?php include_once('../php/selects-tabla-admin/select-usuarios.php');?>
+            </table>
+
+            <table id="tabla-manuales" class="tabla">
+                <?php include_once('../php/selects-tabla-admin/select-manuales.php');?>
+            </table>
+
+            <table id="tabla-alquileres" class="tabla">
+                <?php include_once('../php/selects-tabla-admin/select-alquileres.php');?>
+            </table>
+
             <section class="navegacion-container">
                 <a href="#" class="anterior navegacion">&laquo; Anterior</a>
                 <a href="#" class="siguiente navegacion">Siguiente &raquo;</a>
@@ -94,5 +67,4 @@
         </section>
     </main>
 </body>
-
 </html>
