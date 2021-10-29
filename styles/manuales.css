@@ -46,6 +46,12 @@ header {
   right: 2%;
 }
 
+.titulo {
+    color: black;
+    text-shadow: -2px 0px 0px #EEC51F;
+    font-size: 35px;
+}
+
 #parteSuperior {
   grid-area: parte-Superior;
   display: inline-flex;
@@ -64,18 +70,15 @@ header {
   width: 100%;
   display: inline-flex;
   justify-content: space-between;
+  font-size: 20px;
+  color: black;
+  text-shadow: -2px 0px 0px #EEC51F;
 }
-
 
 #anadirManual {
   background: linear-gradient(145deg, #FFEA96, #EEC51F);
   color: black;
   border-radius: 2em;
-}
-
-#anadirManual:hover {
-  opacity: 0.6;
-  text-decoration: none;
 }
 
 #filtro {
@@ -129,7 +132,7 @@ header {
   border-radius: 2em;
 }
 
-#descarga:hover {
+button:hover {
   transition: 0.3s ease all;
   box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
