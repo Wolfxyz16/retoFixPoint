@@ -2,12 +2,14 @@
     font-family: fuenteFixpoint;
     src: url(/fonts/tonus-sans-heavy-italic.otf) format("opentype");
 }
-body{
+
+body {
     font-family: fuenteFixpoint;
     background-color: #ebe1c9;
     margin: 0;
 }
-#registrarse{
+
+#registrarse {
     width: 100%;
     height: 100%;
     align-content: center;
@@ -16,15 +18,19 @@ body{
     flex-direction: column;
     justify-content: center;
 }
-#registrarse > h1{
+
+#registrarse>h1 {
     text-align: center;
     width: 300px;
 }
-#registro{
+
+#registro {
     align-items: center;
 }
-#Registrar, #Borrar{
-    background: linear-gradient(145deg, #FFEA96, #EEC51F );
+
+#Registrar,
+#Borrar {
+    background: linear-gradient(145deg, #FFEA96, #EEC51F);
     color: black;
     border-radius: 2em;
     font-family: fuenteFixpoint;
@@ -33,17 +39,17 @@ body{
     width: 80px;
 }
 
-#registro >form{
+#registro>form {
     margin-right: 25px;
     display: grid;
     grid-template-columns: 125px 180px;
     gap: 10px;
     row-gap: 10px;
-    margin-left: 25px;   
+    margin-left: 25px;
 }
 
-footer{
-    
+footer {
+
     display: inline-flex;
     margin: 0;
     bottom: 0;
@@ -54,82 +60,98 @@ footer{
     align-items: center;
     justify-content: space-around;
     position: absolute;
-  }
-  
-  footer > img{
-      height: 100px;
-      width: 300px;
-  }
-  #horario{
-      text-align: center;
-  }
-  table{
-     border-collapse: collapse;
-  }
-  tr{
-      border-bottom: solid 3px #FFEA96;
-      border-top: solid 3px #FFEA96;
-   }
-   
+}
+
+footer>img {
+    height: 100px;
+    width: 300px;
+}
+
+#horario {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: solid 3px #FFEA96;
+    border-top: solid 3px #FFEA96;
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    body{
+    body {
         font-size: 10px;
     }
-    #registro >form{
+
+    #registro>form {
         grid-template-columns: 300px;
         row-gap: 5px;
-        gap:5px;
+        gap: 5px;
     }
-    #registro > form > input {
+
+    #registro>form>input {
         height: 10px;
         width: 100px;
     }
-    #registro{
+
+    #registro {
         align-content: center;
         width: 162px;
     }
-    #registrarse > h1 {
+
+    #registrarse>h1 {
         width: 150px;
     }
-    #pico_frentes{
+
+    #pico_frentes {
         height: 25px;
         width: 50px;
     }
-    #fp{
+
+    #fp {
         height: 25px;
         width: 25px;
     }
-    #logo{
+
+    #logo {
         height: 50px;
         width: 150px;
         margin-left: 20px;
     }
-    #usuario{
+
+    #usuario {
         margin-left: 40px;
         width: 50px;
         height: 50px;
     }
-    header{
+
+    header {
         gap: 0px;
         align-items: center;
     }
-    footer > img{
+
+    footer>img {
         width: 100px;
         height: 30px;
     }
+
     footer {
         width: 100%;
         gap: 10px;
         font-size: 10px;
     }
-    #Registrar{
+
+    #Registrar {
         height: 20px;
         margin-bottom: 10px;
         margin-top: 0px;
     }
-    #Borrar{
+
+    #Borrar {
         height: 20px;
         margin-top: 7px;
         margin-bottom: 0px;
     }
-  }
+}

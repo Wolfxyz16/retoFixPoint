@@ -2,11 +2,13 @@
     font-family: FixpointLigera;
     src: url(/fonts/tonus-sans-regular.otf) format("opentype");
 }
+
 a {
     font-family: FixpointLigera;
     text-decoration: none;
     color: black;
 }
+
 /* FOOTER */
 .pie {
     display: flex;
@@ -80,5 +82,7 @@ a {
 }
 
 @media (min-width:320px) and (max-width:615px) {
-    .logos-footer {display: none;}
+    .logos-footer {
+        display: none;
+    }
 }

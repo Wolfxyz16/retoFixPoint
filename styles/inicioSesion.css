@@ -1,40 +1,44 @@
 @font-face {
     font-family: fuenteFixpoint;
     src: url(/fonts/tonus-sans-regular.otf) format("opentype");
-  }
-*{font-family: fuenteFixpoint;}
-body,html{
+}
+
+* {
+    font-family: fuenteFixpoint;
+}
+
+body,
+html {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     font-family: fuenteFixpoint;
-    
+
 }
 
-  /*----CONTENEDOR GENERAL---*/
-  .grid-contenedor{
-      display: grid;
-      grid-template: 
-      "header"20%
-      "contenedorinicio"50%
-      "footer"30%/
-      100%;
-      background-color: #ebe1c9;
-     visibility: hidden;
-  }
-  /*ventana popup*/
-  form:target{
+/*----CONTENEDOR GENERAL---*/
+.grid-contenedor {
+    display: grid;
+    grid-template:
+        "header"20% "contenedorinicio"50% "footer"30%/ 100%;
+    background-color: #ebe1c9;
+    visibility: hidden;
+}
+
+/*ventana popup*/
+form:target {
     visibility: visible;
     opacity: 1;
-  }
-  /*---HEADER---*/
-  .cabecera {
-    position:sticky;
+}
+
+/*---HEADER---*/
+.cabecera {
+    position: sticky;
     grid-area: header;
     display: flex;
     flex-flow: row nowrap;
-    
+
     justify-content: center;
     align-items: center;
 
@@ -67,31 +71,34 @@ body,html{
     max-width: 16em;
     height: auto;
 }
-.imagenusuario{width: 40%;height: 40%; margin-top: 20%;}
+
+.imagenusuario {
+    width: 40%;
+    height: 40%;
+    margin-top: 20%;
+}
 
 /*----FORMULARIO INICIAR SESION---*/
-form{
+form {
     grid-area: contenedorinicio;
     display: grid;
-    grid-template: 
-    "botones"25%
-    "correo"25%
-    "pass"25%
-    "botones2"25%;
+    grid-template:
+        "botones"25% "correo"25% "pass"25% "botones2"25%;
     width: 80%;
     height: 60%;
     margin-left: 10%;
     background-color: #ebe1c9;
     justify-items: center;
     align-items: center;
-    transition-duration:2s ;
+    transition-duration: 2s;
     visibility: visible;
-    box-shadow: -1px -1px 149px -10px rgba(0,0,0,0.73);
+    box-shadow: -1px -1px 149px -10px rgba(0, 0, 0, 0.73);
     border-radius: 15px 15px 13px 13px / 13px 13px 16px 16px;
-    font-family:  fuenteFixpoint;
+    font-family: fuenteFixpoint;
 }
+
 /*---DIV DE LOS INPUTS---*/
-.botones{
+.botones {
     grid-area: botones;
     width: 100%;
     height: 100%;
@@ -100,9 +107,10 @@ form{
     flex-flow: row wrap;
     text-align: center;
     align-content: center;
- 
+
 }
-.botones2{
+
+.botones2 {
     grid-area: botones2;
     width: 100%;
     display: flex;
@@ -110,46 +118,55 @@ form{
     gap: 5px;
     height: 70%;
 }
+
 /*---ENUNCIADOS---*/
-.correo{
+.correo {
     grid-area: correo;
     font-size: 15px;
     width: 70%;
     height: 70%;
 }
-.pass{
+
+.pass {
     grid-area: pass;
     font-size: 15px;
     width: 70%;
     height: 70%;
 }
+
 /*---CUADRO DE TEXTO--*/
-.recuadro{
+.recuadro {
     width: 100%;
     height: 50%;
     border-width: 2px;
     border-style: solid;
     border-color: black;
 }
+
 /*---INPUTS--*/
-.boton{
-    background-color:#FFEA96 ;
-    height: 100%;width: 50%;
-    border-color:#FFEA96    ;
+.boton {
+    background-color: #FFEA96;
+    height: 100%;
+    width: 50%;
+    border-color: #FFEA96;
     font-family: fuenteFixpoint;
-    font-size: 15px;border-radius: 15px 0px 0px 0px / 13px 0px 0px 8px;
+    font-size: 15px;
+    border-radius: 15px 0px 0px 0px / 13px 0px 0px 8px;
 }
-.botonn{
-    background-color:#FFEA96 ;
-    height: 100%;width: 50%;
-    border-color:#FFEA96 ;
+
+.botonn {
+    background-color: #FFEA96;
+    height: 100%;
+    width: 50%;
+    border-color: #FFEA96;
     font-family: fuenteFixpoint;
     font-size: 15px;
     border-radius: 0px 15px 0px 0px / 0px 13px 0px 8px;
 }
-.boton2{
-    background-color:#FFEA96 ;
-    font-family:  fuenteFixpoint;
+
+.boton2 {
+    background-color: #FFEA96;
+    font-family: fuenteFixpoint;
     width: 30%;
     height: 80%;
     margin-top: 2%;
@@ -160,7 +177,8 @@ a {
     color: black;
     margin-left: 8%;
     margin-top: 3%;
-} 
+}
+
 /* FOOTER */
 .pie {
     display: flex;
@@ -234,29 +252,73 @@ a {
 }
 
 @media (min-width:320px) and (max-width:615px) {
-    .logos-footer {display: none;}
+    .logos-footer {
+        display: none;
+    }
 }
-@media (min-width:600px){
-form{ margin-left: 10%; height: 85%;}
-.correo{font-size: 20px;}
-.pass{font-size: 20px;}
-.boton{font-size: 22px;}
-.boton2{font-size: 22px;}
-a{font-size: 20px;}
+
+@media (min-width:600px) {
+    form {
+        margin-left: 10%;
+        height: 85%;
+    }
+
+    .correo {
+        font-size: 20px;
+    }
+
+    .pass {
+        font-size: 20px;
+    }
+
+    .boton {
+        font-size: 22px;
+    }
+
+    .boton2 {
+        font-size: 22px;
+    }
+
+    a {
+        font-size: 20px;
+    }
 }
-@media (min-width:800px){
-form{ margin-left: 10%; height: 100%;}
-.grid-contenedor{
-    grid-template: 
-    "header"20%
-    "contenedorinicio"60%
-    "footer"10%/
-    100%;
-}
-.correo{font-size: 25px;}
-.pass{font-size: 25px;}
-.boton2{font-size: 20px; width: 20%;height: 70%;}
-.recuadro{width: 90%;height: 40%;}
-.botonn{font-size: 22px;}
-a{font-size:22px ;}
+
+@media (min-width:800px) {
+    form {
+        margin-left: 10%;
+        height: 100%;
+    }
+
+    .grid-contenedor {
+        grid-template:
+            "header"20% "contenedorinicio"60% "footer"10%/ 100%;
+    }
+
+    .correo {
+        font-size: 25px;
+    }
+
+    .pass {
+        font-size: 25px;
+    }
+
+    .boton2 {
+        font-size: 20px;
+        width: 20%;
+        height: 70%;
+    }
+
+    .recuadro {
+        width: 90%;
+        height: 40%;
+    }
+
+    .botonn {
+        font-size: 22px;
+    }
+
+    a {
+        font-size: 22px;
+    }
 }
