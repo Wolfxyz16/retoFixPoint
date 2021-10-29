@@ -27,21 +27,24 @@ var registrarse=document.getElementById("signup");
 var boton=document.getElementById("btn");
 var input=document.getElementsByClassName("input");
 
+login.style.background="#F4EFDA"
 formRegistro.style.display="none";
 registrarse.style = ("background", "none");
 
 function loginMostrar(){
+  vaciar();
  formRegistro.style.display="none";
   formLogin.style.display="";
   registrarse.style = ("background", "none");
-  login.style=("background", "#fff");
+  login.style.background= "#F4EFDA";
 };
 
 function registroMostrar(){
+  vaciar();
   formRegistro.style.display="";
   formLogin.style.display="none";
   login.style = ("background", "none");
-  registrarse.style=("background", "#fff");
+  registrarse.style.background= "#F4EFDA"
 };
 
 function vaciar(){
