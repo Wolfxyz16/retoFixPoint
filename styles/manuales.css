@@ -11,16 +11,16 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 100px 0.2fr 0.2fr 1fr 100px;
+  grid-template-rows: 100px 0.2fr 0.2fr 1fr;
   grid-template-areas:
     "my-header"
     "parte-Superior"
     "filtros"
-    "manuales"
-    "my-footer"
+    "manuales";
 }
 
 header {
+  grid-column: my-header;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -65,6 +65,7 @@ header {
   display: inline-flex;
   justify-content: space-between;
 }
+
 
 #anadirManual {
   background: linear-gradient(145deg, #FFEA96, #EEC51F);
@@ -137,13 +138,12 @@ header {
 @media (min-width: 600px) and (max-width: 1000px) {
   body {
     grid-template-columns: 100%;
-    grid-template-rows: 150px 0.2fr 0.2fr 1fr 100px;
+    grid-template-rows: 150px 0.2fr 0.2fr 1fr;
     grid-template-areas:
       "my-header"
       "parte-Superior"
       "filtros"
-      "manuales"
-      "my-footer"
+      "manuales";
   }
 
 }
@@ -152,13 +152,12 @@ header {
 @media (min-width: 320px) and (max-width: 480px) {
   body {
     grid-template-columns: 100%;
-    grid-template-rows: 80px 0.2fr 0.2fr 1fr 100px;
+    grid-template-rows: 80px 0.2fr 0.2fr 1fr;
     grid-template-areas:
       "my-header"
       "parte-Superior"
       "filtros"
-      "manuales"
-      "my-footer";
+      "manuales";
   }
 
   header {
