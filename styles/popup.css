@@ -142,7 +142,7 @@ span a {
   font-family: roboto;
 }
 
-@media (min-width:320px) and (max-width:450px) {
+@media (min-width:320px) and (max-width:500px) {
   .modal {
     padding-top: 20px;
 
