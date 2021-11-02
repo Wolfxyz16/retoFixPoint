@@ -159,7 +159,7 @@ span a {
   }
 
   .input {
-    width: 300px;
+    width: 280px;
     margin-bottom: 15px;
     height: 10px;
 
@@ -167,28 +167,28 @@ span a {
   }
 
   #container {
-    width: 320px;
+    width: 300px;
   }
 
   #btn {
-    width: 300px;
+    width: 280px;
 
   }
 
   #signup,
   #login {
     display: inline;
-    margin-left: 30px;
-    width: 300px;
-    float: none;
+ 
+    width: 150px;
+    float: inline-start;
 
   }
 
   #signup-form,
   #login-form {
-    background: #fff;
+  
     padding: 10px;
-    height: 300px;
-    width: 320px;
+    height: 350px;
+    width: 300px;
   }
 }
