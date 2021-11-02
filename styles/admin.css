@@ -97,3 +97,19 @@ tr {
     background-color: #EEC51F;
     cursor: pointer;
 }
+@media (min-width:1000px) {
+    main{
+        flex-flow: none;
+        flex-direction: column;
+    }
+    .tabla{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+    .navegacion-container{
+        margin-top: 1em;
+    }
+   
+   
+}
