@@ -20,31 +20,30 @@
     <section class="modal-content">
       <span class="close">&times;</span>
       <section>
-        <div id="wrapper">
-          <div id="container">
+        <section id="wrapper">
+          <section id="container">
 
 
-            <div id="login" onclick="loginMostrar()">Iniciar Sesi&oacute;n</div>
-            <div id="signup" onclick="registroMostrar()">Crear cuenta</div>
+            <section id="login" onclick="loginMostrar()">Iniciar Sesi&oacute;n</section>
+            <section id="signup" onclick="registroMostrar()">Crear cuenta</section>
 
 
 
-            <div id="login-form">
+            <form id="login-form">
               <input type="text" placeholder="Email" class="input"><br />
               <input type="password" placeholder="Contrase&nacute;a" class="input"><br />
-              <div id="btn">Iniciar Sesi&oacute;n</div>
-            </div>
+              <input type="submit" value="Iniciar Sesi&oacute;n" id="btnL">
+            </form>
 
-            <div id="signup-form">
-              <input type="text" placeholder="Nombre" class="input"><br />
-              <input type="text" placeholder="Apellido" class="input"><br />
-              <input type="text" placeholder="Email" class="input"><br />
-              <input type="password" placeholder="Contrase&nacute;a" class="input"><br />
-              <div id="btn" onclick="vaciar()">Crear cuenta</div>
-            </div>
-
-          </div>
-        </div>
+            <form id="signup-form" method="post" action="validacionRegistro.php">
+              <input type="text" placeholder="Nombre" id="nombre" name="nombre" class="input"><br />
+              <input type="text" placeholder="Apellido" id="apellido" name="apellido" class="input"><br />
+              <input type="text" placeholder="Email" id="email" name="email" class="input"><br />
+              <input type="password" placeholder="Contrase&nacute;a" id="contrasena" name="contrasena" class="input"><br />
+              <input type="submit" value="Crear cuenta" id="btnR">
+              </form>
+          </section>
+        </section>
       </section>
     </section>
     <script src="/js/popup.js"></script>
