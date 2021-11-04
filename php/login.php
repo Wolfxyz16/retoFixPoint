@@ -2,8 +2,8 @@
     if ( isset($_SESSION['user'] ) ) {
         echo 'hay sesion';
     } else if ( isset($_POST['user']) && isset($_POST['password']) ){
-        $userMail = '';
-        $userPassword = '';
+        $userMail = $_POST['mail'];
+        $userPassword = $_POST['password'];
     }
 
     $query = 'SELECT FROM usuarios password, name WHERE mail=$userMail';
