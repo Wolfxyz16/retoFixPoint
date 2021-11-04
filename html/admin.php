@@ -1,3 +1,4 @@
+<!-- Esta pagina la hizo Yeray -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,30 +28,37 @@
         <section class="menu">
             <h2>MODO ADMIN</h2>
             <ul class="botones-container">
-                <li class="enlace"><button type="button" value="Data" class="botones">Data</input></li>
-                <li class="enlace"><button type="button" value="Herramientas" class="botones">Herramientas</input></li>
-                <li class="enlace"><button type="button" value="Usuarios" class="botones">Usuarios</button></li>
-                <li class="enlace"><button type="button" value="Manuales" class="botones">Manuales</input></li>
-                <li class="enlace"><button type="button" value="Alquileres" class="botones">Alquileres</input></li>
+                <li class="enlace">
+                    <button type="button" value="Herramientas" class="boton visible" id="boton-herramientas">Herramientas</input>
+                </li>
+                <li class="enlace">
+                    <button type="button" value="Usuarios" class="boton hidden" id="boton-usuarios">Usuarios</button>
+                </li>
+                <li class="enlace">
+                    <button type="button" value="Manuales" class="boton hidden" id="boton-manuales">Manuales</input>
+                </li>
+                <li class="enlace">
+                    <button type="button" value="Alquileres" class="boton hidden" id="boton-alquileres">Alquileres</input>
+                </li>
             </ul>
         </section>
 
         <section class="tabla-container">
 
             <table id="tabla-herramientas" class="tabla">
-                <?php include_once('../php/select-herramientas.php');?>
+                <?php include_once('../php/selects-tabla-admin/select-herramientas.php');?>
             </table>
 
             <table id="tabla-usuarios" class="tabla">
-                <?php include_once('../php/select-usuarios.php');?>
+                <?php include_once('../php/selects-tabla-admin/select-usuarios.php');?>
             </table>
 
             <table id="tabla-manuales" class="tabla">
-                <?php include_once('../php/select-manuales.php');?>
+                <?php include_once('../php/selects-tabla-admin/select-manuales.php');?>
             </table>
 
             <table id="tabla-alquileres" class="tabla">
-                <?php include_once('../php/select-alquileres.php');?>
+                <?php include_once('../php/selects-tabla-admin/select-alquileres.php');?>
             </table>
 
             <section class="navegacion-container">

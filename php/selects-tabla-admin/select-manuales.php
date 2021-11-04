@@ -1,5 +1,5 @@
 <?php
-    include_once('conexion.php');
+    include_once('../conexion.php');
 
     $queryManuales = 'SELECT m.* , u.mail FROM manuales m, usuarios u WHERE m.cod_autor = u.cod_user';
 

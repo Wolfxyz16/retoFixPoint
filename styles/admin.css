@@ -17,6 +17,13 @@ body {
     font-family: fuenteFixpoint;
 }
 
+.visible {
+    visibility: visible;
+}
+
+.hidden{
+    visibility: hidden;
+}
 
 /* MAIN */
 main {
