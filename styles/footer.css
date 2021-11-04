@@ -4,13 +4,13 @@
 }
 
 a {
-    font-family: FixpointLigera;
     text-decoration: none;
     color: white;
 }
 
 /* FOOTER */
 .pie {
+    font-family: FixpointLigera;
     display: flex;
     justify-content: center;
     align-items: center;
