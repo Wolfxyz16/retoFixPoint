@@ -54,19 +54,21 @@ function vaciar() {
 };
 
 
-//document.getElementById("btnR").addEventListener("submit", validarFormularioRegistro());
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("btnR").addEventListener('submit', validarFormularioRegistro); 
+});
 
-function validarFormularioRegistro() {
-
+function validarFormularioRegistro(evento) {
+  evento.preventDefault();
   var nombre = document.getElementById("nombre").value;
   if (nombre.length == 0) {
     alert('No ha escrito su nombre. Por favor rellene esta información para continuar.');
-    return false;
+    return;
   }
   var apellido = document.getElementById("apellido").value;
   if (apellido.length == 0) {
     alert('No ha escrito sus apellidos. Por favor rellene esta informaci&oacute;n para continuar.');
-    return false;
+    return;
   }
   var email = document.getElementById("email").value;
   if (email.length != 0) {
@@ -75,16 +77,16 @@ function validarFormularioRegistro() {
 
     } else {
       alert('El correo electronico insertaddo esta escrito de forma incorrecta. Escriba de forma correcta esta infomación para continuar');
-      return false;
+      return ;
     }
   } else {
     alert('No ha escrito su email. Por favor rellene esta información para continuar.');
-    return false;
+    return;
   }
   var contrasena = document.getElementById("contrasena").value;
   if (contrasena.length == 0) {
     alert('No ha escrito su contrase&ntilde;a. Por favor rellene esta informaci&oacute;n para continuar.');
-    return false;
+    return;
   }
-  return true;
+  this.submit();
 }

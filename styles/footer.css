@@ -4,13 +4,13 @@
 }
 
 a {
-    font-family: FixpointLigera;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 /* FOOTER */
 .pie {
+    font-family: FixpointLigera;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@ a {
     position: static;
     bottom: 0;
 
-    background-color: #695E33;
+    background-color: #292929;
     width: 100%;
 }
 
