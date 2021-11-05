@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/admin.css">
     <link rel="stylesheet" href="../styles/header.css">
-    <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
+    <link rel="icon" type="image/png" href="../img/logo_fixpoint_grisoso.png" sizes="16x16 24x24 36x36 48x48">
     <title>MODO ADMIN</title>
 </head>
 <body>
@@ -63,6 +63,7 @@
 
             <section class="navegacion-container">
                 <a href="#" class="anterior navegacion">&laquo; Anterior</a>
+                <a href="#" class="crear navegacion">Crear nuevo registro</a>
                 <a href="#" class="siguiente navegacion">Siguiente &raquo;</a>
             </section>
         </section>
