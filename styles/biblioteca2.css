@@ -1,4 +1,4 @@
-body{
+body {
     padding: 0;
     margin: 0;
     width: 100%;
@@ -12,35 +12,42 @@ body{
     src: url(/fonts/tonus-sans-heavy-italic.otf) format("opentype");
 }
 
-.grid-contenedor {
-    display: grid;
-    grid-template:
-        "contenedor-uno"20% "herramientas" "final"5% / 100%;
+a {
+    text-decoration: none;
+    color: white; 
 }
 
-.contenedor_uno {
+main {
     display: grid;
-    width: 100%;
-    grid-area: contenedor-uno;
     grid-template:
-        "titulo     titulo"40% "buscador   buscador"20% "tipos      ordenar"40%/ 50% 50%;
+        "contenedor-uno" 15%
+        "herramientas"
+        "final" 8%;
+    gap: 1em;
+}
+
+.contenedor-uno {
+    grid-area: contenedor-uno;
+    /* display: grid;
+    grid-template-columns: repeat( auto-fill, 20% ); */
+    justify-content: space-around;
+}
+
+.contenedor-uno-linea {
+    display: flex;
+    justify-content: space-between;
 }
 
 h1 {
-    grid-area: titulo;
     color: black;
     text-shadow: -2px 0px 0px #EEC51F;
-    font-size: 22px;
-    margin-left: 5%;
+    font-size: 1.5em;
 }
 
 .contenedor_buscar {
-    grid-area: buscador;
-    width: 60%;
     border-radius: 0.4em;
-    grid-column: 1 / span 2;
-    margin-left: 20%;
     background-color: #777DF2;
+    height: 2em;
 }
 
 .buscador {
@@ -56,64 +63,39 @@ h1 {
 }
 
 .tipos_herramientas {
-    grid-area: tipos;
     border-radius: 0.5em;
     background-color: #EEC51F;
-    height: 50%;
-    width: 85%;
     font-weight: bolder;
-    margin-top: 8%;
-    margin-left: 5%;
+    height: 2em;
 }
 
 .ordenar_por {
-    grid-area: ordenar;
-    font-size: 13px;
-    width: 100%;
-    text-align: center;
-    margin-top: 8%;
+    font-size: 1.2em;
 }
 
 .A-Z {
     background-color: #EEC51F;
     border-radius: 0.5em;
-    width: 40%;
-    text-align: center;
-    height: 70%;
     font-weight: bolder;
-    margin-left: 2%;
 }
 
 .herramientas {
     display: grid;
-    width: 100%;
-    justify-items: center;
     grid-area: herramientas;
-    grid-template:
-        "imagen"24% "imagen2"22% "imagen3"22% "imagen4"22%;
+    grid-template-columns: repeat(auto-fill, 20%);
+    justify-content: center;
     gap: 1em;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
 .her {
-    margin-top: 5%;
-    grid-area: imagen;
     background-color: #695E33;
-    width: 40%;
-    display: flex;
-    align-items: flex-end;
+    width: 100%;
 }
 
 .contenedor_final_pagina {
-    width: 100%;
     grid-area: final;
     display: grid;
-    grid-template:
-        "contenedor-a"100%;
+    grid-template: "contenedor-a"100%;
     justify-items: center;
 }
 
