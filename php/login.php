@@ -23,6 +23,8 @@
 
     if ( $userPasswordEncryp == $consulta['password'] ) {
         $_SESSION['user'] = $consulta['name'];
+        if ( $userMail == 'admin' ) { $_SESSION['admin'] = true; }
+        else { $_SESSION['admin'] = false; }
         header('LOCATION:../html/admin.html');
     }
 
