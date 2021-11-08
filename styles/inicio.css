@@ -82,7 +82,7 @@ a {
     right: 0;
     left: 0;
     transition: height 0.5s;
-    background-color: #FFEA96;
+    background-color: rgb(255, 234, 150, 0.9);
     text-align: center;
     color: black;
 }
