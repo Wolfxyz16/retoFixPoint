@@ -7,20 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/admin.css">
     <link rel="stylesheet" href="../styles/header.css">
-    <link rel="icon" type="image/png" href="../img/logo_fixpoint_grisoso.png" sizes="16x16 24x24 36x36 48x48">
+    <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
     <title>MODO ADMIN</title>
+    <script  type="module" src="../js/menu.js"></script>
 </head>
+
 <body>
     <header>
         <div class="cabecera">
-            <section class="contenedor-logo"></section>
             <section class="contenedor-logo" id="contenedor-logo-fixpoint">
-                <a href="../html/inicio.html"><img src="../img/logo_fixpoint.png" alt="logo fixpoint"
+                <a href="../html/inicio.html"><img src="../img/logo_fixpoint_grisoso.png" alt="logo fixpoint"
                         id="logo-fixpoint"></a>
             </section>
-            <section class="contenedor-logo" id="contenedor-logo-user">
-                <a href=""><img src="../img/user.png" alt="iniciar sesion" id="logo-user"></a>
-            </section>
+            <div class="menu">
+                <div class="item"><span><img src="/img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+                <div class="item"><span>Biblioteca</span></div>
+                <div class="item"><span>Manuales</span></div>
+                <div class="item"><span>Sobre Nosotros</span></div>
+                <div class="item"><span>Inicio Sesion/Registro</span></div>
+                <div id="label"><span class="hamburger"></span></div>
+              </div>
         </div>
     </header>
 

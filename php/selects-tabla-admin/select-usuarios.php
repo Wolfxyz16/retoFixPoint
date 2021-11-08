@@ -1,5 +1,5 @@
 <?php
-    include_once('../conexion.php');
+    include("../php/conexion.php");
 
     $query = 'SELECT * FROM usuarios';
 
@@ -21,7 +21,7 @@
         echo '<tr>';
         echo '<td>' . $usuario['name'] . '</td>';
         echo '<td>' . $usuario['surname'] . '</td>';
-        echo '<td>' . $usuario['email'] . '</td>';
+        echo '<td>' . $usuario['mail'] . '</td>';
         echo '<tr>';
     }
 ?>
