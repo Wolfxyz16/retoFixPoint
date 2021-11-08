@@ -6,6 +6,7 @@
 a {
     text-decoration: none;
     color: white;
+    animation: bgchange 7s linear infinite;
 }
 
 /* FOOTER */
@@ -64,6 +65,8 @@ a {
 .horario {
     display: flex;
     justify-content: center;
+    animation: bgchange 7s linear infinite;
+    color: white;
 }
 
 .tabla-horario {
@@ -80,6 +83,20 @@ a {
 .tabla-horario tr:nth-child(odd) {
     background-color: #eec51fb3;
 }
+@keyframes bgchange{
+    0%{
+      color:white;
+    }
+    20%{
+       color: rgb(255,234,150);
+    }
+    40%{
+     color: rgb(238,197,31);
+    }
+    80%{
+       color: rgb(255,234,150);
+    }
+  }
 
 @media (min-width:320px) and (max-width:615px) {
     .logos-footer {

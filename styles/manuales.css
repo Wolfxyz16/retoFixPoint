@@ -1,3 +1,8 @@
+
+@font-face {
+  font-family: fuenteFixpoint;
+  src: url(/fonts/tonus-sans-heavy-italic.otf) format("opentype");
+}
 body {
   padding: 0;
   margin: 0;
@@ -7,10 +12,6 @@ body {
   background-color: #292929;
 }
 
-@font-face {
-  font-family: fuenteFixpoint;
-  src: url(/fonts/tonus-sans-heavy-italic.otf) format("opentype");
-}
 
 a {
   text-decoration: none;
@@ -194,11 +195,7 @@ h1 {
 }
 
 @media (min-width: 480px) and (max-width: 1000px) {
-  main {
-
-
-  }
-
+ 
   #manuales {
     grid-template-columns: repeat(2, 1fr);
     width: 60%;
@@ -209,10 +206,7 @@ h1 {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  main {
 
-
-  }
 
   #parteSuperior {
     justify-content: space-between;

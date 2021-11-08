@@ -1,15 +1,15 @@
+import {slider} from './slider.js';
 window.onload= function () {
-
-document.getElementById('label').addEventListener("click", function () {
-    var item =document.getElementsByClassName('item');
-    if(item[0].style.opacity==0){
-        for(var i=0;i<item.length;i++){
-            item[i].style.opacity=1;
-        } 
-    }else if(item[0].style.opacity==1){
-        for(var i=0;i<item.length;i++){
-            item[i].style.opacity=0;
-        }
+    var items = document.getElementsByClassName('item');
+    const sitios_web = ["../html/inicio.html", "../html/biblioteca.html", "../html/manuales.html", "../html/sobre_nosotros.html", "../html/popup.html"];
+    for (let i = 0; i < sitios_web.length; i++) {
+        items[i].addEventListener('click', function () {
+            location.href = sitios_web[i];
+        });
+        
+    };
+    if(window.location.pathname == "/html/inicio.html"){
+        slider();
     }
-});
 };
+

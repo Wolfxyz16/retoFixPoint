@@ -1,4 +1,5 @@
-window.onload = function () {
+
+function slider() {
 
     var slideIndex = 1;
     mostrarSlider();
@@ -21,4 +22,5 @@ window.onload = function () {
         setTimeout(mostrarSlider, 5000);
     }
 
-}
+};
+export {slider};
