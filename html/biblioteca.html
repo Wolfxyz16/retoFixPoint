@@ -6,11 +6,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/biblioteca2.css" type="text/css">
+    <link rel="stylesheet" href="../styles/biblioteca.css" type="text/css">
     <link rel="stylesheet" href="../styles/header.css" type="text/css">
     <link rel="stylesheet" href="../styles/footer.css" type="text/css">
+    <link rel="stylesheet" href="../styles/boton.css">
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
     <title>Biblioteca</title>
+    <script  type="text/javascript" src="../js/menu.js"></script>
 </head>
 
 <body>
@@ -18,12 +20,17 @@
     <header>
         <div class="cabecera">
             <section class="contenedor-logo" id="contenedor-logo-fixpoint">
-                <a href="../html/inicio.html"><img src="../img/logo_fixpoint.png" alt="logo fixpoint"
+                <a href="../html/inicio.html"><img src="../img/logo_fixpoint_grisoso.png" alt="logo fixpoint"
                         id="logo-fixpoint"></a>
             </section>
-            <section class="contenedor-logo" id="contenedor-logo-user">
-                <a href="../html/inicioSesion.html"><img src="../img/user.png" alt="iniciar sesion" id="logo-user"></a>
-            </section>
+            <div class="menu">
+                <div class="item"><span><img src="/img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+                <div class="item"><span>Biblioteca</span></div>
+                <div class="item"><span>Manuales</span></div>
+                <div class="item"><span>Sobre Nosotros</span></div>
+                <div class="item"><span>Inicio Sesion/Registro</span></div>
+                <div id="label"><span class="hamburger"></span></div>
+              </div>
         </div>
     </header>
 
@@ -33,7 +40,7 @@
                 <h1>Biblioteca de herramientas</h1>
                 <div class="contenedor_buscar">
                     <input class="buscador" type="search" name="buscador" placeholder="B&uacute;squeda...">
-                    <input class="buscar_boton" type="submit" value="Buscar">
+                    <button id="buscar_boton" class="boton" type="submit" >Buscar</button>
                 </div>
             </div>
 

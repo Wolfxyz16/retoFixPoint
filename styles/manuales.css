@@ -1,66 +1,97 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: fuentefixpoint;
+  background-color: #292929;
+}
+
 @font-face {
   font-family: fuenteFixpoint;
   src: url(/fonts/tonus-sans-heavy-italic.otf) format("opentype");
 }
 
-body {
-  font-family: fuenteFixpoint;
-  background-color: #ebe1c9;
-  margin: 0 auto;
-  max-width: 100%;
-  min-height: 100vh;
+a {
+  text-decoration: none;
+
 }
 
 main {
   display: grid;
-  grid-template-areas:
-    "parte-Superior"
-    "filtros"
-    "manuales"
+  grid-template:
+      "contenedor-uno" 15%
+      "manuales"
+      "final" 8%;
+  gap: 1em;
 }
 
-#parteSuperior {
-  grid-area: parte-Superior;
-  display: flex;
+.contenedor-uno {
+  grid-area: contenedor-uno;
+  /* display: grid;
+  grid-template-columns: repeat( auto-fill, 20% ); */
   justify-content: space-around;
+}
+
+.contenedor-uno-linea {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1%;
+
+}
+
+h1 {
+  color: white;
+  font-size: 1.5em;
+  animation: bgchange 7s linear infinite;
+}
+
+.contenedor_buscar {
+  border-radius: 0.4em;
+  margin-right: 1%;
+  height: 2em;
 }
 
 .buscador {
-  display: flex;
-  align-items: center;
+  height: 90%;
+  width: 70%;
+  border-radius: 0.4em;
 }
 
-#filtros {
-  grid-area: filtros;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+#buscar_boton {
+  width: 28%;
+  height: 90%;
+  border-radius: 0.4em;
+  margin-right: 0;
 }
 
-#anadirManual {
-  background: linear-gradient(145deg, #FFEA96, #EEC51F);
-  color: black;
-  border-radius: 2em;
+.tipos_herramientas {
+  border-radius: 0.5em;
+  background-color: #EEC51F;
+  font-weight: bolder;
+  height: 2em;
 }
 
-#anadirManual:hover {
-  opacity: 0.6;
-  text-decoration: none;
+.ordenar_por {
+  font-size: 1.2em;
+  color: white;
+  margin-right: 1%;
+  animation: bgchange 7s linear infinite;
 }
 
-#filtro {
-  background: linear-gradient(145deg, #FFEA96, #EEC51F);
-  color: black;
-  border-radius: 1em;
+.A-Z {
+  background-color: #EEC51F;
+  border-radius: 0.5em;
+  font-weight: bolder;
 }
+
 
 #manuales {
-  margin: 3%;
-  grid-area: manuales;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 4%;
+  grid-area: manuales;
+  grid-template-columns: repeat(auto-fill, 20%);
+  justify-content: center;
+  gap: 1em;
 }
 
 .manual {
@@ -106,12 +137,66 @@ main {
   transform: translateY(-2px);
 }
 
+.contenedor_final_pagina {
+  grid-area: final;
+  display: grid;
+  grid-template: "contenedor-a"100%;
+  justify-items: center;
+}
+
+.contenedor-a {
+  grid-area: contenedor-a;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 50%;
+}
+
+.flechaderecha {
+  width: 80%;
+  height: 90%;
+  filter: invert(1);
+}
+
+.flechaizquierda {
+  width: 80%;
+  height: 90%;
+  filter: invert(1);
+}
+
+.numero {
+  text-align: center;
+  background-color: #FFEA96;
+  width: 10%;
+  height: 90%;
+  line-height: 50%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.numero > a > p{
+  color: black;
+}
+
+@keyframes bgchange{
+  0%{
+    color:white;
+  }
+  20%{
+     color: rgb(255,234,150);
+  }
+  40%{
+   color: rgb(238,197,31);
+  }
+  80%{
+     color: rgb(255,234,150);
+  }
+}
+
 @media (min-width: 480px) and (max-width: 1000px) {
   main {
-    grid-template-areas:
-      "parte-Superior"
-      "filtros"
-      "manuales"
+
+
   }
 
   #manuales {
@@ -125,10 +210,8 @@ main {
 
 @media (min-width: 320px) and (max-width: 480px) {
   main {
-    grid-template-areas:
-      "parte-Superior"
-      "filtros"
-      "manuales"
+
+
   }
 
   #parteSuperior {

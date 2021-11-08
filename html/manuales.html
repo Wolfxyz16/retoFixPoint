@@ -9,60 +9,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../styles/manuales.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/boton.css">
     <title>Manuales</title>
     <link rel="stylesheet" href="../styles/header.css">
+    <script  type="text/javascript" src="../js/menu.js"></script>
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
 </head>
 
 <body>
     <header>
         <div class="cabecera">
-            <section class="contenedor-logo"></section>
             <section class="contenedor-logo" id="contenedor-logo-fixpoint">
-                <a href="../html/inicio.html"><img src="../img/logo_fixpoint.png" alt="logo fixpoint"
+                <a href="../html/inicio.html"><img src="../img/logo_fixpoint_grisoso.png" alt="logo fixpoint"
                         id="logo-fixpoint"></a>
             </section>
-            <section class="contenedor-logo" id="contenedor-logo-user">
-                <a href="../html/inicioSesion.html"><img src="../img/user.png" alt="iniciar sesion" id="logo-user"></a>
-            </section>
+            <div class="menu">
+                <div class="item"><span><img src="/img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+                <div class="item"><span>Biblioteca</span></div>
+                <div class="item"><span>Manuales</span></div>
+                <div class="item"><span>Sobre Nosotros</span></div>
+                <div class="item"><span>Inicio Sesion/Registro</span></div>
+                <div id="label"><span class="hamburger"></span></div>
+              </div>
         </div>
     </header>
 
     <main>
-        <section id="parteSuperior">
-            <h1 class="titulo">Manuales</h1>
-            <form action="" method="" class="buscador">
-                <input type="search" placeholder="Search...">
-                <button type="button" value="Search">Search</button>
-            </form>
-        </section>
-        <section id="filtros">
-            <div class="filtroTipo">
-                <label for="herramienta">Tipo de herramienta:</label>
-                <select id="filtro" name="tipoHerramienta">
-                    <option value="">Martillo martilleador</option>
-                    <option value="">Martillo golpeante</option>
-                    <option value="">Martillo hidra&uacute;lico</option>
-                    <option value="">Martillo fulgurante</option>
-                    <option value="">Martillo fugaz</option>
-                    <option value="">Martillo destructor</option>
-                    <option value="">Martillo constructor</option>
-                    <option value="">Martillo ensamblador</option>
-                    <option value="">Martillo destornillante</option>
+        <div class="contenedor-uno">
+            <div class="contenedor-uno-linea">
+                <h1>Manuales</h1>
+                <div class="contenedor_buscar">
+                    <input class="buscador" type="search" name="buscador" placeholder="B&uacute;squeda...">
+                    <button id="buscar_boton" class="boton" type="submit" >Buscar</button>
+                </div>
+            </div>
+
+            <div class="contenedor-uno-linea">
+                <select class="tipos_herramientas">
+                    <option value="" selected disabled>Selecione el tipo de herramientas</option>
+                    <option>Martillo martilleador</option>
+                    <option>Martillo golpeante</option>
+                    <option>Martillo hidra&uacute;lico</option>
+                    <option>Martillo fulgurante</option>
+                    <option>Martillo fugaz</option>
+                    <option>Martillo destructor</option>
+                    <option>Martillo constructor</option>
+                    <option>Martillo ensamblador</option>
+                    <option>Martillo destornillante</option>
                 </select>
+                <div class="ordenar_por">
+                    <label>Ordenar por</label>
+                    <select class="A-Z">
+                        <option value="az">A - Z</option>
+                        <option value="za">Z - A</option>
+                        <option value="disponible">Disponible</option>
+                    </select>
+                </div>
             </div>
-            <div class="btnManual">
-                <button id="anadirManual" onclick="">A&ntilde;adir un manual</button>
-            </div>
-            <div class="filtroAlf">
-                <label for="orden">Ordenar por:</label>
-                <select id="filtro" name="orden">
-                    <option value="A-Z">A-Z</option>
-                    <option value="Z-A">Z-A</option>
-                    <option value="Disponible">Disponible</option>
-                </select>
-            </div>
-        </section>
+        </div>
         <section id="manuales">
             <section class="manual">
                 <img src="../img/bibliotecatest.png">
@@ -135,6 +139,22 @@
                 </section>
             </section>
         </section>
+        <div class="contenedor_final_pagina">
+            <div class="contenedor-a">
+                <a href="" class="flechas"> <img src="../img/flechaizquierda.png" class="flechaizquierda"></a>
+                <div class="numero">
+                    <a href="">
+                        <p>1</p>
+                    </a>
+                </div>
+                <div class="numero">
+                    <a href="">
+                        <p>2</p>
+                    </a>
+                </div>
+                <a href="" class="flechas"> <img src="../img/flechaderecha.png" class="flechaderecha"></a>
+            </div>
+        </div>
     </main>
 
     <footer class="pie">
