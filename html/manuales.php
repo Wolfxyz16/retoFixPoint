@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="../styles/manuales.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/boton.css">
+    <link rel="stylesheet" href="../styles/boton.css">
     <title>Manuales</title>
     <link rel="stylesheet" href="../styles/header.css">
-    <script  type="text/javascript" src="../js/menu.js"></script>
+    <script type="module" src="../js/menu.js"></script>
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
 </head>
 
@@ -19,17 +20,16 @@
     <header>
         <div class="cabecera">
             <section class="contenedor-logo" id="contenedor-logo-fixpoint">
-                <a href="../html/inicio.html"><img src="../img/logo_fixpoint_grisoso.png" alt="logo fixpoint"
-                        id="logo-fixpoint"></a>
+                <a href="../html/inicio.html"><img src="../img/logo_fixpoint_grisoso.png" alt="logo fixpoint" id="logo-fixpoint"></a>
             </section>
             <div class="menu">
-                <div class="item"><span><img src="/img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+                <div class="item"><span><img src="../img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
                 <div class="item"><span>Biblioteca</span></div>
                 <div class="item"><span>Manuales</span></div>
                 <div class="item"><span>Sobre Nosotros</span></div>
                 <div class="item"><span>Inicio Sesion/Registro</span></div>
                 <div id="label"><span class="hamburger"></span></div>
-              </div>
+            </div>
         </div>
     </header>
 
@@ -39,7 +39,7 @@
                 <h1>Manuales</h1>
                 <div class="contenedor_buscar">
                     <input class="buscador" type="search" name="buscador" placeholder="B&uacute;squeda...">
-                    <button id="buscar_boton" class="boton" type="submit" >Buscar</button>
+                    <button id="buscar_boton" class="boton" type="submit">Buscar</button>
                 </div>
             </div>
 
@@ -67,92 +67,71 @@
             </div>
         </div>
         <section id="manuales">
-            <section class="manual">
-                <img src="../img/bibliotecatest.png">
-                <section class="manual-texto">
-                    <p>Titulo manual</p>
-                    <button id="descarga">Descargar</button>
-                </section>
-            </section>
-            <section class="manual">
-                <img src="../img/logo_fixpoint.png">
-                <section class="manual-texto">
-                    <p>Titulo manual</p>
-                    <button id="descarga">Descargar</button>
-                </section>
-            </section>
-            <section class="manual">
-                <img src="../img/fp.png">
-                <section class="manual-texto">
-                    <p>Titulo manual</p>
-                    <button id="descarga">Descargar</button>
-                </section>
-            </section>
-            <section class="manual">
-                <img src="../img/logo_fixpoint.jpg">
-                <section class="manual-texto">
-                    <p>Titulo manual</p>
-                    <button id="descarga">Descargar</button>
-                </section>
-            </section>
-            <section class="manual">
-                <img src="../img/logo_picofrentes.png">
-                <section class="manual-texto">
-                    <p>Titulo manual</p>
-                    <button id="descarga">Descargar</button>
-                </section>
-            </section>
-            <section class="manual">
-                <img src="../img/pico_frentes_logo.png">
-                <section class="manual-texto">
-                    <p>Titulo manual</p>
-                    <button id="descarga">Descargar</button>
-                </section>
-            </section>
-            <section class="manual">
-                <img src="../img/user.png">
-                <section class="manual-texto">
-                    <p>Titulo manual</p>
-                    <button id="descarga">Descargar</button>
-                </section>
-            </section>
-            <section class="manual">
-                <img src="../img/usuario.png">
-                <section class="manual-texto">
-                    <p>Titulo manual</p>
-                    <button id="descarga">Descargar</button>
-                </section>
-            </section>
-            <section class="manual">
-                <img src="../img/logo_picofrentes.png">
-                <section class="manual-texto">
-                    <p>Titulo manual</p>
-                    <button id="descarga">Descargar</button>
-                </section>
-            </section>
-            <section class="manual">
-                <img src="../img/logo_fp.png">
-                <section class="manual-texto">
-                    <p>Titulo manual</p>
-                    <button id="descarga">Descargar</button>
-                </section>
-            </section>
+            <?php
+            # Cuántos productos mostrar por página
+            $productosPorPagina = 16;
+            // Por defecto es la página 1; pero si está presente en la URL, tomamos esa
+            $pagina = 1;
+            if (isset($_GET["pagina"])) {
+                $pagina = $_GET["pagina"];
+            }
+            # Necesitamos el conteo para saber cuántas páginas vamos a mostrar
+            try {
+                include("../php/conexion.php");
+                $consultaConteo = $conexion->query("SELECT count(*) AS conteo FROM manuales");
+                $conteo = $consultaConteo->fetchObject()->conteo;
+                $paginas = ceil($conteo / $productosPorPagina);
+            } catch (PDOException $e) {
+                echo '<script>console.log(' . $e->getMessage() . ')</script>';
+            }
+
+            try {
+                include("../php/conexion.php");
+                $consultaManual = $conexion->prepare("SELECT * FROM manuales LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                $consultaManual->execute();
+                $resultado = $consultaManual->fetchAll();
+                foreach ($resultado as $columna) {
+                    echo '<section class="manual">
+                            <img src="' . $columna['portada'] . '">
+                            <section class="manual-texto">
+                                <p>' . $columna['titulo'] . '</p>
+                                <button class="boton" id="descarga">Descargar</button>
+                            </section>
+                        </section>';
+                }
+            } catch (PDOException $e) {
+                echo '<script>console.log(' . $e->getMessage() . ')</script>';
+            }
+
+            ?>
         </section>
         <div class="contenedor_final_pagina">
-            <div class="contenedor-a">
-                <a href="" class="flechas"> <img src="../img/flechaizquierda.png" class="flechaizquierda"></a>
-                <div class="numero">
-                    <a href="">
-                        <p>1</p>
-                    </a>
-                </div>
-                <div class="numero">
-                    <a href="">
-                        <p>2</p>
-                    </a>
-                </div>
-                <a href="" class="flechas"> <img src="../img/flechaderecha.png" class="flechaderecha"></a>
-            </div>
+            <ul class="contenedor-a">
+                <!-- Si la página actual es mayor a uno, mostramos el botón para ir una página atrás -->
+                <?php if ($pagina > 1) { ?>
+                    <li>
+                        <a href="./manuales.php?pagina=<?php echo $pagina - 1 ?>">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                <?php } ?>
+
+                <!-- Mostramos enlaces para ir a todas las páginas. Es un simple ciclo for-->
+                <?php for ($x = 1; $x <= $paginas; $x++) { ?>
+                    <li class="numero">
+                        <a href="./manuales.php?pagina=<?php echo $x ?>">
+                            <?php echo $x ?></a>
+                    </li>
+                <?php } ?>
+                <!-- Si la página actual es menor al total de páginas, mostramos un botón para ir una página adelante -->
+                <?php if ($pagina < $paginas) { ?>
+                    <li>
+                        <a href="./manuales.php?pagina=<?php echo $pagina + 1 ?>">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                <?php } ?>
+            </ul>
         </div>
     </main>
 
@@ -169,8 +148,7 @@
             <a href="tel:0034659659659" target="_blank">
                 <li>659 659 659</li>
             </a>
-            <a href="https://www.google.es/maps/place/Centro+Integrado+De+Formaci%C3%B3n+Profesional+Pic%C3%B3+Frentes/@41.7665028,-2.4843674,17z/data=!3m1!4b1!4m5!3m4!1s0xd44d2e709876957:0x469c9525026cc4ad!8m2!3d41.7664988!4d-2.4821734"
-                target="_blank">
+            <a href="https://www.google.es/maps/place/Centro+Integrado+De+Formaci%C3%B3n+Profesional+Pic%C3%B3+Frentes/@41.7665028,-2.4843674,17z/data=!3m1!4b1!4m5!3m4!1s0xd44d2e709876957:0x469c9525026cc4ad!8m2!3d41.7664988!4d-2.4821734" target="_blank">
                 <li>Calle Gervasio Manrique de Lara, 42004 Soria</li>
             </a>
         </ul>

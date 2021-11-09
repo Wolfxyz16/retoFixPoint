@@ -21,7 +21,7 @@ a {
 main {
   display: grid;
   grid-template:
-      "contenedor-uno" 15%
+      "contenedor-uno" 10%
       "manuales"
       "final" 8%;
   gap: 1em;
@@ -86,11 +86,10 @@ h1 {
   font-weight: bolder;
 }
 
-
 #manuales {
   display: grid;
   grid-area: manuales;
-  grid-template-columns: repeat(auto-fill, 20%);
+  grid-template-columns: repeat(auto-fill, 22%);
   justify-content: center;
   gap: 1em;
 }
@@ -98,6 +97,7 @@ h1 {
 .manual {
   width: 100%;
   height: 100%;
+  text-align: center;
   border-radius: 1em;
   border: solid black medium;
   display: flex;
@@ -115,34 +115,27 @@ h1 {
 .manual-texto {
   background-color: transparent;
   display: flex;
+  width: 15%;
   flex-direction: column;
-  justify-content: center;
   position: absolute;
+  justify-content: center;
   align-self: flex-end;
-  justify-items: center;
   margin-bottom: 2%;
   text-shadow: 2px 0 0 #FFEA96, -2px 0 0 #FFEA96, 0 2px 0 #FFEA96, 0 -2px 0 #FFEA96, 1px 1px #FFEA96, -1px -1px 0 #FFEA96, 1px -1px 0 #FFEA96, -1px 1px 0 #fff;
 }
 
-#descarga {
-  background: linear-gradient(145deg, #FFEA96, #EEC51F);
-  border: solid;
-  color: black;
-  border-radius: 2em;
+#descarga{
+  margin-right: 0;
+  margin-bottom: 0;
 }
 
-#descarga:hover {
-  cursor:pointer;
-  transition: 0.3s ease all;
-  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
-}
 
 .contenedor_final_pagina {
   grid-area: final;
   display: grid;
   grid-template: "contenedor-a"100%;
   justify-items: center;
+  margin-bottom: 5%;
 }
 
 .contenedor-a {
@@ -154,29 +147,14 @@ h1 {
   height: 50%;
 }
 
-.flechaderecha {
-  width: 80%;
-  height: 90%;
-  filter: invert(1);
-}
-
-.flechaizquierda {
-  width: 80%;
-  height: 90%;
-  filter: invert(1);
-}
-
 .numero {
   text-align: center;
-  background-color: #FFEA96;
-  width: 10%;
+  width: 4%;
   height: 90%;
-  line-height: 50%;
-  margin-left: 2%;
-  margin-right: 2%;
 }
-.numero > a > p{
-  color: black;
+
+ul{
+  list-style: none;
 }
 
 @keyframes bgchange{
