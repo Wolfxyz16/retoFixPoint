@@ -21,7 +21,7 @@
                         id="logo-fixpoint"></a>
             </section>
             <div class="menu">
-                <div class="item"><span><img src="/img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+                <div class="item"><span><img src="../img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
                 <div class="item"><span>Biblioteca</span></div>
                 <div class="item"><span>Manuales</span></div>
                 <div class="item"><span>Sobre Nosotros</span></div>

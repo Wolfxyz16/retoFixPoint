@@ -1,7 +1,6 @@
 import {slider} from './slider.js';
 import {administrador} from './admin.js';
 window.onload= function () {
-    console.log(window.location.pathname);
 
     var items = document.getElementsByClassName('item');
     const sitios_web = ["../html/inicio.html", "../html/biblioteca.html", "../html/manuales.html", "../html/sobre_nosotros.html", "../html/popup.html"];
