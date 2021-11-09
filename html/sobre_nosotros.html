@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../styles/boton.css">
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
     <title>Sobre Nosotros</title>
-    <script  type="module" src="../js/menu.js"></script>
+    <script type="module" src="../js/menu.js"></script>
 </head>
 
 <body>
@@ -23,7 +23,8 @@
                         id="logo-fixpoint"></a>
             </section>
             <div class="menu">
-                <div class="item"><span><img src="../img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+                <div class="item"><span><img src="../img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span>
+                </div>
                 <div class="item"><span>Biblioteca</span></div>
                 <div class="item"><span>Manuales</span></div>
                 <div class="item"><span>Sobre Nosotros</span></div>
@@ -33,10 +34,10 @@
         </div>
     </header>
     <main>
-        <h1 id="pregunta_titulo">¿Que es una biblioteca de herramientas?</h1>
 
-        <div id="que_es">
-            <div>
+        <div id="que-es">
+            <h1 id="pregunta-titulo">¿Que es una biblioteca de herramientas?</h1>
+            <div id="que-es-contenido">
                 <p>
                     FixPoint es la primera Biblioteca de préstamo de España. Las Bibliotecas de herramientas funcionan
                     como cualquier otra Biblioteca. Te conviertes en miembro y luego puedes tomar prestadas
@@ -59,60 +60,53 @@
             <img src="/img/acercade.jpg" alt="biblioteca">
         </div>
 
-        <div id="vision_objetivo">
-            <div class="img_con_texto">
-                <img src="../img/acercade.jpg" alt="vision">
-                <div class="mensaje">
-                    <h1 class="titulo">Visión</h1>
-                    <p class="texto">
-                        FixPoint es un proyecto que lucha por una economía circular. Esto significa que creemos en un
-                        sistema cerrado de materias primas, en el que los productores seguirán siendo los propietarios
-                        de las materias primas contenidas en los productos en el futuro. Para lograr esto, embargo,
-                        debemos facilitar que 'acceder a' sea más fácil, más barato y más divertido que 'poseer'.
-                    </p>
-                </div>
-            </div>
-            <div class="img_con_texto">
-                <img src="../img/acercade.jpg" alt="objetivo">
-                <div class="mensaje">
-                    <h1 class="titulo">Objetivo</h1>
-                    <p class="texto">
-                        La Biblioteca de herramientas FixPoint, quiere provocar un cambio en el de sobreproducción e
-                        ineficiencia resultante, la comunicación la desigualdad (social). La misión de FixPoint es
-                        transformar la mentalidad social, en la que la propiedad se elige sobre el acceso. Queremos
-                        servir de inspiración para abrir una Biblioteca FixPoint en sus vecindarios acceso para todo el
-                        mundo.
-                    </p>
-                </div>
+        <div class="img_con_texto">
+            <img src="../img/acercade.jpg" alt="vision">
+            <div class="mensaje">
+                <h1 class="titulo">Visión</h1>
+                <p class="texto">
+                    FixPoint es un proyecto que lucha por una economía circular. Esto significa que creemos en un
+                    sistema cerrado de materias primas, en el que los productores seguirán siendo los propietarios
+                    de las materias primas contenidas en los productos en el futuro. Para lograr esto, embargo,
+                    debemos facilitar que 'acceder a' sea más fácil, más barato y más divertido que 'poseer'.
+                </p>
             </div>
         </div>
 
-        <div id="form_map">
-            <div id="formulario_entero">
-                <h2>Contacto</h2>
-                <form>
-                    <div id="formulario">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre">
-                        <label for="apellidos">Apellidos</label>
-                        <input type="text" name="apellido">
-                        <label for="email">Email</label>
-                        <input type="email" name="email">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea name="mensaje" rows="5" cols="22"></textarea>
-                    </div>
-                    <div id="botones_form">
-                        <button type="submit" id="Enviar" class="boton">Enviar</button>
-                        <button type="reset" id="Borrar" class="boton">Borrar</button>
-                    </div>
-                </form>
+        <div class="img_con_texto">
+            <img src="../img/acercade.jpg" alt="objetivo">
+            <div class="mensaje">
+                <h1 class="titulo">Objetivo</h1>
+                <p class="texto">
+                    La Biblioteca de herramientas FixPoint, quiere provocar un cambio en el de sobreproducción e
+                    ineficiencia resultante, la comunicación la desigualdad (social). La misión de FixPoint es
+                    transformar la mentalidad social, en la que la propiedad se elige sobre el acceso. Queremos
+                    servir de inspiración para abrir una Biblioteca FixPoint en sus vecindarios acceso para todo el
+                    mundo.
+                </p>
             </div>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.8682280791436!2d-2.484362084562394!3d41.766498779231206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd44d2e709876957%3A0x469c9525026cc4ad!2sCentro%20Integrado%20De%20Formaci%C3%B3n%20Profesional%20Pic%C3%B3%20Frentes!5e0!3m2!1ses!2ses!4v1634292876084!5m2!1ses!2ses"
-                allowfullscreen loading="lazy">
-            </iframe>
-
         </div>
+
+        <form id="formulario-entero">
+            <fieldset id="formulario-datos">
+                <legend>Contacto</legend>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellido">
+                <label for="email">Email</label>
+                <input type="email" name="email">
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" rows="5" cols="22"></textarea>
+                <button type="submit" id="Enviar" class="boton">Enviar</button>
+            </fieldset>
+        </form>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.8682280791436!2d-2.484362084562394!3d41.766498779231206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd44d2e709876957%3A0x469c9525026cc4ad!2sCentro%20Integrado%20De%20Formaci%C3%B3n%20Profesional%20Pic%C3%B3%20Frentes!5e0!3m2!1ses!2ses!4v1634292876084!5m2!1ses!2ses"
+            allowfullscreen loading="lazy">
+        </iframe>
+
 
     </main>
 
