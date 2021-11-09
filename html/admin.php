@@ -31,20 +31,20 @@
     </header>
 
     <main>
-        <section class="menu">
+        <section class="menu_admin">
             <h2>MODO ADMIN</h2>
             <ul class="botones-container">
                 <li class="enlace">
-                    <button type="button" value="Herramientas" class="boton visible" id="boton-herramientas">Herramientas</input>
+                    <button type="button" value="Herramientas" class="boton" id="boton-herramientas">Herramientas</input>
                 </li>
                 <li class="enlace">
-                    <button type="button" value="Usuarios" class="boton hidden" id="boton-usuarios">Usuarios</button>
+                    <button type="button" value="Usuarios" class="boton" id="boton-usuarios">Usuarios</button>
                 </li>
                 <li class="enlace">
-                    <button type="button" value="Manuales" class="boton hidden" id="boton-manuales">Manuales</input>
+                    <button type="button" value="Manuales" class="boton" id="boton-manuales">Manuales</input>
                 </li>
                 <li class="enlace">
-                    <button type="button" value="Alquileres" class="boton hidden" id="boton-alquileres">Alquileres</input>
+                    <button type="button" value="Alquileres" class="boton" id="boton-alquileres">Alquileres</input>
                 </li>
             </ul>
         </section>
