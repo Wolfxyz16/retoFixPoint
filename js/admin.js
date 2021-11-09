@@ -2,9 +2,12 @@ function administrador() {
 
     //herramientas-usuarios-manuales-alquileres
     var botones = document.getElementsByClassName("boton");
+    var tablas = document.getElementsByClassName("tabla");
     for (let index = 0; index < botones.length; index++) {
         botones[index].addEventListener('click', mostrarTabla);
     }
+    deshabilitarBotones(botones, "boton-herramientas");
+    deshabilitarTablas(tablas, botones, "boton-herramientas");
     function mostrarTabla(event) {
         var id_boton = event.target.id;
         var botones = document.getElementsByClassName("boton");
@@ -26,14 +29,11 @@ function administrador() {
                 deshabilitarBotones(botones, id_boton);
                 deshabilitarTablas(tablas, botones, id_boton);
                 break;
-        
-            default:
-                break;
         }
     }
     function deshabilitarBotones(botones, id_boton) {
         for (let index = 0; index < botones.length; index++) {
-            botones[index].disabled= false; 
+            botones[index].disabled= "disabled"; 
         }
         document.getElementById(id_boton).disabled = true;
     }
@@ -43,7 +43,7 @@ function administrador() {
         }
         for (let index = 0; index < botones.length; index++) {
             if (botones[index].id==id_boton) {
-                tablas[index].style.display= "inline";
+                tablas[index].style.display= "table";
             }
             
         }

@@ -50,6 +50,8 @@ main {
     width: 75em;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
 }
 
 .botones-container {
@@ -57,7 +59,8 @@ main {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    width: 90%;
+    align-content: center;
+    width: 100%;
     text-align: center;
     gap: 1em;
 }
