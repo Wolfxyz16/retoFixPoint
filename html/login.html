@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/login.css">
+    <title>Inicio de sesi&oacute;n</title>
+</head>
+
+<body>
+    <main class="main-container">
+
+        <section class="imagen-container">
+            <img src="../img/logo2-fondo.png" alt="banco de trabajo" srcset="" id="imagen-login">
+        </section>
+
+        <section class="formulario-container">
+            <section class="botones">
+                <section id="iniciar-boton" onclick="loginMostrar()">Iniciar Sesi&oacute;n</section>
+                <section id="registrar-boton" onclick="registroMostrar()">Crear cuenta</section>
+            </section>
+            <form id="inicio-formulario" method="post" action="../php/login.php">
+                <input type="text" placeholder="Email" name="mail" class="input"><br />
+                <input type="password" placeholder="Contrase&nacute;a" name="password" class="input"><br />
+                <input type="submit" value="Iniciar Sesi&oacute;n" id="btnL">
+            </form>
+
+            <form id="registro-formulario" class="hidden" method="post" action="../php/validacionRegistro.php">
+                <input type="text" placeholder="Nombre" id="nombre" name="nombre" class="input"><br />
+                <input type="text" placeholder="Apellido" id="apellido" name="apellido" class="input"><br />
+                <input type="text" placeholder="Email" id="email" name="email" class="input"><br />
+                <input type="password" placeholder="Contrase&nacute;a" id="contrasena" name="contrasena"
+                    class="input"><br />
+                <input type="submit" value="Crear cuenta" id="btnR">
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
