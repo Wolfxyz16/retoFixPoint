@@ -1,3 +1,7 @@
+@font-face {
+  font-family: fuenteFixpoint;
+  src: url(/fonts/tonus-sans-heavy-italic.otf) format("opentype");
+}
 .boton{
     color: white; 
     outline: none;
@@ -20,8 +24,8 @@
     transition: all .2s;
   }
   
-  .boton:before,
-  .boton:after{
+  .boton:before:enabled,
+  .boton:after:enabled{
     content: '';
     position: absolute;
     left: 0;
@@ -38,16 +42,23 @@
     transform: translate3D(-50%,0,0) rotate(-50deg);
   }
   
-  .boton:before{
+  .boton:before:enabled{
     opacity: .4;
   }
   
-  .boton:hover:before,
-  .boton:hover:after{
+  .boton:hover:before:enabled,
+  .boton:hover:after:enabled{
     transform: rotate(0deg);
     transition: all .25s;
   }
   
-  .boton:hover:after{
+  .boton:hover:after:enabled{
     transition-delay: .25s;
+  }
+
+  .boton:disabled{
+    color:rgba(255, 255, 255, 0.2);
+    transition: none;
+    transform: none;
+    cursor: not-allowed;
   }

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/admin.css">
     <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/boton.css">
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
     <title>MODO ADMIN</title>
     <script  type="module" src="../js/menu.js"></script>
@@ -20,7 +21,7 @@
                         id="logo-fixpoint"></a>
             </section>
             <div class="menu">
-                <div class="item"><span><img src="/img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+                <div class="item"><span><img src="../img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
                 <div class="item"><span>Biblioteca</span></div>
                 <div class="item"><span>Manuales</span></div>
                 <div class="item"><span>Sobre Nosotros</span></div>
@@ -31,20 +32,20 @@
     </header>
 
     <main>
-        <section class="menu">
+        <section class="menu_admin">
             <h2>MODO ADMIN</h2>
             <ul class="botones-container">
                 <li class="enlace">
-                    <button type="button" value="Herramientas" class="boton visible" id="boton-herramientas">Herramientas</input>
+                    <button type="button" value="Herramientas" class="boton" id="boton-herramientas">Herramientas</input>
                 </li>
                 <li class="enlace">
-                    <button type="button" value="Usuarios" class="boton hidden" id="boton-usuarios">Usuarios</button>
+                    <button type="button" value="Usuarios" class="boton" id="boton-usuarios">Usuarios</button>
                 </li>
                 <li class="enlace">
-                    <button type="button" value="Manuales" class="boton hidden" id="boton-manuales">Manuales</input>
+                    <button type="button" value="Manuales" class="boton" id="boton-manuales">Manuales</input>
                 </li>
                 <li class="enlace">
-                    <button type="button" value="Alquileres" class="boton hidden" id="boton-alquileres">Alquileres</input>
+                    <button type="button" value="Alquileres" class="boton" id="boton-alquileres">Alquileres</input>
                 </li>
             </ul>
         </section>
