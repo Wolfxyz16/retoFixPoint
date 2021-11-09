@@ -65,11 +65,6 @@ main {
     transition: background-color .2s ease;
 }
 
-.botones:hover {
-    background-color: #FFEA96;
-    cursor: pointer;
-}
-
 tr {
     text-align: center;
 }

@@ -33,7 +33,7 @@ function administrador() {
     }
     function deshabilitarBotones(botones, id_boton) {
         for (let index = 0; index < botones.length; index++) {
-            botones[index].disabled= "disabled"; 
+            botones[index].disabled= false; 
         }
         document.getElementById(id_boton).disabled = true;
     }
