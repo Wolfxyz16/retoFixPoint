@@ -34,7 +34,13 @@
                 <div class="item"><span>Biblioteca</span></div>
                 <div class="item"><span>Manuales</span></div>
                 <div class="item"><span>Sobre Nosotros</span></div>
-                <div class="item"><span>Inicio Sesion/Registro</span></div>
+                <?php
+                    if ( isset( $_SESSION['user'] ) ) {
+                        print '<div class="item"><span>' . $_SESSION['user'] . '</span></div>';
+                    } else {
+                        print '<div class="item"><span>Inicio Sesion/Registro</span></div>';
+                    }
+                ?>
                 <div id="label"><span class="hamburger"></span></div>
               </div>
         </div>
