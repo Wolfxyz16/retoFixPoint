@@ -1,5 +1,7 @@
 import {slider} from './slider.js';
+import {administrador} from './admin.js';
 window.onload= function () {
+
     var items = document.getElementsByClassName('item');
     const sitios_web = ["../html/inicio.html", "../html/biblioteca.html", "../html/manuales.html", "../html/sobre_nosotros.html", "../html/popup.html"];
     for (let i = 0; i < sitios_web.length; i++) {
@@ -8,8 +10,12 @@ window.onload= function () {
         });
         
     };
-    if(window.location.pathname == "/html/inicio.html"){
+    if(window.location.pathname.indexOf("/html/inicio.html") >-1){
         slider();
+    }
+    if (window.location.pathname.indexOf("/html/admin.php") >-1 ){
+
+        administrador();
     }
 };
 

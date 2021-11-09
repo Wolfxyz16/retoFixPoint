@@ -1,15 +1,13 @@
 <?php
         include("../php/conexion.php");
 
-    $queryManuales = 'SELECT m.* , u.mail FROM manuales m, usuarios u WHERE m.cod_autor = u.cod_user';
 
     try{
+        $queryManuales = "SELECT m.* , usuarios.mail FROM manuales m, usuarios WHERE m.cod_autor = usuarios.cod_user";
         $consulta = $conexion->prepare($queryManuales);
         $consulta -> execute();
         $manuales = $consulta -> fetchAll();
-    } catch(PDOException $e) {
-        echo '<script>console.log("' . $e->getMessage() .'");</script>';
-    }
+
 
     echo '<tr>';
         echo '<th>Titulo</th>';
@@ -28,4 +26,7 @@
         echo '<td>' . $manual['portada'] . '</td>';
         echo '<tr>';
     }
+} catch(PDOException $e) {
+    echo '<script>console.log("' . $e->getMessage() .'");</script>';
+}
 ?>
