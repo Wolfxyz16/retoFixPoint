@@ -1,4 +1,7 @@
 <!-- Esta pagina la hizo Yeray -->
+<?php
+    
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,9 +15,8 @@
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
     <script type="module" src="../js/menu.js"></script>
 
-
     <title>Fix Point-P&aacute;gina principal</title>
- 
+
 </head>
 
 <body>
@@ -25,14 +27,22 @@
                         id="logo-fixpoint"></a>
             </section>
             <div class="menu">
-                <div class="item"><span><img src="../img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+                <div class="item"><span><img src="/img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
                 <div class="item"><span>Biblioteca</span></div>
                 <div class="item"><span>Manuales</span></div>
                 <div class="item"><span>Sobre Nosotros</span></div>
-                <div class="item"><span>Inicio Sesion/Registro</span></div>
+                <?php
+                    if( isset( $_SESSION ) ) {
+                        print '<div class="item"><span>' . $_SESSION['user'] . '</span></div>';
+                        print '<div class="item"><span>Cerrar sesion</span></div>';
+                    } else {
+                        print '<div class="item"><span>Inicio Sesion/Registro</span></div>';
+                    }
+                ?>
                 <div id="label"><span class="hamburger"></span></div>
               </div>
         </div>
+    </header>
 
         <div class="slider">
             <div class="imagen-slider">

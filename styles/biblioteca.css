@@ -28,8 +28,6 @@ main {
 
 .contenedor-uno {
     grid-area: contenedor-uno;
-    /* display: grid;
-    grid-template-columns: repeat( auto-fill, 20% ); */
     justify-content: space-around;
 }
 
@@ -88,7 +86,7 @@ h1 {
 .herramientas {
     display: grid;
     grid-area: herramientas;
-    grid-template-columns: repeat(auto-fill, 20%);
+    grid-template-columns: repeat(auto-fit, 25em);
     justify-content: center;
     gap: 1em;
 }

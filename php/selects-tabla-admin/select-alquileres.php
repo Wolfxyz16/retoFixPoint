@@ -1,16 +1,13 @@
 <?php
-    include_once('../conexion.php');
+        include("../php/conexion.php");
 
-    $query = 'SELECT a.*, u.m , h.nombre FROM alquileres a, usuarios u, herramientas h WHERE a.cod_user = u.cod_user AND a.cod_herramienta = h.cod_herrramienta';
+    $query = 'SELECT a.*, u.mail , h.nombre FROM alquileres a, usuarios u, herramientas h WHERE a.cod_user = u.cod_user AND a.cod_herramienta = h.cod_herramienta';
 
     try{
         $consulta = $conexion->prepare($query);
         $consulta -> execute();
         $alquileres = $consulta -> fetchAll();
-    } catch(PDOException $e) {
-        echo '<script>console.log("' . $e->getMessage() .'");</script>';
-    }
-    //HACER LAS CONSULTAS ANIDADAS EN USUARIOS Y HERRAMIENTAS
+         //HACER LAS CONSULTAS ANIDADAS EN USUARIOS Y HERRAMIENTAS
     echo '<tr>';
     echo '<td>email</td>';
     echo '<td>cod_herramienta</td>';
@@ -28,4 +25,8 @@
         echo '<td>' . $alquiler['fecha_alquiler_fin'] . '</td>';
         echo '<tr>';
     }
+    } catch(PDOException $e) {
+        echo '<script>console.log("' . $e->getMessage() .'");</script>';
+    }
+   
 ?>
