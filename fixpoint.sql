@@ -21,7 +21,8 @@ SET time_zone = "+00:00";
 -- Base de datos: `fixpoint`
 --
 
--- --------------------------------------------------------
+CREATE DATABASE fixpoint;
+USE fixpoint;
 
 --
 -- Estructura de tabla para la tabla `alquileres`
