@@ -62,30 +62,38 @@ class validacion {
 }
 
 //boton logearse
-document.getElementById('btnL').onclick = function () {
+document.getElementById("iniciar-submit").onclick = function () {
     var loginValidacion = new validacion(
-        document.getElementById('login-email'),
-        documen.getElementById('login-password')
+        document.getElementById("iniciar-mail"),
+        documen.getElementById("iniciar-contrasena")
     );
 
     if (loginValidacion.validarInicio()) {
         console.log('login existoso')
     } else {
-        console.log('login fallido');
+        loginValidacion.mail.pintarError;
+        loginValidacion.contrasena.pintarError;
     }
 }
 
-document.getElementById('btnR').onclick = function () {
+document.getElementById("registrar-submit").onclick = function () {
     var signupValidacion = new validacion(
-        document.getElementById('signup-email'),
-        documen.getElementById('signup-password'),
-        dcoument.getElementById('signup-name'),
-        dcoument.getElementById('signup-surname')
+        document.getElementById("registrar-nombre"),
+        documen.getElementById("registrar-apellido"),
+        dcoument.getElementById("registrar-mail"),
+        dcoument.getElementById("registrar-contrasena")
     );
 
     if (signupValidacion.validarRegistro()) {
         console.log('signup existoso')
     } else {
-        console.log('signup fallido');
+        loginValidacion.nombre.pintarError;
+        loginValidacion.apellido.pintarError;
+        loginValidacion.mail.pintarError;
+        loginValidacion.contrasena.pintarError;
     }
+}
+
+function pintarError() {
+    this.style.border = "solid red medium";
 }
