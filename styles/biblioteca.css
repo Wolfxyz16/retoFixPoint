@@ -20,7 +20,7 @@ a {
 main {
     display: grid;
     grid-template:
-        "contenedor-uno" 15%
+        "contenedor-uno" 7%
         "herramientas"
         "final" 8%;
     gap: 1em;
@@ -86,7 +86,7 @@ h1 {
 .herramientas {
     display: grid;
     grid-area: herramientas;
-    grid-template-columns: repeat(auto-fit, 25em);
+    grid-template-columns: repeat(auto-fit, 30em);
     justify-content: center;
     gap: 1em;
 }
@@ -95,6 +95,39 @@ h1 {
     background-color: #FFEA96;
     width: 100%;
     color: black;
+    display: grid;
+    grid-template-areas: "img info"
+    "alquiler alquiler";
+    align-content: space-between;
+
+}
+
+.img {
+    grid-area: img;
+    width: 50%;
+  }
+
+  .img > img{
+      width: 150%;
+      height: 100%;
+  }
+
+.alquiler{
+    grid-area: alquiler;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info {
+    grid-area: info;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 2em;
+    text-align: center;
+    margin-right: 15%;
 }
 
 .contenedor_final_pagina {
@@ -110,32 +143,18 @@ h1 {
     justify-content: center;
     align-content: center;
     width: 100%;
-}
-
-.flechaderecha {
-    width: 80%;
-    height: 90%;
-    filter: invert(1);
-}
-
-.flechaizquierda {
-    width: 80%;
-    height: 90%;
-    filter: invert(1);
-}
-
-.numero {
+    height: 50%;
+  }
+  
+  .numero {
     text-align: center;
-    background-color: #FFEA96;
-    width: 10%;
+    width: 4%;
     height: 90%;
-    line-height: 50%;
-    margin-left: 2%;
-    margin-right: 2%;
-}
-.numero > a > p{
-    color: black;
-}
+  }
+  
+  ul{
+    list-style: none;
+  }
 @keyframes bgchange{
     0%{
       color:white;
