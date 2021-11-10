@@ -16,23 +16,22 @@
 </head>
 
 <body>
-    <header>
-        <div class="cabecera">
-            <section class="contenedor-logo" id="contenedor-logo-fixpoint">
-                <a href="../html/inicio.html"><img src="../img/logo_fixpoint_grisoso.png" alt="logo fixpoint"
-                        id="logo-fixpoint"></a>
-            </section>
-            <div class="menu">
-                <div class="item"><span><img src="../img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span>
-                </div>
-                <div class="item"><span>Biblioteca</span></div>
-                <div class="item"><span>Manuales</span></div>
-                <div class="item"><span>Sobre Nosotros</span></div>
-                <div class="item"><span>Inicio Sesion/Registro</span></div>
-                <div id="label"><span class="hamburger"></span></div>
-            </div>
+    <header class="cabecera">
+        <section class="contenedor-logo" id="contenedor-logo-fixpoint">
+            <a href="../html/inicio.html"><img src="../img/logo_fixpoint_grisoso.png" alt="logo fixpoint"
+                    id="logo-fixpoint"></a>
+        </section>
+        <div class="menu">
+            <div class="item"><span><img src="../img/logo_fixpoint_simple.png" id="logo_redireccion_inicio">
+            </span></div>
+            <div class="item"><span>Biblioteca</span></div>
+            <div class="item"><span>Manuales</span></div>
+            <div class="item"><span>Sobre Nosotros</span></div>
+            <div class="item"><span>Inicio Sesion/Registro</span></div>
+            <div id="label"><span class="hamburger"></span></div>
         </div>
     </header>
+
     <main>
 
         <div id="que-es">
@@ -65,10 +64,12 @@
             <div class="mensaje">
                 <h1 class="titulo">Visión</h1>
                 <p class="texto">
-                    FixPoint es un proyecto que lucha por una economía circular. Esto significa que creemos en un
-                    sistema cerrado de materias primas, en el que los productores seguirán siendo los propietarios
+                    FixPoint es un proyecto que lucha por una econom&iacute;a circular. Esto significa que creemos en un
+                    sistema cerrado de materias primas, en el que los productores seguir&aacute;n siendo los
+                    propietarios
                     de las materias primas contenidas en los productos en el futuro. Para lograr esto, embargo,
-                    debemos facilitar que 'acceder a' sea más fácil, más barato y más divertido que 'poseer'.
+                    debemos facilitar que 'acceder a' sea m&aacute;s f&aacute;cil, m&aacute;s barato y más divertido que
+                    'poseer'.
                 </p>
             </div>
         </div>
@@ -78,10 +79,11 @@
             <div class="mensaje">
                 <h1 class="titulo">Objetivo</h1>
                 <p class="texto">
-                    La Biblioteca de herramientas FixPoint, quiere provocar un cambio en el de sobreproducción e
+                    La Biblioteca de herramientas FixPoint, quiere provocar un cambio en el de sobreproducci&oacute;n e
                     ineficiencia resultante, la comunicación la desigualdad (social). La misión de FixPoint es
                     transformar la mentalidad social, en la que la propiedad se elige sobre el acceso. Queremos
-                    servir de inspiración para abrir una Biblioteca FixPoint en sus vecindarios acceso para todo el
+                    servir de inspiraci&oacute;n para abrir una Biblioteca FixPoint en sus vecindarios acceso para todo
+                    el
                     mundo.
                 </p>
             </div>
@@ -92,13 +94,14 @@
                 <legend>Contacto</legend>
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre">
-                <label for="apellidos">Apellidos</label>
-                <input type="text" name="apellido">
+                <!-- <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellido"> -->
+                <!-- ¿quitamos los apellidos? es un poco redundante que alquien tenga que escribir sus ape para consultar algo -->
                 <label for="email">Email</label>
                 <input type="email" name="email">
                 <label for="mensaje">Mensaje</label>
                 <textarea name="mensaje" rows="5" cols="22"></textarea>
-                <button type="submit" id="Enviar" class="boton">Enviar</button>
+                <input type="submit" id="Enviar" class="boton">
             </fieldset>
         </form>
 

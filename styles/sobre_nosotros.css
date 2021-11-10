@@ -1,6 +1,10 @@
 @font-face {
     font-family: fuenteFixpoint;
-    src: url(/fonts/tonus-sans-heavy-italic.otf) format("opentype");
+    src: url(../fonts/tonus-sans-regular.otf) format("opentype");
+}
+
+textarea {
+    resize: none;
 }
 
 body {
@@ -14,7 +18,6 @@ main {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    gap: 2em;
 }
 
 #que-es {
@@ -31,6 +34,7 @@ main {
 
 #pregunta-titulo {
     width: 100%;
+    font-size: xxx-large;
 }
 
 #que-es-contenido {
@@ -45,7 +49,8 @@ main {
 
 .img_con_texto {
     width: 40em;
-    flex: 1 1 40%;
+    margin: 1em;
+    flex: 1 1 35%;
     position: relative;
     border: thick solid black;
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
@@ -61,15 +66,20 @@ main {
 
 .mensaje {
     box-sizing: border-box;
-    padding: 1em 3em 3em 3em;
+    padding: 1em;
     position: absolute;
     bottom: 0;
-    left: 0;
+    width: 100%;
     height: 20%;
     opacity: 1;
     transition: .5s ease-in-out;
     background-color: rgb(0, 0, 0, 0.8);
     transition: .5s ease;
+    font-size: 1.5vw;
+}
+
+.mensaje p {
+    height: 70%;
 }
 
 .texto {
@@ -80,7 +90,6 @@ main {
 
 .img_con_texto:hover .mensaje {
     height: 100%;
-
 }
 
 .img_con_texto:hover .texto {
@@ -90,7 +99,7 @@ main {
 }
 
 #formulario-entero {
-    text-align: center;
+    margin: 0.5em;
     width: 35em;
     flex: 1 1 auto;
 }
@@ -107,9 +116,29 @@ main {
     font-size: xx-large;
 }
 
-#formulario-datos button {
+#formulario-datos input {
+    margin: solid black thin;
+    font-family: fuenteFixpoint; 
+    /* la fuente sale en negrita pero en el textarea no */
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 1.2vw;
+}
+
+#formulario-datos input:focus {
+    border: solid medium #EEC51F;
+    background-color: #EEC51F;
+}
+
+#formulario-datos input[type="submit"] {
+    width: 100%;
     margin: 0;
     grid-column: span 2;
+}
+
+#formulario-datos input[type="submit"]:hover {
+    cursor: pointer;
+    /* no funciona el hover de los botones */
 }
 
 iframe {
@@ -117,7 +146,7 @@ iframe {
     height: auto;
     border: none;
     filter: invert(90%);
-    margin: 0 1em;
+    margin: .5em;
 }
 
 
@@ -139,8 +168,8 @@ iframe {
     }
 }
 
-
-@media (min-width:320px) and (max-width:480px) {
+/* no es necesario medias querys - solo faltan pequeños ajustes */
+/* @media (min-width:320px) and (max-width:480px) {
     #logo {
         height: 50px;
         width: 250px;
@@ -243,4 +272,4 @@ iframe {
 
     }
 
-}
+} */
