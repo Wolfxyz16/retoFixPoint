@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/boton.css">
     <link rel="stylesheet" href="../styles/login.css">
+    <script src="../js/login.js"></script>
+    <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
     <title>Inicio de sesi&oacute;n</title>
 </head>
 
@@ -18,22 +21,21 @@
 
         <section class="formulario-container">
             <section class="botones">
-                <section id="iniciar-boton" onclick="loginMostrar()">Iniciar Sesi&oacute;n</section>
-                <section id="registrar-boton" onclick="registroMostrar()">Crear cuenta</section>
+                <button type="button" class="boton" id="iniciar-boton">Iniciar Sesi&oacute;n</button>
+                <button type="button" class="boton" id="registrar-boton">Crear cuenta</button>
             </section>
-            <form id="inicio-formulario" method="post" action="../php/login.php">
-                <input type="text" placeholder="Email" name="mail" class="input"><br />
-                <input type="password" placeholder="Contrase&nacute;a" name="password" class="input"><br />
-                <input type="submit" value="Iniciar Sesi&oacute;n" id="btnL">
+            <form id="iniciar-formulario" class="formulario " method="post" action="../php/login.php">
+                <input type="text" placeholder="Email" name="mail" class="input">
+                <input type="password" placeholder="Contrase&ntilde;a" name="password" class="input">
+                <input type="submit" value="Iniciar Sesi&oacute;n" class="submit" id="btnL">
             </form>
 
-            <form id="registro-formulario" class="hidden" method="post" action="../php/validacionRegistro.php">
-                <input type="text" placeholder="Nombre" id="nombre" name="nombre" class="input"><br />
-                <input type="text" placeholder="Apellido" id="apellido" name="apellido" class="input"><br />
-                <input type="text" placeholder="Email" id="email" name="email" class="input"><br />
-                <input type="password" placeholder="Contrase&nacute;a" id="contrasena" name="contrasena"
-                    class="input"><br />
-                <input type="submit" value="Crear cuenta" id="btnR">
+            <form id="registrar-formulario" class="formulario hidden" method="post" action="../php/validacionRegistro.php">
+                <input type="text" placeholder="Nombre" id="nombre" name="nombre" class="input">
+                <input type="text" placeholder="Apellido" id="apellido" name="apellido" class="input">
+                <input type="text" placeholder="Email" id="email" name="email" class="input">
+                <input type="password" placeholder="Contrase&nacute;a" id="contrasena" name="contrasena" class="input">
+                <input type="submit" value="Crear cuenta" class="submit" id="btnR">
             </form>
         </section>
     </main>
