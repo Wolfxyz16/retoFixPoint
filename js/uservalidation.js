@@ -61,39 +61,40 @@ class validacion {
     }
 }
 
-//boton logearse
-document.getElementById("iniciar-submit").onclick = function () {
-    var loginValidacion = new validacion(
-        document.getElementById("iniciar-mail"),
-        documen.getElementById("iniciar-contrasena")
-    );
-
-    if (loginValidacion.validarInicio()) {
-        console.log('login existoso')
-    } else {
-        loginValidacion.mail.pintarError;
-        loginValidacion.contrasena.pintarError;
-    }
-}
-
-document.getElementById("registrar-submit").onclick = function () {
-    var signupValidacion = new validacion(
-        document.getElementById("registrar-nombre"),
-        documen.getElementById("registrar-apellido"),
-        dcoument.getElementById("registrar-mail"),
-        dcoument.getElementById("registrar-contrasena")
-    );
-
-    if (signupValidacion.validarRegistro()) {
-        console.log('signup existoso')
-    } else {
-        loginValidacion.nombre.pintarError;
-        loginValidacion.apellido.pintarError;
-        loginValidacion.mail.pintarError;
-        loginValidacion.contrasena.pintarError;
-    }
-}
-
 function pintarError() {
     this.style.border = "solid red medium";
+}
+
+window.onload = function () {
+    document.getElementById("iniciar-submit").onclick = function () {
+        var loginValidacion = new validacion(
+            document.getElementById("iniciar-mail").value,
+            documen.getElementById("iniciar-contrasena").value
+        );
+
+        if (loginValidacion.validarInicio()) {
+            console.log('login existoso')
+        } else {
+            document.getElementById("iniciar-mail").pintarError;
+            documen.getElementById("iniciar-contrasena").pintarError;
+        }
+    }
+
+    document.getElementById("registrar-submit").onclick = function () {
+        var signupValidacion = new validacion(
+            document.getElementById("registrar-nombre").value,
+            documen.getElementById("registrar-apellido").value,
+            dcoument.getElementById("registrar-mail").value,
+            dcoument.getElementById("registrar-contrasena").value
+        );
+
+        if (signupValidacion.validarRegistro()) {
+            console.log('signup existoso')
+        } else {
+            document.getElementById("registrar-nombre").pintarError;
+            documen.getElementById("registrar-apellido").pintarError;
+            dcoument.getElementById("registrar-mail").pintarError;
+            dcoument.getElementById("registrar-contrasena").pintarError;
+        }
+    }
 }
