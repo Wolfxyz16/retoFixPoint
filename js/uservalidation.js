@@ -61,31 +61,40 @@ class validacion {
     }
 }
 
-//boton logearse
-document.getElementById('btnL').onclick = function () {
-    var loginValidacion = new validacion(
-        document.getElementById('login-email'),
-        documen.getElementById('login-password')
-    );
-
-    if (loginValidacion.validarInicio()) {
-        console.log('login existoso')
-    } else {
-        console.log('login fallido');
-    }
+function pintarError() {
+    this.style.border = "solid red medium";
 }
 
-document.getElementById('btnR').onclick = function () {
-    var signupValidacion = new validacion(
-        document.getElementById('signup-email'),
-        documen.getElementById('signup-password'),
-        dcoument.getElementById('signup-name'),
-        dcoument.getElementById('signup-surname')
-    );
+window.onload = function () {
+    document.getElementById("iniciar-submit").onclick = function () {
+        var loginValidacion = new validacion(
+            document.getElementById("iniciar-mail").value,
+            documen.getElementById("iniciar-contrasena").value
+        );
 
-    if (signupValidacion.validarRegistro()) {
-        console.log('signup existoso')
-    } else {
-        console.log('signup fallido');
+        if (loginValidacion.validarInicio()) {
+            console.log('login existoso')
+        } else {
+            document.getElementById("iniciar-mail").pintarError;
+            documen.getElementById("iniciar-contrasena").pintarError;
+        }
+    }
+
+    document.getElementById("registrar-submit").onclick = function () {
+        var signupValidacion = new validacion(
+            document.getElementById("registrar-nombre").value,
+            documen.getElementById("registrar-apellido").value,
+            dcoument.getElementById("registrar-mail").value,
+            dcoument.getElementById("registrar-contrasena").value
+        );
+
+        if (signupValidacion.validarRegistro()) {
+            console.log('signup existoso')
+        } else {
+            document.getElementById("registrar-nombre").pintarError;
+            documen.getElementById("registrar-apellido").pintarError;
+            dcoument.getElementById("registrar-mail").pintarError;
+            dcoument.getElementById("registrar-contrasena").pintarError;
+        }
     }
 }
