@@ -26,17 +26,17 @@
                 <button type="button" class="boton" id="registrar-boton">Crear cuenta</button>
             </section>
             <form id="iniciar-formulario" class="formulario " method="post" action="../php/login.php">
-                <input type="text" placeholder="Email" name="mail" class="input">
-                <input type="password" placeholder="Contrase&ntilde;a" name="password" class="input">
+                <input type="text" placeholder="Email" name="mail" class="input" required>
+                <input type="password" placeholder="Contrase&ntilde;a" name="password" class="input" required>
                 <input type="submit" value="Iniciar Sesi&oacute;n" class="submit" id="btnL">
             </form>
 
             <form id="registrar-formulario" class="formulario hidden" method="post"
                 action="../php/validacionRegistro.php">
-                <input type="text" placeholder="Nombre" id="nombre" name="nombre" class="input">
-                <input type="text" placeholder="Apellido" id="apellido" name="apellido" class="input">
-                <input type="text" placeholder="Email" id="email" name="email" class="input">
-                <input type="password" placeholder="Contrase&nacute;a" id="contrasena" name="contrasena" class="input">
+                <input type="text" placeholder="Nombre" id="nombre" name="nombre" class="input" required>
+                <input type="text" placeholder="Apellido" id="apellido" name="apellido" class="input" required>
+                <input type="text" placeholder="Email" id="email" name="email" class="input" required>
+                <input type="password" placeholder="Contrase&nacute;a" id="contrasena" name="contrasena" class="input" required>
                 <input type="submit" value="Crear cuenta" class="submit" id="btnR">
             </form>
         </section>
