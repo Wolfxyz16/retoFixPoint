@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../styles/login.css">
     <script src="../js/login.js"></script>
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
+    <script src="../js/uservalidation.js"></script>
     <title>Inicio de sesi&oacute;n</title>
 </head>
 
@@ -30,7 +31,8 @@
                 <input type="submit" value="Iniciar Sesi&oacute;n" class="submit" id="btnL">
             </form>
 
-            <form id="registrar-formulario" class="formulario hidden" method="post" action="../php/validacionRegistro.php">
+            <form id="registrar-formulario" class="formulario hidden" method="post"
+                action="../php/validacionRegistro.php">
                 <input type="text" placeholder="Nombre" id="nombre" name="nombre" class="input">
                 <input type="text" placeholder="Apellido" id="apellido" name="apellido" class="input">
                 <input type="text" placeholder="Email" id="email" name="email" class="input">
