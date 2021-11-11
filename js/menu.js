@@ -1,5 +1,6 @@
 import {slider} from './slider.js';
 import {administrador} from './admin.js';
+import {descarga} from './descargaManuales.js';
 window.onload= function () {
 
     var items = document.getElementsByClassName('item');
@@ -16,6 +17,10 @@ window.onload= function () {
     if (window.location.pathname.indexOf("/html/admin.php") >-1 ){
 
         administrador();
+    }
+    if (window.location.pathname.indexOf("/html/manuales.php") >-1 ){
+       
+        descarga();
     }
 };
 
