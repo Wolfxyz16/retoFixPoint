@@ -7,6 +7,7 @@
 
     // fixpoint-database.cfhjlaahn7bu.us-east-1.rds.amazonaws.com:3306
 
+    // contrasena para entrar a la base de datos
     // admin
     // xfyRa83Nk73RqsMS
 
