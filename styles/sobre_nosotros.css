@@ -30,6 +30,7 @@ main {
     background-color: #292929;
     text-align: justify;
     animation: bgchange 7s linear infinite;
+    margin-bottom: 5em;
 }
 
 #pregunta-titulo {
@@ -40,6 +41,7 @@ main {
 #que-es-contenido {
     max-width: 70%;
     height: auto;
+    margin-right: 5em;
 }
 
 #que-es > img {
@@ -54,6 +56,7 @@ main {
     position: relative;
     border: thick solid black;
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    margin-bottom: 5em;
 }
 
 
@@ -100,8 +103,8 @@ main {
 
 #formulario-entero {
     margin: 0.5em;
-    width: 35em;
-    flex: 1 1 auto;
+    width: 40em;
+    flex: 1 1 35%;
 }
 
 #formulario-datos {
@@ -116,7 +119,7 @@ main {
     font-size: xx-large;
 }
 
-#formulario-datos input {
+#formulario-datos input, textarea {
     margin: solid black thin;
     font-family: fuenteFixpoint; 
     /* la fuente sale en negrita pero en el textarea no */
@@ -125,10 +128,12 @@ main {
     font-size: 1.2vw;
 }
 
-#formulario-datos input:focus {
+#formulario-datos input:focus, textarea:focus {
+    outline: none ;
     border: solid medium #EEC51F;
-    background-color: #EEC51F;
+    background-color: #FFEA96;
 }
+
 
 #formulario-datos input[type="submit"] {
     width: 100%;
@@ -142,7 +147,8 @@ main {
 }
 
 iframe {
-    flex: 1 1 auto;
+    width: 40em;
+    flex: 1 1 35%;
     height: auto;
     border: none;
     filter: invert(90%);
