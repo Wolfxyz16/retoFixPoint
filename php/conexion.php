@@ -1,8 +1,8 @@
 <?php
-    $server = 'localhost';
+    $server = 'fixpoint-database.cfhjlaahn7bu.us-east-1.rds.amazonaws.com';
     $dbname = 'fixpoint';
-    $username = 'root';
-    $password = '';
+    $username = 'fixpoint';
+    $password = 'Fixpoint123';
 
     // fixpoint-database.cfhjlaahn7bu.us-east-1.rds.amazonaws.com:3306
 
