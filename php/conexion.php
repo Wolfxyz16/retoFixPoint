@@ -1,8 +1,9 @@
 <?php
     $server = 'fixpoint-database.cfhjlaahn7bu.us-east-1.rds.amazonaws.com';
+    $port = "3306";
     $dbname = 'fixpoint';
-    $username = 'fixpoint';
-    $password = 'Fixpoint123';
+    $username = 'admin';
+    $password = 'xfyRa83Nk73RqsMS';
 
     // fixpoint-database.cfhjlaahn7bu.us-east-1.rds.amazonaws.com:3306
 
@@ -13,11 +14,11 @@
     // Fixpoint123
 
     try {
-        $conexion = new PDO("mysql:host=$server;dbname=$dbname" , $username , $password);
+        $conexion = new PDO("mysql:host=$server;port=$port;dbname=$dbname" , $username , $password);
         echo '<script>console.log("Oye, que la base de datos funciona")</script>';
 
     } catch (PDOException $e) {
-        echo '<script>console.log(' . $e->getMessage() . ')</script>';
+        echo '<script>console.log("' . $e->getMessage() . '")</script>';
         die();
     }
     
