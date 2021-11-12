@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="../styles/boton.css">
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
     <title>Biblioteca</title>
-    <script  type="module" src="../js/menu.js"></script>
+    <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="../js/alquilerHerramienta.js"></script>
 </head>
 
 <body>
@@ -103,7 +104,14 @@
                             <div class="alquiler">';
                                  if ($columna['disponibilidad']=="Disponible") {
                                     echo '<p style="background-color: green";>Disponible</p>
-                                    <button class="boton" id="alquilar">Alquilar ahora</button>';
+                                    <button class="boton" id="'.$columna['cod_herramienta'].'">Alquilar ahora</button>
+                                    <div id="myModal" class="modal">
+                                    <div class="modal-content">
+                                        <span class="close">&times;</span>
+                                        <p>Enhorabuena usted ha realizado la reserva correctamente. Tiene dos dias, dentro del horario, para poder recorge la herramienta solicitada. En caso de que no vaya a recogerla se cancelara la reserva.</p>
+                                    </div>
+
+                                    </div>';
                                 } else {
                                     echo '<p style="background-color: red";>No disponible</p>';
                                 };
