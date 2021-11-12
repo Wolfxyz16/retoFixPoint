@@ -1,179 +1,190 @@
+
 @font-face {
   font-family: fuenteFixpoint;
   src: url(/fonts/tonus-sans-heavy-italic.otf) format("opentype");
 }
-
 body {
-  font-family: fuenteFixpoint;
-  background-color: #ebe1c9;
-  margin: 0 auto;
-  max-width: 100%;
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 100px 0.2fr 0.2fr 1fr 100px;
-  grid-template-areas:
-    "my-header"
-    "parte-Superior"
-    "filtros"
-    "manuales"
-    "my-footer"
-}
-
-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  padding: 0;
+  margin: 0;
   width: 100%;
-  position: relative
-}
-
-#logo {
   height: 100%;
-  width: 40%;
-  margin-top: 1%;
+  font-family: fuentefixpoint;
+  background-color: #292929;
 }
 
-#usuario {
-  height: 100%;
-  width: 6%;
-  outline: none;
-  background-color: transparent;
-  border: none;
-  background-image: url("/img/usuario.png");
-  background-size: cover;
-  position: absolute;
-  right: 2%;
+
+a {
+  text-decoration: none;
+
 }
 
-#parteSuperior {
-  grid-area: parte-Superior;
-  display: inline-flex;
-  margin-top: 5%;
-  justify-content: center;
-  height: 20%;
+main {
+  display: grid;
+  grid-template:
+      "contenedor-uno" 10%
+      "manuales"
+      "final" 8%;
+  gap: 1em;
+}
+
+.contenedor-uno {
+  grid-area: contenedor-uno;
+  /* display: grid;
+  grid-template-columns: repeat( auto-fill, 20% ); */
+  justify-content: space-around;
+}
+
+.contenedor-uno-linea {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1%;
+
+}
+
+h1 {
+  color: white;
+  font-size: 1.5em;
+  animation: bgchange 7s linear infinite;
+}
+
+.contenedor_buscar {
+  border-radius: 0.4em;
+  margin-right: 1%;
+  height: 2em;
 }
 
 .buscador {
-  position: absolute;
-  right: 1%;
+  height: 90%;
+  width: 70%;
+  border-radius: 0.4em;
 }
 
-#filtros {
-  grid-area: filtros;
-  width: 100%;
-  display: inline-flex;
-  justify-content: space-between;
+#buscar_boton {
+  width: 28%;
+  height: 90%;
+  border-radius: 0.4em;
+  margin-right: 0;
 }
 
-#anadirManual {
-  background: linear-gradient(145deg, #FFEA96, #EEC51F);
-  color: black;
-  border-radius: 2em;
+.tipos_herramientas {
+  border-radius: 0.5em;
+  background-color: #EEC51F;
+  font-weight: bolder;
+  height: 2em;
 }
 
-#anadirManual:hover {
-  opacity: 0.6;
-  text-decoration: none;
+.ordenar_por {
+  font-size: 1.2em;
+  color: white;
+  margin-right: 1%;
+  animation: bgchange 7s linear infinite;
 }
 
-#filtro {
-  background: linear-gradient(145deg, #FFEA96, #EEC51F);
-  color: black;
-  border-radius: 1em;
+.A-Z {
+  background-color: #EEC51F;
+  border-radius: 0.5em;
+  font-weight: bolder;
 }
 
 #manuales {
-  margin: 3%;
-  grid-area: manuales;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 4%;
+  grid-area: manuales;
+  grid-template-columns: repeat(auto-fill, 22%);
+  justify-content: center;
+  gap: 1em;
 }
 
-#manuales>section {
+.manual {
   width: 100%;
   height: 100%;
+  text-align: center;
   border-radius: 1em;
-  border: solid;
+  border: solid black medium;
   display: flex;
   justify-content: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#manuales>section>img {
+.manual>img {
   width: 100%;
   height: 100%;
   border-radius: 1em;
   opacity: 0.7;
 }
 
-#manuales>section>section {
+.manual-texto {
   background-color: transparent;
   display: flex;
+  width: 15%;
   flex-direction: column;
-  justify-content: center;
   position: absolute;
+  justify-content: center;
   align-self: flex-end;
-  justify-items: center;
   margin-bottom: 2%;
   text-shadow: 2px 0 0 #FFEA96, -2px 0 0 #FFEA96, 0 2px 0 #FFEA96, 0 -2px 0 #FFEA96, 1px 1px #FFEA96, -1px -1px 0 #FFEA96, 1px -1px 0 #FFEA96, -1px 1px 0 #fff;
 }
 
-#descarga {
-  background: linear-gradient(145deg, #FFEA96, #EEC51F);
-  border: solid;
-  color: black;
-  border-radius: 2em;
+#descarga{
+  margin-right: 0;
+  margin-bottom: 0;
 }
 
-#descarga:hover {
-  transition: 0.3s ease all;
-  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+
+.contenedor_final_pagina {
+  grid-area: final;
+  display: grid;
+  grid-template: "contenedor-a"100%;
+  justify-items: center;
+  margin-bottom: 5%;
 }
 
-@media (min-width: 600px) and (max-width: 1000px) {
-  body {
-    grid-template-columns: 100%;
-    grid-template-rows: 150px 0.2fr 0.2fr 1fr 100px;
-    grid-template-areas:
-      "my-header"
-      "parte-Superior"
-      "filtros"
-      "manuales"
-      "my-footer"
+.contenedor-a {
+  grid-area: contenedor-a;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 50%;
+}
+
+.numero {
+  text-align: center;
+  width: 4%;
+  height: 90%;
+}
+
+ul{
+  list-style: none;
+}
+
+@keyframes bgchange{
+  0%{
+    color:white;
+  }
+  20%{
+     color: rgb(255,234,150);
+  }
+  40%{
+   color: rgb(238,197,31);
+  }
+  80%{
+     color: rgb(255,234,150);
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1000px) {
+ 
+  #manuales {
+    grid-template-columns: repeat(2, 1fr);
+    width: 60%;
+    justify-self: center;
+    column-gap: 10%;
   }
 
 }
-
 
 @media (min-width: 320px) and (max-width: 480px) {
-  body {
-    grid-template-columns: 100%;
-    grid-template-rows: 80px 0.2fr 0.2fr 1fr 100px;
-    grid-template-areas:
-      "my-header"
-      "parte-Superior"
-      "filtros"
-      "manuales"
-      "my-footer";
-  }
 
-  header {
-    justify-content: space-between;
-  }
-
-  #logo {
-    width: 50%;
-    height: 70%;
-  }
-
-  #usuario {
-    width: 17%;
-    height: 70%;
-  }
 
   #parteSuperior {
     justify-content: space-between;
@@ -186,6 +197,14 @@ header {
     width: 57%;
   }
 
+  #manuales {
+    grid-template-columns: repeat(1, 1fr);
+    width: 55%;
+    gap: 2%;
+    font-size: 10px;
+    justify-self: center;
+  }
+
   .buscador>input {
     width: 40%;
   }
@@ -193,10 +212,6 @@ header {
   #filtros {
     font-size: 10px;
     gap: 13%;
-  }
-
-  #manuales {
-    font-size: 10px;
   }
 
   #manuales>section>section>button {

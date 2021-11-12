@@ -82,8 +82,7 @@ form:target {
 form {
     grid-area: contenedorinicio;
     display: grid;
-    grid-template:
-        "botones"25% "correo"25% "pass"25% "botones2"25%;
+
     width: 80%;
     height: 60%;
     margin-left: 10%;
@@ -131,7 +130,10 @@ form {
     grid-area: pass;
     font-size: 15px;
     width: 70%;
-    height: 70%;
+    height: 60%;
+}
+.aa{
+    grid-area: aa;
 }
 
 /*---CUADRO DE TEXTO--*/
@@ -171,7 +173,9 @@ form {
     height: 80%;
     margin-top: 2%;
 }
-
+.aa{
+    font-size: 10px;
+}
 a {
     text-decoration: none;
     color: black;
@@ -252,36 +256,37 @@ a {
 }
 
 @media (min-width:320px) and (max-width:615px) {
-    .logos-footer {
-        display: none;
-    }
+
+    .logos-footer {display: none;}
 }
+@media (min-width:600px){
+form{ margin-left: 10%; height: 85%;}
+.correo{font-size: 20px;}
+.pass{font-size: 20px;}
+.boton{font-size: 22px;}
+.boton2{font-size: 22px;}
+a{font-size: 20px;}
+.aa{font-size: 20px;}
 
-@media (min-width:600px) {
-    form {
-        margin-left: 10%;
-        height: 85%;
-    }
-
-    .correo {
-        font-size: 20px;
-    }
-
-    .pass {
-        font-size: 20px;
-    }
-
-    .boton {
-        font-size: 22px;
-    }
-
-    .boton2 {
-        font-size: 22px;
-    }
-
-    a {
-        font-size: 20px;
-    }
+}
+@media (min-width:800px){
+form{ margin-left: 10%; height: 100%;}
+.grid-contenedor{
+    grid-template: 
+    "header"20%
+    "contenedorinicio"60%
+    "footer"10%/
+    100%;
+}
+.correo{font-size: 25px;}
+.pass{font-size: 25px;}
+.boton2{font-size: 20px; width: 20%;height: 70%;}
+.recuadro{width: 90%;height: 40%;}
+.botonn{font-size: 22px;}
+a{font-size:22px ;}
+.aa{
+    font-size: 25px;margin-left: 0;
+}
 }
 
 @media (min-width:800px) {

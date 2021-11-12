@@ -1,9 +1,10 @@
 <?php
-    include_once('../conexion.php');
-
-    $query = 'SELECT * FROM herramientas';
+   
 
     try{
+        include("../php/conexion.php");
+
+        $query = 'SELECT * FROM herramientas';
         $consulta = $conexion->prepare($query);
         $consulta -> execute();
         $herramientas = $consulta -> fetchAll();

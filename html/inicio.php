@@ -1,3 +1,7 @@
+<!-- Esta pagina la hizo Yeray -->
+<?php
+    
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -9,23 +13,41 @@
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
-    <script src="../js/slider.js"></script>
+    <script type="module" src="../js/menu.js"></script>
+
     <title>Fix Point-P&aacute;gina principal</title>
+
 </head>
 
 <body>
     <header>
         <div class="cabecera">
-            <section class="contenedor-logo"></section>
             <section class="contenedor-logo" id="contenedor-logo-fixpoint">
-                <a href="../html/inicio.html"><img src="../img/logo_fixpoint.png" alt="logo fixpoint"
+                <a href="../html/inicio.html"><img src="../img/logo_fixpoint_grisoso.png" alt="logo fixpoint"
                         id="logo-fixpoint"></a>
             </section>
-            <section class="contenedor-logo" id="contenedor-logo-user">
-                <button id="logo-user-btn" onclick="location = 'popup.html'"><img src="../img/user.png"
-                        alt="iniciar sesion" id="logo-user"></button>
-            </section>
+            <div class="menu">
+                <div class="item"><span><img src="/img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+                <div class="item"><span>Biblioteca</span></div>
+                <div class="item"><span>Manuales</span></div>
+                <div class="item"><span>Sobre Nosotros</span></div>
+                <?php
+                    session_start();
+                    if(isset( $_SESSION['usuario']) ) {
+                        if ($_SESSION['admin']==true) {
+                            print '<div class="item"><span>Administrador</span></div>';
+                        }else{
+                             print '<div class="item"><span>' . $_SESSION['usuario'] . '</span></div>';
+                        }
+                    } else {
+                        print '<div class="item"><span>Inicio Sesion/Registro</span></div>';
+                    }
+                    
+                ?>
+                <div id="label"><span class="hamburger"></span></div>
+              </div>
         </div>
+    </header>
 
         <div class="slider">
             <div class="imagen-slider">
@@ -44,7 +66,7 @@
 
         <article class="accesos">
             <section class="biblioteca caja">
-                <a href="biblioteca2.html">
+                <a href="biblioteca.html">
                     <img src="../img/bibliotecatest.png" alt="Imagen biblioteca">
                     <section class="caja-texto">
                         <h2>Biblioteca</h2>

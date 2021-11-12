@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/boton.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
+    <script type="module" src="../js/uservalidation.js"></script>
+    <title>Inicio de sesi&oacute;n</title>
+</head>
+
+<body>
+    <main class="main-container">
+
+        <section class="imagen-container">
+            <img src="../img/logo2-fondo.png" alt="banco de trabajo" srcset="" id="imagen-login">
+        </section>
+
+        <section class="formulario-container">
+            <section class="botones">
+                <button type="button" class="boton" id="iniciar-boton">Iniciar Sesi&oacute;n</button>
+                <button type="button" class="boton" id="registrar-boton">Crear cuenta</button>
+            </section>
+            <form id="iniciar-formulario" class="formulario " method="post" action="../php/validacionInicioSesion.php">
+                <input type="text" placeholder="Email" name="mail" class="input" id="iniciar-mail" required>
+                <input type="password" placeholder="Contrase&ntilde;a" name="password" id="iniciar-contrasena" class="input" required>
+                <input type="submit" value="Iniciar Sesi&oacute;n" class="submit" id="iniciar-submit">
+            </form>
+
+            <form id="registrar-formulario" class="formulario hidden" method="post"
+                action="../php/validacionRegistro.php">
+                <input type="text" placeholder="Nombre" id="registrar-nombre" name="nombre" class="input" required>
+                <input type="text" placeholder="Apellido" id="registrar-apellido" name="apellido" class="input" required>
+                <input type="text" placeholder="Email" id="registrar-mail" name="email" class="input" required>
+                <input type="password" placeholder="Contrase&nacute;a" id="registrar-contrasena" name="contrasena" class="input" required>
+                <input type="submit" value="Crear cuenta" class="submit" id="registrar-submit">
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
