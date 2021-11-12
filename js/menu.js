@@ -1,6 +1,7 @@
 import {slider} from './slider.js';
 import {administrador} from './admin.js';
 import {descarga} from './descargaManuales.js';
+import {alquiler} from './alquilerHerramienta.js';
 window.onload= function () {
 
     var items = document.getElementsByClassName('item');
@@ -21,6 +22,9 @@ window.onload= function () {
     if (window.location.pathname.indexOf("/html/manuales.php") >-1 ){
        
         descarga();
+    }
+    if (window.location.pathname.indexOf("/html/biblioteca.php") >-1) {
+        alquiler();
     }
 };
 
