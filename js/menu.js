@@ -5,7 +5,7 @@ import{alquiler} from './alquilerHerramienta.js';
 window.onload= function () {
 
     var items = document.getElementsByClassName('item');
-    const sitios_web = ["../html/inicio.php", "../html/biblioteca.php", "../html/manuales.php", "../html/sobre_nosotros.html"];
+    const sitios_web = ["../index.php", "../html/biblioteca.php", "../html/manuales.php", "../html/sobre_nosotros.html"];
     
     for (let i = 0; i < items.length; i++) {
         items[i].addEventListener('click', function () {
@@ -19,7 +19,7 @@ window.onload= function () {
         });
     }else if(document.getElementById('usuario')){
         document.getElementById('iniciosesion').addEventListener('click', function () {  
-            location.href = "../html/inicio.php";
+            location.href = "../index.php";
             sessionStorage.removeItem('usuario');
         });
     }else if(document.getElementById('iniciosesion')){
@@ -28,7 +28,7 @@ window.onload= function () {
         });
     }
 
-    if(window.location.pathname.indexOf("/html/inicio.php") >-1){
+    if(window.location.pathname.indexOf("/index.php") >-1){
         slider();
     }
     if (window.location.pathname.indexOf("/html/admin.php") >-1 ){
