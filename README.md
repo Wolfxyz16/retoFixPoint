@@ -30,4 +30,4 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 <p>xfyRa83Nk73RqsMS</p>
 <p>2dw3grupo4@gmail.com<p>
   
-  <a href="http://ec2-54-236-33-67.compute-1.amazonaws.com">balanceador</a>
+  <a href="http://ec2-54-236-33-67.compute-1.amazonaws.com" target="_blank">balanceador</a>
