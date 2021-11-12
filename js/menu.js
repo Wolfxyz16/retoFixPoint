@@ -5,7 +5,7 @@ import{alquiler} from './alquilerHerramienta.js';
 window.onload= function () {
 
     var items = document.getElementsByClassName('item');
-    const sitios_web = ["../index.php", "../html/biblioteca.php", "../html/manuales.php", "../html/sobre_nosotros.html"];
+    const sitios_web = ["index.php", "html/biblioteca.php", "html/manuales.php", "html/sobre_nosotros.html"];
     
     for (let i = 0; i < items.length; i++) {
         items[i].addEventListener('click', function () {
