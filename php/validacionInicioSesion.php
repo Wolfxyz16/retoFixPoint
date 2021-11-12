@@ -32,7 +32,10 @@
                 }
                 
                 $_SESSION['usuario']=$usuario;
-                header('Location: ../html/inicio.php');
+                echo "<script>
+                alert('Bienvenido $usuario');
+                window.location.href='../html/inicio.php';
+                </script>";
                 exit;
             }
             exit;
