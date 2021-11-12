@@ -13,6 +13,7 @@
     <title>Manuales</title>
     <link rel="stylesheet" href="../styles/header.css">
     <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="../js/descargaManuales.js"></script>
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
 </head>
 
@@ -94,8 +95,8 @@
                     echo '<section class="manual">
                             <img src="' . $columna['portada'] . '">
                             <section class="manual-texto">
-                                <p>' . $columna['titulo'] . '</p>
-                                <button class="boton" id="descarga">Descargar</button>
+                                <p id="p'.$columna['fichero'].'">' . $columna['titulo'] . '</p>
+                                <button class="boton" id="'.$columna['fichero'].'">Descargar</button>
                             </section>
                         </section>';
                 }

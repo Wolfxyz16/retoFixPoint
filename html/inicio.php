@@ -32,9 +32,9 @@
                 <div class="item"><span>Manuales</span></div>
                 <div class="item"><span>Sobre Nosotros</span></div>
                 <?php
-                    if( isset( $_SESSION ) ) {
-                        print '<div class="item"><span>' . $_SESSION['user'] . '</span></div>';
-                        print '<div class="item"><span>Cerrar sesion</span></div>';
+                    session_start();
+                    if( isset( $_SESSION['usuario']) ) {
+                        print '<div class="item"><span>' . $_SESSION['usuario'] . '</span></div>';
                     } else {
                         print '<div class="item"><span>Inicio Sesion/Registro</span></div>';
                     }
