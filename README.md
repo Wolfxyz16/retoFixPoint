@@ -22,10 +22,14 @@
   <li>rgb(48,54,166)</li>
   <li name='FixPointBueno-5' rgb='777DF2' r='119' g='125' b='242' > #777DF2 morado pastel </li>
   <li>rgb(119,125,242)</li>
+  <li name='FixPointBueno-6' rgb='292929'>#292929 gris</li>
 </ul> 
 
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 <p>wrCKWcyvDTEcpwlrgh8VwUhoTBkyFiUU3GkYqDkzokfAwQHx4GRG8r6oLE0FmpIW@</p>
+
 <p>xfyRa83Nk73RqsMS</p>
 <p>2dw3grupo4@gmail.com<p>
+  
+  <a href="http://ec2-3-222-224-9.compute-1.amazonaws.com" target="_blank">balanceador</a>
