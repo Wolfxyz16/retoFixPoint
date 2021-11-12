@@ -35,12 +35,12 @@
                     session_start();
                     if(isset( $_SESSION['usuario']) ) {
                         if ($_SESSION['admin']==true) {
-                            print '<div class="item"><span>Administrador</span></div>';
+                            print '<div class="item" id="admin"><span>Administrador</span></div>';
                         }else{
-                             print '<div class="item"><span>' . $_SESSION['usuario'] . '</span></div>';
+                             print '<div class="item" id="usuario"><span>' . $_SESSION['usuario'] . '</span></div>';
                         }
                     } else {
-                        print '<div class="item"><span>Inicio Sesion/Registro</span></div>';
+                        print '<div class="item" id="iniciosesion"><span>Inicio Sesion/Registro</span></div>';
                     }
                     
                 ?>

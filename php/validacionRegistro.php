@@ -25,8 +25,21 @@
             $userPasswordEncryp = hash('sha512' , $contrasena);
             $insert=$conexion->prepare('INSERT INTO usuarios (name, surname, mail, password) VALUES (:nombre, :apellido, :email, :contrasena)');
             $insert->execute( array('nombre'=>$nombre, 'apellido'=>$apellido, 'email'=>$email, 'contrasena'=>$userPasswordEncryp));
-            header('Location: ../html/login.html');
-            exit;
+            $consultaUsuario=$conexion->prepare("SELECT name, surname, mail FROM usuarios  WHERE password='".$userPasswordEncryp."' AND mail='".$email."'");
+            $consultaUsuario -> execute();
+            $resultado = $consultaUsuario->fetchAll();
+            foreach($resultado as $result) {
+                $usuario =$result['name'].' '.$result['surname'];
+                if ( $result['mail'] == 'admin' ) { 
+                    $_SESSION['admin'] = true; 
+                }else{
+                    $_SESSION['admin'] = false;
+                }
+            }
+            echo "<script>
+            alert('Se ha registrado con exito, inicie sesion para disfrutar de su acceso como socio');
+            window.location.href='../html/login.html';
+            </script>";
         }catch(PDOException $e) {
             echo '<script>console.log(' . $e->getMessage() . ')</script>';
         }    
