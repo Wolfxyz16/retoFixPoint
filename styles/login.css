@@ -18,21 +18,21 @@ body {
 }
 
 .main-container {
-    width: 50%;
+    width: 70%;
     height: auto;
 
     border: white thick solid;
     background-color: #EEC51F;
 
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
 }
 
 .imagen-container {
-    flex: 1 1 auto;
+    width: 25em;
     height: auto;
-    width: 30%;
 }
 
 #imagen-login {
@@ -41,7 +41,8 @@ body {
 }
 
 .formulario-container {
-    flex: 1 1 auto;
+    min-width: 20em;
+    max-width: 40em;
     display: flex;
     padding: 2em;
     flex-flow: column nowrap;
@@ -61,12 +62,7 @@ body {
     font-size: large;
 }
 
-.submit {
-    
-}
-
 .formulario {
-    width: 40em;
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
