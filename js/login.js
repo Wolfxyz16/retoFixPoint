@@ -1,4 +1,4 @@
-window.onload = function() {
+function login() {
 
     var login_boton = document.getElementById("iniciar-boton");
     var singup_boton = document.getElementById("registrar-boton");
@@ -15,4 +15,5 @@ window.onload = function() {
         iniciar.style.display = "none";
         registrar.style.display = "block";
     };
-}
+};
+export {login};

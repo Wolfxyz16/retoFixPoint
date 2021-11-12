@@ -1,9 +1,9 @@
 <?php
         if(!isset($_POST['mail'])){
-            echo "<script type='text/javascript' alert=(Email mal);</script>";
+            echo "<script>alert('No se ha recibido ningun email')</script>";
 
         } else if (!isset($_POST['password'])) {
-            echo "<script type='text/javascript' alert=(Contrasena mal);</script>";
+            echo "<script>alert('No se ha recibido ninguna password')</script>";
         } else{
             inicioSesion();
         }
@@ -14,17 +14,23 @@
             $contrasena = $_POST['password'];
             
             include("conexion.php");
-            $consultaUsuario=$conexion->prepare("SELECT name, surname FROM usuarios  WHERE password='".$contrasena."' AND mail='".$mail."'");
+            $userPasswordEncryp = hash('sha512' , $contrasena);
+            $consultaUsuario=$conexion->prepare("SELECT name, surname, mail FROM usuarios  WHERE password='".$userPasswordEncryp."' AND mail='".$mail."'");
             $consultaUsuario -> execute();
             $resultado = $consultaUsuario->fetchAll();
             if(empty($resultado)){
-                echo "<script>console.log('La cuenta no existe mal');</script>";
+                echo "<script>console.log('La cuenta no existe');</script>";
             }else{
+                session_start();
                 foreach($resultado as $result) {
                     $usuario =$result['name'].' '.$result['surname'];
-                    
+                    if ( $result['mail'] == 'admin' ) { 
+                        $_SESSION['admin'] = true; 
+                    }else{
+                        $_SESSION['admin'] = false;
+                    }
                 }
-                session_start();
+                
                 $_SESSION['usuario']=$usuario;
                 header('Location: ../html/inicio.php');
                 exit;
