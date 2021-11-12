@@ -1,11 +1,7 @@
 import {slider} from './slider.js';
 import {administrador} from './admin.js';
 import {descarga} from './descargaManuales.js';
-<<<<<<< HEAD
 import{alquiler} from './alquilerHerramienta.js';
-=======
-import {alquiler} from './alquilerHerramienta.js';
->>>>>>> 036948e884390d7e1fdeddfaa36116cd9af0e322
 window.onload= function () {
 
     var items = document.getElementsByClassName('item');
@@ -43,11 +39,7 @@ window.onload= function () {
        
         descarga();
     }
-<<<<<<< HEAD
     if (window.location.pathname.indexOf("/html/biblioteca.php") >-1 ){
-=======
-    if (window.location.pathname.indexOf("/html/biblioteca.php") >-1) {
->>>>>>> 036948e884390d7e1fdeddfaa36116cd9af0e322
         alquiler();
     }
 };
