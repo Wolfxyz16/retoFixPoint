@@ -21,7 +21,7 @@
     <header>
         <div class="cabecera">
             <section class="contenedor-logo" id="contenedor-logo-fixpoint">
-                <a href="../html/inicio.html"><img src="../img/logo_fixpoint_grisoso.png" alt="logo fixpoint"
+                <a href="../index.php"><img src="../img/logo_fixpoint_grisoso.png" alt="logo fixpoint"
                         id="logo-fixpoint"></a>
             </section>
             <div class="menu">
