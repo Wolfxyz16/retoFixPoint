@@ -32,4 +32,6 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 <p>xfyRa83Nk73RqsMS</p>
 <p>2dw3grupo4@gmail.com<p>
   
-  <a href="http://ec2-3-222-224-9.compute-1.amazonaws.com" target="_blank">balanceador</a>
+<a href="http://ec2-3-222-224-9.compute-1.amazonaws.com" target="_blank">balanceador</a>
+  
+<a href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fec2-3-222-224-9.compute-1.amazonaws.com%2F" target="_blank">pagina de testeo de nuestra web</a>  
