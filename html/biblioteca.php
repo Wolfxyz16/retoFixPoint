@@ -6,14 +6,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/biblioteca.css" type="text/css">
+    
     <link rel="stylesheet" href="../styles/header.css" type="text/css">
     <link rel="stylesheet" href="../styles/footer.css" type="text/css">
     <link rel="stylesheet" href="../styles/boton.css">
-    <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
-    <title>Biblioteca</title>
+    <link rel="stylesheet" href="../styles/biblioteca.css" type="text/css">
+    
     <script type="module" src="../js/menu.js"></script>
     <script type="module" src="../js/alquilerHerramienta.js"></script>
+    
+    <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
+    <title>Biblioteca</title>
 </head>
 
 <body>
