@@ -15,9 +15,7 @@
 <body>
     <main class="main-container">
 
-        <section class="imagen-container">
-            <img src="../img/logo2-fondo.png" alt="banco de trabajo" srcset="" id="imagen-login">
-        </section>
+        <img src="../img/logo2-fondo.png" alt="banco de trabajo" srcset="" id="imagen-login">
 
         <section class="formulario-container">
             <section class="botones">
@@ -26,16 +24,19 @@
             </section>
             <form id="iniciar-formulario" class="formulario " method="post" action="../php/validacionInicioSesion.php">
                 <input type="text" placeholder="Email" name="mail" class="input" id="iniciar-mail" required>
-                <input type="password" placeholder="Contrase&ntilde;a" name="password" id="iniciar-contrasena" class="input" required>
+                <input type="password" placeholder="Contrase&ntilde;a" name="password" id="iniciar-contrasena"
+                    class="input" required>
                 <input type="submit" value="Iniciar Sesi&oacute;n" class="submit" id="iniciar-submit">
             </form>
 
             <form id="registrar-formulario" class="formulario hidden" method="post"
                 action="../php/validacionRegistro.php">
                 <input type="text" placeholder="Nombre" id="registrar-nombre" name="nombre" class="input" required>
-                <input type="text" placeholder="Apellido" id="registrar-apellido" name="apellido" class="input" required>
+                <input type="text" placeholder="Apellido" id="registrar-apellido" name="apellido" class="input"
+                    required>
                 <input type="text" placeholder="Email" id="registrar-mail" name="email" class="input" required>
-                <input type="password" placeholder="Contrase&nacute;a" id="registrar-contrasena" name="contrasena" class="input" required>
+                <input type="password" placeholder="Contrase&nacute;a" id="registrar-contrasena" name="contrasena"
+                    class="input" required>
                 <input type="submit" value="Crear cuenta" class="submit" id="registrar-submit">
             </form>
         </section>
