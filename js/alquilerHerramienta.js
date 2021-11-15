@@ -1,5 +1,5 @@
 function alquiler () {
-    var botones = document.getElementsByClassName("boton");
+    var botones = document.getElementsByClassName("buton");
     for (let index = 0; index < botones.length; index++) {
         botones[index].addEventListener('click', alquilerHerramientas);
     };

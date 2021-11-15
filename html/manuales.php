@@ -38,10 +38,10 @@
         <div class="contenedor-uno">
             <div class="contenedor-uno-linea">
                 <h1>Manuales</h1>
-                <div class="contenedor_buscar">
+                <form class="contenedor_buscar" method="post">
                     <input class="buscador" type="search" name="buscador" placeholder="B&uacute;squeda...">
-                    <button id="buscar_boton" class="boton" type="submit">Buscar</button>
-                </div>
+                    <button id="buscar_boton" class="boton" value="Buscar" type="submit" name="enviar">Buscar</button>
+                </form>
             </div>
 
             <div class="contenedor-uno-linea">
@@ -88,7 +88,13 @@
 
             try {
                 include("../php/conexion.php");
-                $consultaManual = $conexion->prepare("SELECT * FROM manuales LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                $consultaManual;
+                if (!isset($_POST['enviar'])){
+                    $consultaManual = $conexion->prepare("SELECT * FROM manuales LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                } else{
+                    $busqueda=$_POST['buscador'];
+                    $consultaManual = $conexion->prepare("SELECT * FROM manuales WHERE titulo LIKE '%$busqueda%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                };
                 $consultaManual->execute();
                 $resultado = $consultaManual->fetchAll();
                 foreach ($resultado as $columna) {
