@@ -3,6 +3,11 @@
     src: url(/fonts/tonus-sans-heavy-italic.otf) format("opentype");
 }
 
+::selection {
+    background-color: #EEC51F;
+    color: #292929;
+}
+
 body {
     font-family: fuenteFixpoint;
     padding: 0;
