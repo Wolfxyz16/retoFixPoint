@@ -14,12 +14,12 @@ window.onload= function () {
         
     };
     if(document.getElementById('admin')){
-        document.getElementById('iniciosesion').addEventListener('click', function () {
+        document.getElementById('admin').addEventListener('click', function () {
             location.href = "../html/admin.php";
         });
     }else if(document.getElementById('usuario')){
-        document.getElementById('iniciosesion').addEventListener('click', function () {  
-            location.href = "../index.php";
+        document.getElementById('usuario').addEventListener('click', function () {  
+            location.href = "../html/inicio.php";
             sessionStorage.removeItem('usuario');
         });
     }else if(document.getElementById('iniciosesion')){
