@@ -4,7 +4,7 @@
 
 <ul>
   <p>GRUPO 3 FORMADO POR :</p>
-    <li>Shania Bencomo</li>
+    <li><strike>Shania Bencomo</strike></li>
     <li>Eneko Vilamor</li>
     <li>Ekaitz Martin</li>
     <li>Yeray Li Loaiza</li>
