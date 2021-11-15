@@ -9,13 +9,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/inicio.css">
+    
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
-    <script type="module" src="js/menu.js"></script>
-    <link rel="icon" type="image/png" href="img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
-    <script type="module" src="js/menu.js"></script>
+    <link rel="stylesheet" href="styles/inicio.css">
 
+    <script type="module" src="js/menu.js"></script>
+    <script type="module" src="js/menu.js"></script>
+    
+    <link rel="icon" type="image/png" href="img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
     <title>Fix Point-P&aacute;gina principal</title>
 
 </head>
