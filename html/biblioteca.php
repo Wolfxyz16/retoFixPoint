@@ -18,20 +18,27 @@
 
 <body>
 
-    <header>
-        <div class="cabecera">
-            <section class="contenedor-logo" id="contenedor-logo-fixpoint">
-                <a href="../index.php"><img src="../img/logo_fixpoint_grisoso.png" alt="logo fixpoint"
-                        id="logo-fixpoint"></a>
-            </section>
-            <div class="menu">
-                <div class="item"><span><img src="../img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
-                <div class="item"><span>Biblioteca</span></div>
-                <div class="item"><span>Manuales</span></div>
-                <div class="item"><span>Sobre Nosotros</span></div>
-                <div class="item"><span>Inicio Sesion/Registro</span></div>
-                <div id="label"><span class="hamburger"></span></div>
-              </div>
+    <header class="header">
+        <div class="menu">
+            <a href="html/inicio.html"><img src="img/logo_fixpoint_grisoso.png" alt="logo fixpoint"
+                    id="logo-fixpoint"></a>
+            <div class="item"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+            <div class="item"><span>Biblioteca</span></div>
+            <div class="item"><span>Manuales</span></div>
+            <div class="item"><span>Sobre Nosotros</span></div>
+            <?php
+                session_start();
+                if(isset( $_SESSION['usuario']) ) {
+                    if ($_SESSION['admin']==true) {
+                        print '<div class="item" id="admin"><span>Administrador</span></div>';
+                    }else{
+                            print '<div class="item" id="usuario"><span>' . $_SESSION['usuario'] . '</span></div>';
+                    }
+                } else {
+                    print '<div class="item" id="iniciosesion"><span>Inicio Sesion/Registro</span></div>';
+                }
+            ?>
+            <div id="label"><span class="hamburger"></span></div>
         </div>
     </header>
 
@@ -41,7 +48,7 @@
                 <h1>Biblioteca de herramientas</h1>
                 <div class="contenedor_buscar">
                     <input class="buscador" type="search" name="buscador" placeholder="B&uacute;squeda...">
-                    <button id="buscar_boton" class="boton" type="submit" >Buscar</button>
+                    <button id="buscar_boton" class="boton" type="submit">Buscar</button>
                 </div>
             </div>
 
@@ -69,7 +76,7 @@
             </div>
         </div>
         <div class="herramientas">
-        <?php
+            <?php
             // Cuántos productos mostrar por página
             $productosPorPagina = 16;
             // Por defecto es la página 1; pero si está presente en la URL, tomamos esa
@@ -124,30 +131,30 @@
             ?>
         </div>
         <div class="contenedor_final_pagina">
-        <ul class="contenedor-a">
+            <ul class="contenedor-a">
                 <!-- Si la página actual es mayor a uno, mostramos el botón para ir una página atrás -->
                 <?php if ($pagina > 1) { ?>
-                    <li>
-                        <a href="./biblioteca.php?pagina=<?php echo $pagina - 1 ?>">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
+                <li>
+                    <a href="./biblioteca.php?pagina=<?php echo $pagina - 1 ?>">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
                 <?php } ?>
 
                 <!-- Mostramos enlaces para ir a todas las páginas. Es un simple ciclo for-->
                 <?php for ($x = 1; $x <= $paginas; $x++) { ?>
-                    <li class="numero">
-                        <a href="./biblioteca.php?pagina=<?php echo $x ?>">
-                            <?php echo $x ?></a>
-                    </li>
+                <li class="numero">
+                    <a href="./biblioteca.php?pagina=<?php echo $x ?>">
+                        <?php echo $x ?></a>
+                </li>
                 <?php } ?>
                 <!-- Si la página actual es menor al total de páginas, mostramos un botón para ir una página adelante -->
                 <?php if ($pagina < $paginas) { ?>
-                    <li>
-                        <a href="./biblioteca.php?pagina=<?php echo $pagina + 1 ?>">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
+                <li>
+                    <a href="./biblioteca.php?pagina=<?php echo $pagina + 1 ?>">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
                 <?php } ?>
             </ul>
         </div>
