@@ -12,40 +12,35 @@
     <link rel="stylesheet" href="styles/inicio.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <script type="module" src="js/menu.js"></script>
     <link rel="icon" type="image/png" href="img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
-    <script type="module" src="../js/menu.js"></script>
+    <script type="module" src="js/menu.js"></script>
 
     <title>Fix Point-P&aacute;gina principal</title>
 
 </head>
 
 <body>
-    <header>
-        <div class="cabecera">
-            <section class="contenedor-logo" id="contenedor-logo-fixpoint">
-                <a href="html/inicio.html"><img src="img/logo_fixpoint_grisoso.png" alt="logo fixpoint"
-                        id="logo-fixpoint"></a>
-            </section>
-            <div class="menu">
-                <div class="item"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
-                <div class="item"><span>Biblioteca</span></div>
-                <div class="item"><span>Manuales</span></div>
-                <div class="item"><span>Sobre Nosotros</span></div>
-                <?php
-                    session_start();
-                    if(isset( $_SESSION['usuario']) ) {
-                        if ($_SESSION['admin']==true) {
-                            print '<div class="item" id="admin"><span>Administrador</span></div>';
-                        }else{
-                             print '<div class="item" id="usuario"><span>' . $_SESSION['usuario'] . '</span></div>';
-                        }
-                    } else {
-                        print '<div class="item" id="iniciosesion"><span>Inicio Sesion/Registro</span></div>';
+    <header class="header">
+        <div class="menu">
+            <a href="html/inicio.html"><img src="img/logo_fixpoint_grisoso.png" alt="logo fixpoint" id="logo-fixpoint"></a>
+            <div class="item"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+            <div class="item"><span>Biblioteca</span></div>
+            <div class="item"><span>Manuales</span></div>
+            <div class="item"><span>Sobre Nosotros</span></div>
+            <?php
+                session_start();
+                if(isset( $_SESSION['usuario']) ) {
+                    if ($_SESSION['admin']==true) {
+                        print '<div class="item" id="admin"><span>Administrador</span></div>';
+                    }else{
+                            print '<div class="item" id="usuario"><span>' . $_SESSION['usuario'] . '</span></div>';
                     }
-                    
-                ?>
-                <div id="label"><span class="hamburger"></span></div>
-              </div>
+                } else {
+                    print '<div class="item" id="iniciosesion"><span>Inicio Sesion/Registro</span></div>';
+                }
+            ?>
+            <div id="label"><span class="hamburger"></span></div>
         </div>
     </header>
 
@@ -66,7 +61,7 @@
 
         <article class="accesos">
             <section class="biblioteca caja">
-                <a href="biblioteca.html">
+                <a href="html/biblioteca.php">
                     <img src="img/bibliotecatest.png" alt="Imagen biblioteca">
                     <section class="caja-texto">
                         <h2>Biblioteca</h2>
@@ -79,7 +74,7 @@
 
 
             <section class="manuales caja">
-                <a href="manuales.html">
+                <a href="html/manuales.php">
                     <img src="img/bibliotecatest.png" alt="Imagen manuales">
                     <section class="caja-texto">
                         <h2>Manuales</h2>
@@ -91,7 +86,7 @@
 
 
             <section class="sobrenosotros caja">
-                <a href="sobre_nosotros.html">
+                <a href="html/sobre_nosotros.html">
                     <img src="img/bibliotecatest.png" alt="Imagen sobre nosotros">
                     <section class="caja-texto">
                         <h2>Sobre Nosotros</h2>
