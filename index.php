@@ -20,32 +20,26 @@
 </head>
 
 <body>
-    <header>
-        <div class="cabecera">
-            <section class="contenedor-logo" id="contenedor-logo-fixpoint">
-                <a href="html/inicio.html"><img src="img/logo_fixpoint_grisoso.png" alt="logo fixpoint"
-                        id="logo-fixpoint"></a>
-            </section>
-            <div class="menu">
-                <div class="item"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
-                <div class="item"><span>Biblioteca</span></div>
-                <div class="item"><span>Manuales</span></div>
-                <div class="item"><span>Sobre Nosotros</span></div>
-                <?php
-                    session_start();
-                    if(isset( $_SESSION['usuario']) ) {
-                        if ($_SESSION['admin']==true) {
-                            print '<div class="item" id="admin"><span>Administrador</span></div>';
-                        }else{
-                             print '<div class="item" id="usuario"><span>' . $_SESSION['usuario'] . '</span></div>';
-                        }
-                    } else {
-                        print '<div class="item" id="iniciosesion"><span>Inicio Sesion/Registro</span></div>';
+    <header class="header">
+        <div class="menu">
+            <a href="html/inicio.html"><img src="img/logo_fixpoint_grisoso.png" alt="logo fixpoint" id="logo-fixpoint"></a>
+            <div class="item"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+            <div class="item"><span>Biblioteca</span></div>
+            <div class="item"><span>Manuales</span></div>
+            <div class="item"><span>Sobre Nosotros</span></div>
+            <?php
+                session_start();
+                if(isset( $_SESSION['usuario']) ) {
+                    if ($_SESSION['admin']==true) {
+                        print '<div class="item" id="admin"><span>Administrador</span></div>';
+                    }else{
+                            print '<div class="item" id="usuario"><span>' . $_SESSION['usuario'] . '</span></div>';
                     }
-                    
-                ?>
-                <div id="label"><span class="hamburger"></span></div>
-              </div>
+                } else {
+                    print '<div class="item" id="iniciosesion"><span>Inicio Sesion/Registro</span></div>';
+                }
+            ?>
+            <div id="label"><span class="hamburger"></span></div>
         </div>
     </header>
 
