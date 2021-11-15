@@ -46,21 +46,18 @@
             </div>
 
             <div class="contenedor-uno-linea">
-                <select class="tipos_herramientas">
+                <select class="tipos_herramientas" id="tipo_herramienta" onchange="filtrado()">
                     <option value="" selected>Todas las herramientas</option>
-                    <option>Martillo martilleador</option>
-                    <option>Martillo golpeante</option>
-                    <option>Martillo hidra&uacute;lico</option>
-                    <option>Martillo fulgurante</option>
-                    <option>Martillo fugaz</option>
-                    <option>Martillo destructor</option>
-                    <option>Martillo constructor</option>
-                    <option>Martillo ensamblador</option>
-                    <option>Martillo destornillante</option>
+                    <option value="Martillo">Martillo</option>
+                    <option value="Llave inglesa">Llave inglesa</option>
+                    <option value="Destornillador">Destornillador</option>
+                    <option value="Taladro">Taladro</option>
+                    <option value="Tenaza">Tenaza</option>
+                    <option value="Alicate">Alicate</option>
                 </select>
                 <div class="ordenar_por">
                     <label>Ordenar por</label>
-                    <select class="A-Z">
+                    <select class="A-Z" id="orden">
                         <option value="az">A - Z</option>
                         <option value="za">Z - A</option>
                         <option value="disponible">Disponible</option>
@@ -90,11 +87,14 @@
             try {
                 include("../php/conexion.php");
                 $consultaHerramienta;
-                if (!isset($_POST['enviar'])){
-                    $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
-                } else{
+                if (isset($_POST['enviar'])){
                     $busqueda=$_POST['buscador'];
-                    $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas WHERE nombre LIKE '%$busqueda%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                    $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas WHERE nombre LIKE '%$busqueda%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina); 
+                } else if(isset($_GET['filtro'])) {
+                    $filtro=$_GET['filtro'];
+                    $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas WHERE nombre LIKE '%$filtro%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                } else{
+                    $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
                 };
                 $consultaHerramienta->execute();
                 $resultado = $consultaHerramienta->fetchAll();

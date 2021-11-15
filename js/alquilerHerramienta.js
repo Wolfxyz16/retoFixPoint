@@ -22,5 +22,13 @@ function alquiler () {
         }
 
     }
-}
+    var filtro=document.getElementById("tipo_herramienta");
+    filtro.addEventListener("change", function (){
+        location.href=location.href+'?filtro='+filtro.value;
+    });
+};
+
+    
+    
+
 export {alquiler};
