@@ -64,18 +64,28 @@
 
             <table id="tabla-herramientas" class="tabla">
                 <?php include_once('../php/selects-tabla-admin/select-herramientas.php');?>
+                <tr>
+                    <td>
+                        <img src="../img/svg/settings.svg" alt="icono engranaje editar">
+                        <img src="../img/svg/trash.svg" alt="icono cubo de basura">
+                    </td>
+                </tr>
+                </tbody>
             </table>
 
             <table id="tabla-usuarios" class="tabla">
                 <?php include_once('../php/selects-tabla-admin/select-usuarios.php');?>
+                </tbody>
             </table>
 
             <table id="tabla-manuales" class="tabla">
                 <?php include_once('../php/selects-tabla-admin/select-manuales.php');?>
+                </tbody>
             </table>
 
             <table id="tabla-alquileres" class="tabla">
                 <?php include_once('../php/selects-tabla-admin/select-alquileres.php');?>
+                </tbody>
             </table>
 
             <section class="navegacion-container">
