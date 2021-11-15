@@ -5,7 +5,7 @@ import{alquiler} from './alquilerHerramienta.js';
 window.onload= function () {
 
     var items = document.getElementsByClassName('item');
-    const sitios_web = ["../index.php", "html/biblioteca.php", "html/manuales.php", "html/sobre_nosotros.php"];
+    const sitios_web = ["", "html/biblioteca.php", "html/manuales.php", "html/sobre_nosotros.php"];
     
     for (let i = 0; i < items.length; i++) {
         items[i].addEventListener('click', function () {
@@ -14,11 +14,15 @@ window.onload= function () {
         
     };
     if(document.getElementById('admin')){
-        document.getElementById('admin').addEventListener('click', function () {
+        document.getElementById('modo-admin').addEventListener('click', function () {
             location.href = "../html/admin.php";
         });
+        document.getElementById('cerrar-sesion').addEventListener('click', function () {
+            location.href = "../html/inicio.php";
+            sessionStorage.removeItem('usuario');
+        });
     }else if(document.getElementById('usuario')){
-        document.getElementById('usuario').addEventListener('click', function () {  
+        document.getElementById('cerrar-sesion').addEventListener('click', function () {
             location.href = "../html/inicio.php";
             sessionStorage.removeItem('usuario');
         });
@@ -28,19 +32,19 @@ window.onload= function () {
         });
     }
 
-    if(window.location.pathname.indexOf("/index.php") >-1){
-        slider();
-    }
+    
     if (window.location.pathname.indexOf("/html/admin.php") >-1 ){
 
         administrador();
     }
-    if (window.location.pathname.indexOf("/html/manuales.php") >-1 ){
+    else if (window.location.pathname.indexOf("/html/manuales.php") >-1 ){
        
         descarga();
     }
-    if (window.location.pathname.indexOf("/html/biblioteca.php") >-1 ){
+    else if (window.location.pathname.indexOf("/html/biblioteca.php") >-1 ){
         alquiler();
+    }else if(window.location.pathname.indexOf("") >-1){
+        slider();
     }
 };
 
