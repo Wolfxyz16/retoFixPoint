@@ -46,10 +46,10 @@
         <div class="contenedor-uno">
             <div class="contenedor-uno-linea">
                 <h1>Biblioteca de herramientas</h1>
-                <div class="contenedor_buscar">
+                <form class="contenedor_buscar" method="post">
                     <input class="buscador" type="search" name="buscador" placeholder="B&uacute;squeda...">
-                    <button id="buscar_boton" class="boton" type="submit">Buscar</button>
-                </div>
+                    <button id="buscar_boton" class="boton" name="enviar" value="Buscar" type="submit" >Buscar</button>
+                </form>
             </div>
 
             <div class="contenedor-uno-linea">
@@ -96,9 +96,15 @@
             // Consulta para el contenido de los manuales y crear "tarjetas" con cada registro
             try {
                 include("../php/conexion.php");
-                $consultaManual = $conexion->prepare("SELECT * FROM herramientas LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
-                $consultaManual->execute();
-                $resultado = $consultaManual->fetchAll();
+                $consultaHerramienta;
+                if (!isset($_POST['enviar'])){
+                    $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                } else{
+                    $busqueda=$_POST['buscador'];
+                    $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas WHERE nombre LIKE '%$busqueda%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                };
+                $consultaHerramienta->execute();
+                $resultado = $consultaHerramienta->fetchAll();
                 foreach ($resultado as $columna) {
                     echo '<div class="her">
                             <div class="img">
@@ -110,8 +116,8 @@
                             </div>
                             <div class="alquiler">';
                                  if ($columna['disponibilidad']=="Disponible") {
-                                    echo '<p style="background-color: green";>Disponible</p>
-                                    <button class="boton" id="'.$columna['cod_herramienta'].'">Alquilar ahora</button>
+                                    echo '<p style="background-color: #70FF8B";>Disponible</p>
+                                    <button class="buton" id="'.$columna['cod_herramienta'].'">Alquilar ahora</button>
                                     <div id="myModal" class="modal">
                                     <div class="modal-content">
                                         <span class="close">&times;</span>
@@ -120,7 +126,7 @@
 
                                     </div>';
                                 } else {
-                                    echo '<p style="background-color: red";>No disponible</p>';
+                                    echo '<p style="background-color: #FF6961";>No disponible</p>';
                                 };
                             echo '</div>
                             </div>';
