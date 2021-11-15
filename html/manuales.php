@@ -6,15 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../styles/manuales.css">
+
+    <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/boton.css">
-    <link rel="stylesheet" href="../styles/boton.css">
-    <title>Manuales</title>
-    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/manuales.css">
+    
     <script type="module" src="../js/menu.js"></script>
     <script type="module" src="../js/descargaManuales.js"></script>
+    
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
+    <title>Manuales</title>
 </head>
 
 <body>
@@ -22,7 +24,7 @@
         <div class="menu">
             <a href="html/inicio.html"><img src="../img/logo_fixpoint_grisoso.png" alt="logo fixpoint"
                     id="logo-fixpoint"></a>
-            <div class="item"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+            <div class="item"><span><img src="../img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
             <div class="item"><span>Biblioteca</span></div>
             <div class="item"><span>Manuales</span></div>
             <div class="item"><span>Sobre Nosotros</span></div>
