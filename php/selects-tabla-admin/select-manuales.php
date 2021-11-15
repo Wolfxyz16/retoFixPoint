@@ -9,13 +9,13 @@
         $manuales = $consulta -> fetchAll();
 
 
-    echo '<tr>';
+    echo '<th>';
         echo '<th>Titulo</th>';
         echo '<th>Fichero</th>';
         echo '<th>Autor</th>';
         echo '<th>Aprobado</th>';
         echo '<th>Portada</th>';
-    echo '<tr>';
+    echo '<th>';
 
     foreach ($manuales as $manual) {
         echo '<tr>';

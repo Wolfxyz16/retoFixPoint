@@ -12,12 +12,12 @@
         echo '<script>console.log("' . $e->getMessage() .'");</script>';
     }
 
-    echo '<tr>';
+    echo '<th>';
         echo '<th>Nombre</th>';
         echo '<th>Marca y modelo</th>';
         echo '<th>Disponible</th>';
         echo '<th>Foto</th>';
-    echo '<tr>';
+    echo '<th>';
 
     foreach ($herramientas as $herramienta) {
         echo '<tr>';

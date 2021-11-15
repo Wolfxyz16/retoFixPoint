@@ -8,13 +8,13 @@
         $consulta -> execute();
         $alquileres = $consulta -> fetchAll();
          //HACER LAS CONSULTAS ANIDADAS EN USUARIOS Y HERRAMIENTAS
-    echo '<tr>';
+    echo '<th>';
     echo '<td>email</td>';
     echo '<td>cod_herramienta</td>';
     echo '<td>fecha_prealquiler</td>';
     echo '<td>alquiler inicio</td>';
     echo '<td>alquiler fin</td>';
-    echo '<tr>';
+    echo '<th>';
 
     foreach ($alquileres as $alquiler) {
         echo '<tr>';
