@@ -6,32 +6,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/biblioteca.css" type="text/css">
+    
     <link rel="stylesheet" href="../styles/header.css" type="text/css">
     <link rel="stylesheet" href="../styles/footer.css" type="text/css">
     <link rel="stylesheet" href="../styles/boton.css">
-    <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
-    <title>Biblioteca</title>
+    <link rel="stylesheet" href="../styles/biblioteca.css" type="text/css">
+    
     <script type="module" src="../js/menu.js"></script>
     <script type="module" src="../js/alquilerHerramienta.js"></script>
+    
+    <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
+    <title>Biblioteca</title>
 </head>
 
 <body>
 
-    <header>
-        <div class="cabecera">
-            <section class="contenedor-logo" id="contenedor-logo-fixpoint">
-                <a href="../index.php"><img src="../img/logo_fixpoint_grisoso.png" alt="logo fixpoint"
-                        id="logo-fixpoint"></a>
-            </section>
-            <div class="menu">
-                <div class="item"><span><img src="../img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
-                <div class="item"><span>Biblioteca</span></div>
-                <div class="item"><span>Manuales</span></div>
-                <div class="item"><span>Sobre Nosotros</span></div>
-                <div class="item"><span>Inicio Sesion/Registro</span></div>
-                <div id="label"><span class="hamburger"></span></div>
-              </div>
+<header class="header">
+        <div class="menu">
+            <a href="html/inicio.html"><img src="img/logo_fixpoint_grisoso.png" alt="logo fixpoint" id="logo-fixpoint"></a>
+            <div class="item"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+            <div class="item"><span>Biblioteca</span></div>
+            <div class="item"><span>Manuales</span></div>
+            <div class="item"><span>Sobre Nosotros</span></div>
+            <?php
+                    session_start();
+                    if(isset( $_SESSION['usuario']) ) {
+                        if ($_SESSION['admin']==TRUE) {
+                            print '<div class="item" id="admin"><span id="menu-admin">Administrador<div id="cerrar-sesion"><span>Cerrar Sesion</span></div><div id="modo-admin"><span>Modo Admin</span></div></span></div>';
+                        }else if($_SESSION['admin']==FALSE){
+                             print '<div class="item" id="usuario"><span id="menu-usuario">' . $_SESSION['usuario'] . ' <div id="cerrar-sesion"><span>Cerrar Sesion</span></div></span></div>';
+                        }
+                    } else {
+                        print '<div class="item" id="iniciosesion"><span>Inicio Sesion/Registro</span></div>';
+                    }
+                    
+                ?>
+            <div id="label"><span class="hamburger"></span></div>
         </div>
     </header>
 
@@ -66,7 +76,7 @@
             </div>
         </div>
         <div class="herramientas">
-        <?php
+            <?php
             // Cuántos productos mostrar por página
             $productosPorPagina = 16;
             // Por defecto es la página 1; pero si está presente en la URL, tomamos esa
@@ -130,30 +140,30 @@
             ?>
         </div>
         <div class="contenedor_final_pagina">
-        <ul class="contenedor-a">
+            <ul class="contenedor-a">
                 <!-- Si la página actual es mayor a uno, mostramos el botón para ir una página atrás -->
                 <?php if ($pagina > 1) { ?>
-                    <li>
-                        <a href="./biblioteca.php?pagina=<?php echo $pagina - 1 ?>">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
+                <li>
+                    <a href="./biblioteca.php?pagina=<?php echo $pagina - 1 ?>">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
                 <?php } ?>
 
                 <!-- Mostramos enlaces para ir a todas las páginas. Es un simple ciclo for-->
                 <?php for ($x = 1; $x <= $paginas; $x++) { ?>
-                    <li class="numero">
-                        <a href="./biblioteca.php?pagina=<?php echo $x ?>">
-                            <?php echo $x ?></a>
-                    </li>
+                <li class="numero">
+                    <a href="./biblioteca.php?pagina=<?php echo $x ?>">
+                        <?php echo $x ?></a>
+                </li>
                 <?php } ?>
                 <!-- Si la página actual es menor al total de páginas, mostramos un botón para ir una página adelante -->
                 <?php if ($pagina < $paginas) { ?>
-                    <li>
-                        <a href="./biblioteca.php?pagina=<?php echo $pagina + 1 ?>">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
+                <li>
+                    <a href="./biblioteca.php?pagina=<?php echo $pagina + 1 ?>">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
                 <?php } ?>
             </ul>
         </div>

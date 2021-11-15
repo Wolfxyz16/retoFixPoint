@@ -25,9 +25,9 @@
                 foreach($resultado as $result) {
                     $usuario =$result['name'].' '.$result['surname'];
                     if ( $result['mail'] == 'admin' ) { 
-                        $_SESSION['admin'] = true; 
+                        $_SESSION['admin'] = TRUE; 
                     }else{
-                        $_SESSION['admin'] = false;
+                        $_SESSION['admin'] = FALSE;
                     }
                 }
                 

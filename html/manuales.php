@@ -6,31 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../styles/manuales.css">
+
+    <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/boton.css">
-    <link rel="stylesheet" href="../styles/boton.css">
-    <title>Manuales</title>
-    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/manuales.css">
+    
     <script type="module" src="../js/menu.js"></script>
     <script type="module" src="../js/descargaManuales.js"></script>
+    
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
+    <title>Manuales</title>
 </head>
 
 <body>
-    <header>
-        <div class="cabecera">
-            <section class="contenedor-logo" id="contenedor-logo-fixpoint">
-                <a href="../index.php"><img src="../img/logo_fixpoint_grisoso.png" alt="logo fixpoint" id="logo-fixpoint"></a>
-            </section>
-            <div class="menu">
-                <div class="item"><span><img src="../img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
-                <div class="item"><span>Biblioteca</span></div>
-                <div class="item"><span>Manuales</span></div>
-                <div class="item"><span>Sobre Nosotros</span></div>
-                <div class="item"><span>Inicio Sesion/Registro</span></div>
-                <div id="label"><span class="hamburger"></span></div>
-            </div>
+<header class="header">
+        <div class="menu">
+            <a href="html/inicio.html"><img src="img/logo_fixpoint_grisoso.png" alt="logo fixpoint" id="logo-fixpoint"></a>
+            <div class="item"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+            <div class="item"><span>Biblioteca</span></div>
+            <div class="item"><span>Manuales</span></div>
+            <div class="item"><span>Sobre Nosotros</span></div>
+            <?php
+                    session_start();
+                    if(isset( $_SESSION['usuario']) ) {
+                        if ($_SESSION['admin']==TRUE) {
+                            print '<div class="item" id="admin"><span id="menu-admin">Administrador<div id="cerrar-sesion"><span>Cerrar Sesion</span></div><div id="modo-admin"><span>Modo Admin</span></div></span></div>';
+                        }else if($_SESSION['admin']==FALSE){
+                             print '<div class="item" id="usuario"><span id="menu-usuario">' . $_SESSION['usuario'] . ' <div id="cerrar-sesion"><span>Cerrar Sesion</span></div></span></div>';
+                        }
+                    } else {
+                        print '<div class="item" id="iniciosesion"><span>Inicio Sesion/Registro</span></div>';
+                    }
+                    
+                ?>
+            <div id="label"><span class="hamburger"></span></div>
         </div>
     </header>
 
@@ -116,27 +126,27 @@
             <ul class="contenedor-a">
                 <!-- Si la página actual es mayor a uno, mostramos el botón para ir una página atrás -->
                 <?php if ($pagina > 1) { ?>
-                    <li>
-                        <a href="./manuales.php?pagina=<?php echo $pagina - 1 ?>">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
+                <li>
+                    <a href="./manuales.php?pagina=<?php echo $pagina - 1 ?>">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
                 <?php } ?>
 
                 <!-- Mostramos enlaces para ir a todas las páginas. Es un simple ciclo for-->
                 <?php for ($x = 1; $x <= $paginas; $x++) { ?>
-                    <li class="numero">
-                        <a href="./manuales.php?pagina=<?php echo $x ?>">
-                            <?php echo $x ?></a>
-                    </li>
+                <li class="numero">
+                    <a href="./manuales.php?pagina=<?php echo $x ?>">
+                        <?php echo $x ?></a>
+                </li>
                 <?php } ?>
                 <!-- Si la página actual es menor al total de páginas, mostramos un botón para ir una página adelante -->
                 <?php if ($pagina < $paginas) { ?>
-                    <li>
-                        <a href="./manuales.php?pagina=<?php echo $pagina + 1 ?>">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
+                <li>
+                    <a href="./manuales.php?pagina=<?php echo $pagina + 1 ?>">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
                 <?php } ?>
             </ul>
         </div>
@@ -155,7 +165,8 @@
             <a href="tel:0034659659659" target="_blank">
                 <li>659 659 659</li>
             </a>
-            <a href="https://www.google.es/maps/place/Centro+Integrado+De+Formaci%C3%B3n+Profesional+Pic%C3%B3+Frentes/@41.7665028,-2.4843674,17z/data=!3m1!4b1!4m5!3m4!1s0xd44d2e709876957:0x469c9525026cc4ad!8m2!3d41.7664988!4d-2.4821734" target="_blank">
+            <a href="https://www.google.es/maps/place/Centro+Integrado+De+Formaci%C3%B3n+Profesional+Pic%C3%B3+Frentes/@41.7665028,-2.4843674,17z/data=!3m1!4b1!4m5!3m4!1s0xd44d2e709876957:0x469c9525026cc4ad!8m2!3d41.7664988!4d-2.4821734"
+                target="_blank">
                 <li>Calle Gervasio Manrique de Lara, 42004 Soria</li>
             </a>
         </ul>
