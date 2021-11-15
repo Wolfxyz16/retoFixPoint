@@ -11,14 +11,17 @@
     } catch(PDOException $e) {
         echo '<script>console.log("' . $e->getMessage() .'");</script>';
     }
+    
+    echo '</thead>';
+        echo '<th>';
+            echo '<td>Nombre</td>';
+            echo '<td>Marca y modelo</td>';
+            echo '<td>Disponible</td>';
+            echo '<td>Foto</td>';
+        echo '<th>';
+    echo '</thead>';
 
-    echo '<th>';
-        echo '<th>Nombre</th>';
-        echo '<th>Marca y modelo</th>';
-        echo '<th>Disponible</th>';
-        echo '<th>Foto</th>';
-    echo '<th>';
-
+    echo '<tbody>';
     foreach ($herramientas as $herramienta) {
         echo '<tr>';
         echo '<td>' . $herramienta['nombre'] . '</td>';

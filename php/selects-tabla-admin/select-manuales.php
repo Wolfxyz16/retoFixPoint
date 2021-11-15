@@ -8,14 +8,17 @@
         $consulta -> execute();
         $manuales = $consulta -> fetchAll();
 
+    echo '</thead>';
+        echo '<th>';
+            echo '<td>Titulo</td>';
+            echo '<td>Fichero</td>';
+            echo '<td>Autor</td>';
+            echo '<td>Aprobado</td>';
+            echo '<td>Portada</td>';
+        echo '<th>';
+    echo '</thead>';
 
-    echo '<th>';
-        echo '<th>Titulo</th>';
-        echo '<th>Fichero</th>';
-        echo '<th>Autor</th>';
-        echo '<th>Aprobado</th>';
-        echo '<th>Portada</th>';
-    echo '<th>';
+    echo '<tbody>';
 
     foreach ($manuales as $manual) {
         echo '<tr>';

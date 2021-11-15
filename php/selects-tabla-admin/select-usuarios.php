@@ -11,11 +11,15 @@
         echo '<script>console.log("' . $e->getMessage() .'");</script>';
     }
 
-    echo '<th>';
-        echo '<td>Nombre</td>';
-        echo '<td>Apellidos</td>';
-        echo '<td>Email</td>';
-    echo '<th>';
+    echo '</thead>';
+        echo '<th>';
+            echo '<td>Nombre</td>';
+            echo '<td>Apellido</td>';
+            echo '<td>Correo</td>';
+        echo '<th>';
+    echo '</thead>';
+
+    echo '<tbody>';
 
     foreach ($usuarios as $usuario) {
         echo '<tr>';
