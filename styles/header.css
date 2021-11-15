@@ -1,6 +1,6 @@
 @font-face {
   font-family: fuenteFixpoint;
-  src: url(/fonts/tonus-sans-heavy-italic.otf) format("opentype");
+  src: url(fonts/tonus-sans-heavy-italic.otf) format("opentype");
 }
 
 /******************************** HEADER *********************************/
@@ -18,30 +18,35 @@
 }
 
 #logo-fixpoint {
-  max-width: 25vw;
+  max-width: 25em;
   height: auto;
   background-color: white;
   animation: logocambio 7s linear infinite;
-
 }
 
 .menu {
+  box-sizing: border-box;
+  user-select: none;
   text-transform: uppercase;
   height: 100%;
   color: rgba(255, 255, 255, 0.8);
-  cursor: pointer;
   pointer-events: none;
   animation: bgchange 7s linear infinite;
 
   /* display: inline-block; */
   display: flex;
-  justify-content: space-around;
+  flex-flow: row wrap;
+  justify-content: space-between;
   align-items: center;
-  gap: .5em;
+}
+
+.menu > * {
+  padding: 1em;
 }
 
 .menu:hover {
   pointer-events: all;
+  cursor: pointer;
 }
 
 #label { /* label es hamburguesa */
@@ -214,7 +219,6 @@ span {
   display: inline-block;
   width: 1.25em;
   height: 0.8em;
-  margin-right: 0.3em;
   border-top: 0.2em solid #fff;
   border-bottom: 0.2em solid #fff;
   animation: hamburgerchange 7s linear infinite;
@@ -224,7 +228,6 @@ span {
   content: "";
   position: absolute;
   top: 0.3em;
-  left: 0px;
   width: 100%;
   border-top: 0.2em solid #fff;
   animation: hamburgerchange 7s linear infinite;
