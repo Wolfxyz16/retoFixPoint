@@ -68,7 +68,7 @@
                 </fieldset>
             </form>
             
-            <form action="" method="POST" class="form manuales oculto">
+            <form action="../php/insertar/crear-manual.php" method="POST" class="form manuales oculto">
                 <fieldset class="fieldset">
                     <legend class="titulo-formulario">Crear un manual</legend>
                     <label for="titulo">Titulo<input type="text" name="titulo" required></label>
