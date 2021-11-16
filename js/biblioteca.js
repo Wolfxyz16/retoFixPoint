@@ -1,4 +1,11 @@
-function alquiler () {
+function biblioteca () {
+    if(localStorage.getItem('url_biblioteca')===null){
+        localStorage.setItem('url_biblioteca', location.href);
+    }
+    var biblioteca=localStorage.getItem('url_biblioteca');
+    console.log(biblioteca);
+  
+    console.log( location.href);
     var botones = document.getElementsByClassName("buton");
     for (let index = 0; index < botones.length; index++) {
         botones[index].addEventListener('click', alquilerHerramientas);
@@ -22,5 +29,13 @@ function alquiler () {
         }
 
     }
-}
-export {alquiler};
+    var filtro=document.getElementById("tipo_herramienta");
+    filtro.addEventListener('change', function (){
+        location.href=biblioteca+'?filtro='+filtro.value;
+    });
+};
+
+    
+    
+
+export {biblioteca};

@@ -1,9 +1,10 @@
 import {slider} from './slider.js';
 import {administrador} from './admin.js';
 import {descarga} from './descargaManuales.js';
-import {alquiler} from './alquilerHerramienta.js';
 import {accesoDesdeIndex} from './accesoDesdeIndex.js';
 import {accesoDesdeHtml} from './accesoDesdeHtml.js';
+import{biblioteca} from './biblioteca.js';
+
 window.onload= function () {
     console.log(window.location.pathname.indexOf("/html/"));
     if (window.location.pathname.indexOf("/html/") >-1){
@@ -19,8 +20,13 @@ window.onload= function () {
         descarga();
     }
     else if (window.location.pathname.indexOf("/html/biblioteca.php") >-1 ){
-        alquiler();
+
+        biblioteca();
     }else if(window.location.pathname.indexOf("/html/sobre_nosotros.php")==-1){
+
+
+    }else if(window.location.pathname.indexOf("") >-1){
+
         slider();
     }
 };

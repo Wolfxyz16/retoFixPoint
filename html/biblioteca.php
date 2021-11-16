@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../styles/biblioteca.css" type="text/css">
     
     <script type="module" src="../js/menu.js"></script>
-    <script type="module" src="../js/alquilerHerramienta.js"></script>
+    <script type="module" src="../js/biblioteca.js"></script>
     
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
     <title>Biblioteca</title>
@@ -56,21 +56,19 @@
             </div>
 
             <div class="contenedor-uno-linea">
-                <select class="tipos_herramientas">
+                <select class="tipos_herramientas" id="tipo_herramienta">
                     <option value="" selected>Todas las herramientas</option>
-                    <option>Martillo martilleador</option>
-                    <option>Martillo golpeante</option>
-                    <option>Martillo hidra&uacute;lico</option>
-                    <option>Martillo fulgurante</option>
-                    <option>Martillo fugaz</option>
-                    <option>Martillo destructor</option>
-                    <option>Martillo constructor</option>
-                    <option>Martillo ensamblador</option>
-                    <option>Martillo destornillante</option>
+                    <option value="Martillo">Martillo</option>
+                    <option value="Llave inglesa">Llave inglesa</option>
+                    <option value="Destornillador">Destornillador</option>
+                    <option value="Taladro">Taladro</option>
+                    <option value="Tenaza">Tenaza</option>
+                    <option value="Alicate">Alicate</option>
+                    <option value="Calibre">Calibre</option>
                 </select>
                 <div class="ordenar_por">
                     <label>Ordenar por</label>
-                    <select class="A-Z">
+                    <select class="A-Z" id="orden">
                         <option value="az">A - Z</option>
                         <option value="za">Z - A</option>
                         <option value="disponible">Disponible</option>
@@ -100,11 +98,18 @@
             try {
                 include("../php/conexion.php");
                 $consultaHerramienta;
-                if (!isset($_POST['enviar'])){
-                    $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
-                } else{
+                if (isset($_POST['enviar'])){
+                    $pagina=1;
                     $busqueda=$_POST['buscador'];
-                    $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas WHERE nombre LIKE '%$busqueda%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                    $consultaHerramienta=crearConsulta($busqueda, $conexion, $pagina, $productosPorPagina);
+                    $paginas=conteo($busqueda, $conexion, $pagina, $productosPorPagina);
+                } else if(isset($_GET['filtro'])) {
+                    $pagina=1;
+                    $filtro=$_GET['filtro'];
+                    $consultaHerramienta=crearConsulta($filtro, $conexion, $pagina, $productosPorPagina);
+                    $paginas=conteo($filtro, $conexion, $pagina, $productosPorPagina);
+                } else{
+                    $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
                 };
                 $consultaHerramienta->execute();
                 $resultado = $consultaHerramienta->fetchAll();
@@ -136,6 +141,21 @@
                 }
             } catch (PDOException $e) {
                 echo '<script>console.log(' . $e->getMessage() . ')</script>';
+            }
+            function conteo($condicion, $conexion, $paginas, $productosPorPagina){
+                try {
+                    include("../php/conexion.php");
+                    $consultaConteo = $conexion->query("SELECT count(*) AS conteo FROM herramientas WHERE nombre LIKE '%$condicion%'");
+                    $conteo = $consultaConteo->fetchObject()->conteo;
+                    $paginas = ceil($conteo / $productosPorPagina);
+                    return $paginas;
+                } catch (PDOException $e) {
+                    echo '<script>console.log(' . $e->getMessage() . ')</script>';
+                }
+            };
+            function crearConsulta($where, $conexion, $pagina, $productosPorPagina){
+                $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas WHERE nombre LIKE '%$where%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                return $consultaHerramienta;
             }
             ?>
         </div>
