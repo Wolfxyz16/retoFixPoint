@@ -64,7 +64,7 @@
                     <label for="nombre">Nombre de la herramienta<input type="text" name="nombre" required></label>
                     <label for="marca-modelo">Marca y modelo<input type="text" name="marca-modelo" required></label>
                     <label for="foto">Foto<input type="file" name="nombre" required></label>
-                    <input type="submit" value="Crear" class="submit">
+                    <input type="submit" value="Crear" class="submit" name="submit">
                 </fieldset>
             </form>
             
@@ -74,7 +74,7 @@
                     <label for="titulo">Titulo<input type="text" name="titulo" required></label>
                     <label for="portada">Portada<input type="file" name="portada" required></label>
                     <label for="fichero">Fichero<input type="file" name="fichero" required></label>
-                    <input type="submit" value="Crear" class="submit">
+                    <input type="submit" value="Crear" class="submit" name="submit">
                 </fieldset>
             </form>
 
@@ -85,7 +85,7 @@
                     <label for="apellido">Apellido<input type="text" name="apellido" required></label>
                     <label for="mail">Email<input type="email" name="email" required></label>
                     <label for="password">Contrase&ntilde;a<input type="password" name="password" required></label>
-                    <input type="submit" value="Crear" class="submit">
+                    <input type="submit" value="Crear" class="submit" name="submit">
                 </fieldset>
             </form>
 
