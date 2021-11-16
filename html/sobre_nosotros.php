@@ -19,9 +19,9 @@
 </head>
 
 <body>
-<header class="header">
+    <header class="header">
         <div class="menu">
-            <a href="html/inicio.html"><img src="img/logo_fixpoint_grisoso.png" alt="logo fixpoint" id="logo-fixpoint"></a>
+            <a href="" id="a-logo-fixpoint"><img src="img/logo_fixpoint_grisoso.png" alt="logo fixpoint" id="logo-fixpoint"></a>
             <div class="item"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
             <div class="item"><span>Biblioteca</span></div>
             <div class="item"><span>Manuales</span></div>
@@ -67,7 +67,7 @@
                     </li>
                 </ul>
             </div>
-            <img src="/img/acercade.jpg" alt="biblioteca">
+            <img src="../img/acercade.jpg" alt="biblioteca">
         </div>
 
         <div class="img_con_texto">

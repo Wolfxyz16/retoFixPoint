@@ -1,9 +1,10 @@
 <?php
         if(!isset($_POST['mail'])){
-            echo "<script>alert('No se ha recibido ningun email')</script>";
+            echo "<script>alert('No se ha recibido ningun email');window.location.href='../html/login.html';</script>";
+
 
         } else if (!isset($_POST['password'])) {
-            echo "<script>alert('No se ha recibido ninguna password')</script>";
+            echo "<script>alert('No se ha recibido ninguna password');window.location.href='../html/login.html';</script>";
         } else{
             inicioSesion();
         }
@@ -19,7 +20,7 @@
             $consultaUsuario -> execute();
             $resultado = $consultaUsuario->fetchAll();
             if(empty($resultado)){
-                echo "<script>console.log('La cuenta no existe');</script>";
+                echo "<script>alert('La cuenta no existe');window.location.href='../html/login.html';</script>";
             }else{
                 session_start();
                 foreach($resultado as $result) {
@@ -34,7 +35,7 @@
                 $_SESSION['usuario']=$usuario;
                 echo "<script>
                 alert('Bienvenido $usuario');
-                window.location.href='../html/inicio.php';
+                window.location.href='../';
                 </script>";
                 exit;
             }

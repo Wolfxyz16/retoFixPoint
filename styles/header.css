@@ -32,7 +32,6 @@
   color: rgba(255, 255, 255, 0.8);
   pointer-events: none;
   animation: bgchange 7s linear infinite;
-
   /* display: inline-block; */
   display: flex;
   flex-flow: row wrap;
@@ -285,4 +284,41 @@ span {
   80% {
     background-color: rgb(255, 234, 150);
   }
+}
+
+@media (min-width:320px) and (max-width:1300px) {
+  .menu{
+    flex-flow: column;
+    justify-content: baseline;
+  }
+  #a-logo-fixpoint{
+    order: 0;
+  }
+  #label{
+    order: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  #home{
+    order: 3;
+  }
+  #library{
+    order: 4;
+  }
+  #guide{
+    order: 5;
+  }
+  #about{
+    order: 6;
+  }
+  #admin{
+    order: 7;
+  }
+  #usuario{
+    order: 7;
+  }
+  #iniciosesion{
+    order: 7;
+  }
+ 
 }
