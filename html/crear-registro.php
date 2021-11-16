@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../styles/boton.css" type="text/css">
     <link rel="stylesheet" href="../styles/crear-registro.css" type="text/css">
 
+    <script src="../js/crear-registro.js"></script>
+
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
     <title>Crear</title>
 </head>
@@ -44,7 +46,8 @@
 
     <main>
         <div class="first-container">
-            <select name="tabla" id="">
+            <select name="tabla" id="select-tabla">
+                <option value="" selected disabled>Seleccione una opcion</option>
                 <option value="herramientas">Herramientas</option>
                 <option value="manuales">Manuales</option>
                 <option value="usuarios">Usuarios</option>
@@ -53,12 +56,12 @@
         </div>
 
         <div class="form-container">
-            <form action="../php/insertar/crear-herramienta.php" method="POST" class="form herramientas visible">
+            <form action="../php/insertar/crear-herramienta.php" method="POST" class="form herramientas oculto">
                 <fieldset class="fieldset">
                     <legend class="titulo-formulario">Crear una herramienta</legend>
-                    <label for="nombre">Nombre de la herramienta<input type="text" name="nombre"></label>
-                    <label for="marca-modelo">Marca y modelo<input type="text" name="marca-modelo"></label>
-                    <label for="foto">Foto<input type="file" name="nombre"></label>
+                    <label for="nombre">Nombre de la herramienta<input type="text" name="nombre" required></label>
+                    <label for="marca-modelo">Marca y modelo<input type="text" name="marca-modelo" required></label>
+                    <label for="foto">Foto<input type="file" name="nombre" required></label>
                     <input type="submit" value="Crear" class="submit">
                 </fieldset>
             </form>
@@ -66,9 +69,9 @@
             <form action="" method="POST" class="form manuales oculto">
                 <fieldset class="fieldset">
                     <legend class="titulo-formulario">Crear un manual</legend>
-                    <label for="titulo">Titulo<input type="text" name="titulo"></label>
-                    <label for="portada">Portada<input type="file" name="portada"></label>
-                    <label for="fichero">Fichero<input type="file" name="fichero" id=""></label>
+                    <label for="titulo">Titulo<input type="text" name="titulo" required></label>
+                    <label for="portada">Portada<input type="file" name="portada" required></label>
+                    <label for="fichero">Fichero<input type="file" name="fichero" required></label>
                     <input type="submit" value="Crear" class="submit">
                 </fieldset>
             </form>
@@ -76,10 +79,10 @@
             <form action="../php/insertar/crear-usuario" method="POST" class="form usuarios oculto">
                 <fieldset class="fieldset">
                     <legend class="titulo-formulario">Crear un usuario</legend>
-                    <label for="nombre">Nombre<input type="text" name="nombre"></label>
-                    <label for="apellido">Apellido<input type="text" name="apellido"></label>
-                    <label for="mail">Email<input type="email" name="email" id=""></label>
-                    <label for="password">Contrase&ntilde;a<input type="password" name="password" id=""></label>
+                    <label for="nombre">Nombre<input type="text" name="nombre" required></label>
+                    <label for="apellido">Apellido<input type="text" name="apellido" required></label>
+                    <label for="mail">Email<input type="email" name="email" required></label>
+                    <label for="password">Contrase&ntilde;a<input type="password" name="password" required></label>
                     <input type="submit" value="Crear" class="submit">
                 </fieldset>
             </form>
