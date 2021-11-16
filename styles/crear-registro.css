@@ -16,14 +16,14 @@ body {
 
 main {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
 }
 
 .first-container {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     gap: 2em;
 }
 
@@ -44,6 +44,7 @@ main {
     color: black;
     font-size: 2em;
     text-align: center;
+    width: 100%;
 
     border: solid #1b1b1b  medium;
     border-radius: 10px;
