@@ -12,11 +12,12 @@
     }
 
     echo '</thead>';
-        echo '<th>';
-            echo '<td>Nombre</td>';
-            echo '<td>Apellido</td>';
-            echo '<td>Correo</td>';
-        echo '<th>';
+        echo '<tr>';
+            echo '<th>Nombre</th>';
+            echo '<th>Apellido</th>';
+            echo '<th>Correo</th>';
+            echo '<th>Editar</th>';
+        echo '<tr>';
     echo '</thead>';
 
     echo '<tbody>';
@@ -26,6 +27,8 @@
         echo '<td>' . $usuario['name'] . '</td>';
         echo '<td>' . $usuario['surname'] . '</td>';
         echo '<td>' . $usuario['mail'] . '</td>';
+        echo '<td><img src="../img/svg/settings.svg" alt="icono engranaje editar">';
+        echo '<img src="../img/svg/trash.svg" alt="icono cubo de basura"></td>';
         echo '<tr>';
     }
 ?>

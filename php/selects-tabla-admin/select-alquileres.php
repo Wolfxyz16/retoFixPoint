@@ -9,23 +9,26 @@
         $alquileres = $consulta -> fetchAll();
          //HACER LAS CONSULTAS ANIDADAS EN USUARIOS Y HERRAMIENTAS
     echo '</thead>';
-        echo '<th>';
-            echo '<td>email</td>';
-            echo '<td>cod_herramienta</td>';
-            echo '<td>fecha_prealquiler</td>';
-            echo '<td>alquiler inicio</td>';
-            echo '<td>alquiler fin</td>';
-        echo '<th>';
+        echo '<tr>';
+            echo '<th>Mail</th>';
+            echo '<th>Codigo herramientas</th>';
+            echo '<th>Fecha pre-alquiler</th>';
+            echo '<th>Inicio alquiler</th>';
+            echo '<th>Fin alquiler</th>';
+            echo '<th>Editar</th>';
+        echo '<tr>';
     echo '</thead>';
 
     echo '<tbody>';
     foreach ($alquileres as $alquiler) {
         echo '<tr>';
-        echo '<td>' . $alquiler['mail'] . '</td>';
-        echo '<td>' . $alquiler['nombre'] . '</td>';
-        echo '<td>' . $alquiler['fecha_prealquiler'] . '</td>';
-        echo '<td>' . $alquiler['fecha_alquiler_inicio'] . '</td>';
-        echo '<td>' . $alquiler['fecha_alquiler_fin'] . '</td>';
+            echo '<td>' . $alquiler['mail'] . '</td>';
+            echo '<td>' . $alquiler['nombre'] . '</td>';
+            echo '<td>' . $alquiler['fecha_prealquiler'] . '</td>';
+            echo '<td>' . $alquiler['fecha_alquiler_inicio'] . '</td>';
+            echo '<td>' . $alquiler['fecha_alquiler_fin'] . '</td>';
+            echo '<td><img src="../img/svg/settings.svg" alt="icono engranaje editar">';
+            echo '<img src="../img/svg/trash.svg" alt="icono cubo de basura"></td>';
         echo '<tr>';
     }
     } catch(PDOException $e) {

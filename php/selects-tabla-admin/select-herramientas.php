@@ -13,12 +13,13 @@
     }
     
     echo '</thead>';
-        echo '<th>';
-            echo '<td>Nombre</td>';
-            echo '<td>Marca y modelo</td>';
-            echo '<td>Disponible</td>';
-            echo '<td>Foto</td>';
-        echo '<th>';
+        echo '<tr>';
+            echo '<th>Nombre</th>';
+            echo '<th>Marca y modelo</th>';
+            echo '<th>Disponible</th>';
+            echo '<th>Foto</th>';
+            echo '<th>Editar</th>';
+        echo '<tr>';
     echo '</thead>';
 
     echo '<tbody>';
@@ -28,6 +29,8 @@
         echo '<td>' . $herramienta['marca_y_modelo'] . '</td>';
         echo '<td>' . $herramienta['disponibilidad'] . '</td>';
         echo '<td>' . $herramienta['foto'] . '</td>';
+        echo '<td><img src="../img/svg/settings.svg" alt="icono engranaje editar">';
+        echo '<img src="../img/svg/trash.svg" alt="icono cubo de basura"></td>';
         echo '<tr>';
     }
 ?>
