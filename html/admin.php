@@ -19,8 +19,8 @@
 <body>
     <header class="header">
         <div class="menu">
-            <a href="html/inicio.html"><img src="img/logo_fixpoint_grisoso.png" alt="logo fixpoint" id="logo-fixpoint"></a>
-            <div class="item"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+            <a href="html/inicio.html"><img src="../img/logo_fixpoint_grisoso.png" alt="logo fixpoint" id="logo-fixpoint"></a>
+            <div class="item"><span><img src="../img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
             <div class="item"><span>Biblioteca</span></div>
             <div class="item"><span>Manuales</span></div>
             <div class="item"><span>Sobre Nosotros</span></div>
@@ -64,35 +64,19 @@
 
             <table id="tabla-herramientas" class="tabla">
                 <?php include_once('../php/selects-tabla-admin/select-herramientas.php');?>
-                <tr>
-                    <td>
-                        <img src="../img/svg/settings.svg" alt="icono engranaje editar">
-                        <img src="../img/svg/trash.svg" alt="icono cubo de basura">
-                    </td>
-                </tr>
-                </tbody>
             </table>
 
             <table id="tabla-usuarios" class="tabla">
                 <?php include_once('../php/selects-tabla-admin/select-usuarios.php');?>
-                </tbody>
             </table>
 
             <table id="tabla-manuales" class="tabla">
                 <?php include_once('../php/selects-tabla-admin/select-manuales.php');?>
-                </tbody>
             </table>
 
             <table id="tabla-alquileres" class="tabla">
                 <?php include_once('../php/selects-tabla-admin/select-alquileres.php');?>
-                </tbody>
             </table>
-
-            <section class="navegacion-container">
-                <a href="#" class="anterior navegacion">&laquo; Anterior</a>
-                <a href="#" class="crear navegacion">Crear nuevo registro</a>
-                <a href="#" class="siguiente navegacion">Siguiente &raquo;</a>
-            </section>
         </section>
     </main>
 </body>
