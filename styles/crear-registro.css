@@ -1,3 +1,8 @@
+::selection {
+    color: #EEC51F;
+    background-color: #292929;
+}
+
 body {
     width:100%;
     overflow-x: hidden;
@@ -13,6 +18,13 @@ main {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    align-items: center;
+}
+
+.first-container {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2em;
 }
 
 #select-tabla {
@@ -22,22 +34,52 @@ main {
     background-color: #EEC51F;
 }
 
+#select-tabla:focus {
+    outline: #292929 solid 2px;
+}
+
+.volver {
+    text-decoration: none;
+    background-color: #EEC51F;
+    color: black;
+    font-size: 2em;
+    text-align: center;
+
+    border: solid #1b1b1b  medium;
+    border-radius: 10px;
+}
+
+.volver:active {
+    border: solid black medium;
+    background-color: #FFEA96;
+}
+
 .form-container {
-    width: 40em;
-    height: 25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50em;
+    height: 35em;
 
     background-color: #EEC51F;
     color: black;
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
 }
 
-.form-container .fieldset {
+.form {
+    width: 80%;
+    height: 80%;
+}
+
+.form .fieldset {
     display: flex;
     flex-flow: column wrap;
-    gap: 0.5em;
+    justify-content: space-around;
 
-    height: 50%;
-    padding: 1em;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5em;
 }
 
 .titulo-formulario {
@@ -59,6 +101,22 @@ main {
 label input {
     padding: 0;
     width: 60%;
+}
+
+input[type="file"]{
+    margin:0;
+    padding: 0em 0em;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: .2em;
+    outline: none;
+    border: 2px solid #bbb;
+    cursor: pointer;
+}
+
+input[type="file"]:hover {
+    background: #f9f9ff; 
+    border: 2px solid #292929;
 }
 
 .oculto {
