@@ -69,9 +69,9 @@
                 <div class="ordenar_por">
                     <label>Ordenar por</label>
                     <select class="A-Z" id="orden">
-                        <option value="az">A - Z</option>
-                        <option value="za">Z - A</option>
-                        <option value="disponible">Disponible</option>
+                        <option value="ASC">A - Z</option>
+                        <option value="DESC">Z - A</option>
+                        <option value="Disponible">Disponible</option>
                     </select>
                 </div>
             </div>
@@ -108,7 +108,37 @@
                     $filtro=$_GET['filtro'];
                     $consultaHerramienta=crearConsulta($filtro, $conexion, $pagina, $productosPorPagina);
                     $paginas=conteo($filtro, $conexion, $pagina, $productosPorPagina);
-                } else{
+                } else if(isset($_GET['ordenar'])){
+                    $pagina=1;
+                    $orden=$_GET['ordenar'];
+                    $consultaHerramienta=crearConsultaOrden($orden, $conexion, $pagina, $productosPorPagina);
+                    switch ($orden){
+                        case 'ASC':
+                            try {
+                                include("../php/conexion.php");
+                                $consultaConteo = $conexion->query("SELECT count(*) AS conteo FROM herramientas ORDER BY nombre ASC");
+                                $paginas=conteoOrden($paginas, $productosPorPagina, $consultaConteo);
+                            } catch (PDOException $e) {
+                                echo '<script>console.log(' . $e->getMessage() . ')</script>';
+                            };
+                        case 'DESC':
+                            try {
+                                include("../php/conexion.php");
+                                $consultaConteo = $conexion->query("SELECT count(*) AS conteo FROM herramientas ORDER BY nombre DESC");
+                                $paginas=conteoOrden($paginas, $productosPorPagina, $consultaConteo);
+                            } catch (PDOException $e) {
+                                echo '<script>console.log(' . $e->getMessage() . ')</script>';
+                            };
+                        case 'Disponible':
+                            try {
+                                include("../php/conexion.php");
+                                $consultaConteo = $conexion->query("SELECT count(*) AS conteo FROM herramientas WHERE disponibilidad='Disponible'");
+                                $paginas=conteoOrden($paginas, $productosPorPagina, $consultaConteo);
+                            } catch (PDOException $e) {
+                                echo '<script>console.log(' . $e->getMessage() . ')</script>';
+                            };
+                    };
+                } else {
                     $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
                 };
                 $consultaHerramienta->execute();
@@ -156,7 +186,25 @@
             function crearConsulta($where, $conexion, $pagina, $productosPorPagina){
                 $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas WHERE nombre LIKE '%$where%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
                 return $consultaHerramienta;
-            }
+            };
+            function crearConsultaOrden($orden, $conexion, $pagina, $productosPorPagina){
+                switch ($orden){
+                    case 'ASC':
+                        $consultaHerramienta= $conexion->prepare("SELECT * FROM herramientas  ORDER BY '.$orden.' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                        return $consultaHerramienta;
+                    case 'DESC':
+                        $consultaHerramienta= $conexion->prepare("SELECT * FROM herramientas  ORDER BY '.$orden.' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                        return $consultaHerramienta;
+                    case 'Disponible':
+                        $consultaHerramienta= $conexion->prepare("SELECT * FROM herramientas  WHERE disponibilidad = 'Disponible' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                        return $consultaHerramienta;
+                };        
+            };
+            function conteoOrden($paginas, $productosPorPagina, $consultaConteo){
+                    $conteo = $consultaConteo->fetchObject()->conteo;
+                    $paginas = ceil($conteo / $productosPorPagina);
+                    return $paginas; 
+            };
             ?>
         </div>
         <div class="contenedor_final_pagina">

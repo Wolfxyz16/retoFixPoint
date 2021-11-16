@@ -29,9 +29,15 @@ function biblioteca () {
         }
 
     }
+    
     var filtro=document.getElementById("tipo_herramienta");
     filtro.addEventListener('change', function (){
         location.href=biblioteca+'?filtro='+filtro.value;
+    });
+
+    var filtroOrden=document.getElementById("orden");
+    filtroOrden.addEventListener('change', function (){
+        location.href=biblioteca+'?ordenar='+filtroOrden.value;
     });
 };
 
