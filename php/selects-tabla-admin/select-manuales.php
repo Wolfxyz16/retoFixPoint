@@ -2,7 +2,7 @@
     include("../php/conexion.php");
 
     try{
-        $queryManuales = "SELECT m.* , usuarios.mail FROM manuales m, usuarios WHERE m.cod_autor = usuarios.cod_user";
+        $queryManuales = "SELECT m.* , usuarios.mail FROM manuales m, usuarios WHERE m.cod_autor = usuarios.cod_user LIMIT 15";
         $consulta = $conexion->prepare($queryManuales);
         $consulta -> execute();
         $manuales = $consulta -> fetchAll();

@@ -1,7 +1,7 @@
 <?php
         include("../php/conexion.php");
 
-    $query = 'SELECT a.*, u.mail , h.nombre FROM alquileres a, usuarios u, herramientas h WHERE a.cod_user = u.cod_user AND a.cod_herramienta = h.cod_herramienta';
+    $query = 'SELECT a.*, u.mail , h.nombre FROM alquileres a, usuarios u, herramientas h WHERE a.cod_user = u.cod_user AND a.cod_herramienta = h.cod_herramienta LIMIT 15';
 
     try{
         $consulta = $conexion->prepare($query);

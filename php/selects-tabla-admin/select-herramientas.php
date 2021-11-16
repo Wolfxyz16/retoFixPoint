@@ -4,7 +4,7 @@
     try{
         include("../php/conexion.php");
 
-        $query = 'SELECT * FROM herramientas';
+        $query = 'SELECT * FROM herramientas LIMIT 15';
         $consulta = $conexion->prepare($query);
         $consulta -> execute();
         $herramientas = $consulta -> fetchAll();

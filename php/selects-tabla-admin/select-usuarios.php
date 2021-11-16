@@ -1,7 +1,7 @@
 <?php
     include("../php/conexion.php");
 
-    $query = 'SELECT * FROM usuarios';
+    $query = 'SELECT * FROM usuarios LIMIT 15';
 
     try{
         $consulta = $conexion->prepare($query);
