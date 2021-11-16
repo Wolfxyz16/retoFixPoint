@@ -1,6 +1,6 @@
 @font-face {
     font-family: FixpointLigera;
-    src: url(/fonts/tonus-sans-regular.otf) format("opentype");
+    src: url(../fonts/tonus-sans-regular.otf) format("opentype");
 }
 
 a {
