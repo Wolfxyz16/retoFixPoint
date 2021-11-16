@@ -190,10 +190,10 @@
             function crearConsultaOrden($orden, $conexion, $pagina, $productosPorPagina){
                 switch ($orden){
                     case 'ASC':
-                        $consultaHerramienta= $conexion->prepare("SELECT * FROM herramientas  ORDER BY '.$orden.' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                        $consultaHerramienta= $conexion->prepare("SELECT * FROM herramientas  ORDER BY nombre '.$orden.' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
                         return $consultaHerramienta;
                     case 'DESC':
-                        $consultaHerramienta= $conexion->prepare("SELECT * FROM herramientas  ORDER BY '.$orden.' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                        $consultaHerramienta= $conexion->prepare("SELECT * FROM herramientas  ORDER BY nombre '.$orden.' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
                         return $consultaHerramienta;
                     case 'Disponible':
                         $consultaHerramienta= $conexion->prepare("SELECT * FROM herramientas  WHERE disponibilidad = 'Disponible' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);

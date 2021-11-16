@@ -1,6 +1,6 @@
 import {slider} from './slider.js';
 import {administrador} from './admin.js';
-import {descarga} from './descargaManuales.js';
+import {manuales} from './manuales.js';
 import {accesoDesdeIndex} from './accesoDesdeIndex.js';
 import {accesoDesdeHtml} from './accesoDesdeHtml.js';
 import{biblioteca} from './biblioteca.js';
@@ -17,7 +17,7 @@ window.onload= function () {
         administrador();
     }
     else if (window.location.pathname.indexOf("/html/manuales.php") >-1 ){
-        descarga();
+        manuales();
     }
     else if (window.location.pathname.indexOf("/html/biblioteca.php") >-1 ){
 
