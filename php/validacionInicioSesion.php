@@ -16,7 +16,7 @@
             
             include("conexion.php");
             $userPasswordEncryp = hash('sha512' , $contrasena);
-            $consultaUsuario=$conexion->prepare("SELECT name, surname, mail FROM usuarios  WHERE password='".$userPasswordEncryp."' AND mail='".$mail."'");
+            $consultaUsuario=$conexion->prepare("SELECT cod_user, name, surname, mail FROM usuarios  WHERE password='".$userPasswordEncryp."' AND mail='".$mail."'");
             $consultaUsuario -> execute();
             $resultado = $consultaUsuario->fetchAll();
             if(empty($resultado)){
@@ -25,6 +25,7 @@
                 session_start();
                 foreach($resultado as $result) {
                     $usuario =$result['name'].' '.$result['surname'];
+                    $_SESSION['cod_user']=$result['cod_user'];
                     if ( $result['mail'] == 'admin' ) { 
                         $_SESSION['admin'] = TRUE; 
                     }else{
@@ -33,6 +34,7 @@
                 }
                 
                 $_SESSION['usuario']=$usuario;
+               
                 echo "<script>
                 alert('Bienvenido $usuario');
                 window.location.href='../';
