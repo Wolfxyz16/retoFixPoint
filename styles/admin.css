@@ -67,7 +67,6 @@ main {
 
 tr {
     text-align: center;
-    background-color: blue;
 }
 
 .datos-fila:nth-child(even) {
