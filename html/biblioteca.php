@@ -101,27 +101,13 @@
                 if (isset($_POST['enviar'])){
                     $pagina=1;
                     $busqueda=$_POST['buscador'];
-                    $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas WHERE nombre LIKE '%$busqueda%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
-                    try {
-                        include("../php/conexion.php");
-                        $consultaConteo = $conexion->query("SELECT count(*) AS conteo FROM herramientas WHERE nombre LIKE '%$busqueda%'");
-                        $conteo = $consultaConteo->fetchObject()->conteo;
-                        $paginas = ceil($conteo / $productosPorPagina);
-                    } catch (PDOException $e) {
-                        echo '<script>console.log(' . $e->getMessage() . ')</script>';
-                    } 
+                    $consultaHerramienta=crearConsulta($busqueda, $conexion, $pagina, $productosPorPagina);
+                    $paginas=conteo($busqueda, $conexion, $pagina, $productosPorPagina);
                 } else if(isset($_GET['filtro'])) {
                     $pagina=1;
                     $filtro=$_GET['filtro'];
-                    $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas WHERE nombre LIKE '%$filtro%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
-                    try {
-                        include("../php/conexion.php");
-                        $consultaConteo = $conexion->query("SELECT count(*) AS conteo FROM herramientas WHERE nombre LIKE '%$filtro%'");
-                        $conteo = $consultaConteo->fetchObject()->conteo;
-                        $paginas = ceil($conteo / $productosPorPagina);
-                    } catch (PDOException $e) {
-                        echo '<script>console.log(' . $e->getMessage() . ')</script>';
-                    } 
+                    $consultaHerramienta=crearConsulta($filtro, $conexion, $pagina, $productosPorPagina);
+                    $paginas=conteo($filtro, $conexion, $pagina, $productosPorPagina);
                 } else{
                     $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
                 };
@@ -155,6 +141,21 @@
                 }
             } catch (PDOException $e) {
                 echo '<script>console.log(' . $e->getMessage() . ')</script>';
+            }
+            function conteo($condicion, $conexion, $paginas, $productosPorPagina){
+                try {
+                    include("../php/conexion.php");
+                    $consultaConteo = $conexion->query("SELECT count(*) AS conteo FROM herramientas WHERE nombre LIKE '%$condicion%'");
+                    $conteo = $consultaConteo->fetchObject()->conteo;
+                    $paginas = ceil($conteo / $productosPorPagina);
+                    return $paginas;
+                } catch (PDOException $e) {
+                    echo '<script>console.log(' . $e->getMessage() . ')</script>';
+                }
+            };
+            function crearConsulta($where, $conexion, $pagina, $productosPorPagina){
+                $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas WHERE nombre LIKE '%$where%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                return $consultaHerramienta;
             }
             ?>
         </div>
