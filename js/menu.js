@@ -22,11 +22,7 @@ window.onload= function () {
     else if (window.location.pathname.indexOf("/html/biblioteca.php") >-1 ){
 
         biblioteca();
-    }else if(window.location.pathname.indexOf("/html/sobre_nosotros.php")==-1){
-
-
-    }else if(window.location.pathname.indexOf("") >-1){
-
+    }else if(window.location.pathname.indexOf("/html/sobre_nosotros.php")<=-1){
         slider();
     }
 };

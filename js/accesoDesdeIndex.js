@@ -1,6 +1,6 @@
 function accesoDesdeIndex() {
     var items = document.getElementsByClassName('item');
-    var sitios_web = ["", "html/login.html", "html/manuales.php", "html/sobre_nosotros.php"];
+    var sitios_web = ["", "html/biblioteca.php", "html/manuales.php", "html/sobre_nosotros.php"];
     if(document.getElementById('admin')){
         document.getElementById('modo-admin').addEventListener('click', function () {
             location.href = location.href+"/html/admin.php";

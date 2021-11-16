@@ -19,13 +19,13 @@
 </head>
 
 <body>
-    <header class="header">
+<header class="header">
         <div class="menu">
             <a href="" id="a-logo-fixpoint"><img src="img/logo_fixpoint_grisoso.png" alt="logo fixpoint" id="logo-fixpoint"></a>
-            <div class="item"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
-            <div class="item"><span>Biblioteca</span></div>
-            <div class="item"><span>Manuales</span></div>
-            <div class="item"><span>Sobre Nosotros</span></div>
+            <div class="item" id="home"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+            <div class="item" id="library"><span>Biblioteca</span></div>
+            <div class="item" id="guide"><span>Manuales</span></div>
+            <div class="item" id="about"><span>Sobre Nosotros</span></div>
             <?php
                     session_start();
                     if(isset( $_SESSION['usuario']) ) {
@@ -35,7 +35,7 @@
                              print '<div class="item" id="usuario"><span id="menu-usuario">' . $_SESSION['usuario'] . ' <div id="cerrar-sesion"><span>Cerrar Sesion</span></div></span></div>';
                         }
                     } else {
-                        print '<div class="item" id="iniciosesion"><span>Inicio Sesion/Registro</span></div>';
+                        print '<div class="item" id="iniciosesion" ><span>Inicio Sesion/Registro</span></div>';
                     }
                     
                 ?>
