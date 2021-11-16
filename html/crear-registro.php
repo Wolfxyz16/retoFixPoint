@@ -47,12 +47,14 @@
     <main>
         <div class="first-container">
             <select name="tabla" id="select-tabla">
-                <option value="" selected disabled>Seleccione una opcion</option>
+                <option value="" selected disabled>Seleccione una opci&oacute;n</option>
                 <option value="herramientas">Herramientas</option>
                 <option value="manuales">Manuales</option>
                 <option value="usuarios">Usuarios</option>
                 <option value="alquileres">Alquileres</option>
             </select>
+            
+            <a href="admin.php" class="volver">Volver</a>
         </div>
 
         <div class="form-container">
