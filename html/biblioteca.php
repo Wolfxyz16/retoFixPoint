@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../styles/biblioteca.css" type="text/css">
     
     <script type="module" src="../js/menu.js"></script>
-    <script type="module" src="../js/alquilerHerramienta.js"></script>
+    <script type="module" src="../js/biblioteca.js"></script>
     
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
     <title>Biblioteca</title>
@@ -56,7 +56,7 @@
             </div>
 
             <div class="contenedor-uno-linea">
-                <select class="tipos_herramientas" id="tipo_herramienta" onchange="filtrado()">
+                <select class="tipos_herramientas" id="tipo_herramienta">
                     <option value="" selected>Todas las herramientas</option>
                     <option value="Martillo">Martillo</option>
                     <option value="Llave inglesa">Llave inglesa</option>
@@ -64,6 +64,7 @@
                     <option value="Taladro">Taladro</option>
                     <option value="Tenaza">Tenaza</option>
                     <option value="Alicate">Alicate</option>
+                    <option value="Calibre">Calibre</option>
                 </select>
                 <div class="ordenar_por">
                     <label>Ordenar por</label>
@@ -98,11 +99,29 @@
                 include("../php/conexion.php");
                 $consultaHerramienta;
                 if (isset($_POST['enviar'])){
+                    $pagina=1;
                     $busqueda=$_POST['buscador'];
-                    $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas WHERE nombre LIKE '%$busqueda%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina); 
+                    $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas WHERE nombre LIKE '%$busqueda%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                    try {
+                        include("../php/conexion.php");
+                        $consultaConteo = $conexion->query("SELECT count(*) AS conteo FROM herramientas WHERE nombre LIKE '%$busqueda%'");
+                        $conteo = $consultaConteo->fetchObject()->conteo;
+                        $paginas = ceil($conteo / $productosPorPagina);
+                    } catch (PDOException $e) {
+                        echo '<script>console.log(' . $e->getMessage() . ')</script>';
+                    } 
                 } else if(isset($_GET['filtro'])) {
+                    $pagina=1;
                     $filtro=$_GET['filtro'];
                     $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas WHERE nombre LIKE '%$filtro%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                    try {
+                        include("../php/conexion.php");
+                        $consultaConteo = $conexion->query("SELECT count(*) AS conteo FROM herramientas WHERE nombre LIKE '%$filtro%'");
+                        $conteo = $consultaConteo->fetchObject()->conteo;
+                        $paginas = ceil($conteo / $productosPorPagina);
+                    } catch (PDOException $e) {
+                        echo '<script>console.log(' . $e->getMessage() . ')</script>';
+                    } 
                 } else{
                     $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
                 };
