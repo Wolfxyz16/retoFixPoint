@@ -47,8 +47,7 @@
     <main>
         <div class="first-container">
             <select name="tabla" id="select-tabla">
-                <option value="" selected disabled>Seleccione una opci&oacute;n</option>
-                <option value="herramientas">Herramientas</option>
+                <option value="herramientas" selected>Herramientas</option>
                 <option value="manuales">Manuales</option>
                 <option value="usuarios">Usuarios</option>
                 <option value="alquileres">Alquileres</option>
@@ -62,8 +61,8 @@
                 <fieldset class="fieldset">
                     <legend class="titulo-formulario">Crear una herramienta</legend>
                     <label for="nombre">Nombre de la herramienta<input type="text" name="nombre" required></label>
-                    <label for="marca-modelo">Marca y modelo<input type="text" name="marca-modelo" required></label>
-                    <label for="foto">Foto<input type="file" name="nombre" required></label>
+                    <label for="marca_modelo">Marca y modelo<input type="text" name="marca_modelo" required></label>
+                    <label for="foto">Foto<input type="file" name="foto" required></label>
                     <input type="submit" value="Crear" class="submit" name="submit">
                 </fieldset>
             </form>
@@ -78,12 +77,12 @@
                 </fieldset>
             </form>
 
-            <form action="../php/insertar/crear-usuario" method="POST" class="form usuarios oculto">
+            <form action="../php/insertar/crear-usuario.php" method="POST" class="form usuarios oculto">
                 <fieldset class="fieldset">
                     <legend class="titulo-formulario">Crear un usuario</legend>
                     <label for="nombre">Nombre<input type="text" name="nombre" required></label>
                     <label for="apellido">Apellido<input type="text" name="apellido" required></label>
-                    <label for="mail">Email<input type="email" name="email" required></label>
+                    <label for="mail">Email<input type="email" name="mail" required></label>
                     <label for="password">Contrase&ntilde;a<input type="password" name="password" required></label>
                     <input type="submit" value="Crear" class="submit" name="submit">
                 </fieldset>
