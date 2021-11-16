@@ -57,7 +57,7 @@
         </div>
 
         <div class="form-container">
-            <form action="../php/insertar/crear-herramienta.php" method="POST" class="form herramientas oculto">
+            <form action="../php/insertar/crear-herramienta.php" method="POST" class="form herramientas visible">
                 <fieldset class="fieldset">
                     <legend class="titulo-formulario">Crear una herramienta</legend>
                     <label for="nombre">Nombre de la herramienta<input type="text" name="nombre" required></label>
