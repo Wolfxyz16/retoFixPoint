@@ -47,7 +47,7 @@ CREATE TABLE `herramientas` (
   `nombre` varchar(100) NOT NULL,
   `marca_y_modelo` varchar(100) DEFAULT NULL,
   `foto` varchar(100) NOT NULL,
-  `disponibilidad` enum('Disponible','No Disponible') DEFAULT NULL
+  `disponibilidad` enum('Disponible','No Disponible') DEFAULT 'Disponible'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
