@@ -36,9 +36,9 @@
 
     echo '<tfoot>';
         echo '<tr class="pie-fila">';
-            echo '<td>Anterior</td>';
-            echo '<td>Crear Usuario</td>';
-            echo '<td>Siguiente</td>';
+            echo '<td><a href="#">Anterior<a/></td>';
+            echo '<td><a href="crear-registro.php">Crear Herramienta</a></td>';
+            echo '<td><a href="#">Siguiente</a></td>';
         echo '</tr>';
     echo '</tfoot>';
 ?>

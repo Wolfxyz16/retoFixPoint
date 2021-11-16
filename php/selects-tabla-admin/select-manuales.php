@@ -37,4 +37,12 @@
     }
 
     echo '</tbody>';
+
+    echo '<tfoot>';
+        echo '<tr class="pie-fila">';
+            echo '<td><a href="#">Anterior<a/></td>';
+            echo '<td><a href="crear-registro.php">Crear Herramienta</a></td>';
+            echo '<td><a href="#">Siguiente</a></td>';
+        echo '</tr>';
+    echo '</tfoot>';
 ?>
