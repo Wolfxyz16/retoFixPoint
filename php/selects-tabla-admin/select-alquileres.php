@@ -7,9 +7,12 @@
         $consulta = $conexion->prepare($query);
         $consulta -> execute();
         $alquileres = $consulta -> fetchAll();
-         //HACER LAS CONSULTAS ANIDADAS EN USUARIOS Y HERRAMIENTAS
-    echo '</thead>';
-        echo '<tr>';
+    } catch(PDOException $e) {
+        echo '<script>console.log("' . $e->getMessage() .'");</script>';
+    }
+
+    echo '<thead>';
+        echo '<tr class="encabezado-fila">';
             echo '<th>Mail</th>';
             echo '<th>Codigo herramientas</th>';
             echo '<th>Fecha pre-alquiler</th>';
@@ -20,8 +23,9 @@
     echo '</thead>';
 
     echo '<tbody>';
+
     foreach ($alquileres as $alquiler) {
-        echo '<tr>';
+        echo '<tr class="datos-fila">';
             echo '<td>' . $alquiler['mail'] . '</td>';
             echo '<td>' . $alquiler['nombre'] . '</td>';
             echo '<td>' . $alquiler['fecha_prealquiler'] . '</td>';
@@ -31,8 +35,6 @@
             echo '<img src="../img/svg/trash.svg" alt="icono cubo de basura"></td>';
         echo '<tr>';
     }
-    } catch(PDOException $e) {
-        echo '<script>console.log("' . $e->getMessage() .'");</script>';
-    }
-   
+    
+    echo '</tbody>';
 ?>

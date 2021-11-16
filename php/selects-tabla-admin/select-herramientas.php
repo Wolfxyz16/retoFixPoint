@@ -12,8 +12,8 @@
         echo '<script>console.log("' . $e->getMessage() .'");</script>';
     }
     
-    echo '</thead>';
-        echo '<tr>';
+    echo '<thead>';
+        echo '<tr class="encabezado-fila">';
             echo '<th>Nombre</th>';
             echo '<th>Marca y modelo</th>';
             echo '<th>Disponible</th>';
@@ -24,13 +24,23 @@
 
     echo '<tbody>';
     foreach ($herramientas as $herramienta) {
-        echo '<tr>';
-        echo '<td>' . $herramienta['nombre'] . '</td>';
-        echo '<td>' . $herramienta['marca_y_modelo'] . '</td>';
-        echo '<td>' . $herramienta['disponibilidad'] . '</td>';
-        echo '<td>' . $herramienta['foto'] . '</td>';
-        echo '<td><img src="../img/svg/settings.svg" alt="icono engranaje editar">';
-        echo '<img src="../img/svg/trash.svg" alt="icono cubo de basura"></td>';
+        echo '<tr class="datos-fila">';
+            echo '<td>' . $herramienta['nombre'] . '</td>';
+            echo '<td>' . $herramienta['marca_y_modelo'] . '</td>';
+            echo '<td>' . $herramienta['disponibilidad'] . '</td>';
+            echo '<td>' . $herramienta['foto'] . '</td>';
+            echo '<td><img src="../img/svg/settings.svg" alt="icono engranaje editar">';
+            echo '<img src="../img/svg/trash.svg" alt="icono cubo de basura"></td>';
         echo '<tr>';
     }
+    echo '</tbody>';
+
+    echo '<tfoot>';
+        echo '<tr class="pie-fila">';
+            echo '<td>Anterior</td>';
+            echo '<td>Crear Herramienta</td>';
+            echo '<td>Siguiente</td>';
+        echo '</tr>';
+    echo '</tfoot>';
+
 ?>
