@@ -3,6 +3,12 @@
     src: url(/fonts/tonus-sans-regular.otf) format("opentype");
 }
 
+::selection {
+    color: #EEC51F;
+    background-color: #292929;
+}
+
+
 body {
     width:100%; 
     overflow-x: hidden;
@@ -32,6 +38,23 @@ main {
 
 .menu_admin h2 {
     padding: 1em;
+}
+
+.crear-registro {
+    text-decoration: none;
+    background-color: #EEC51F;
+    color: black;
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+
+    border: solid #1b1b1b  medium;
+    border-radius: 10px;
+}
+
+.crear-registro:active {
+    border: solid black medium;
+    background-color: #FFEA96;
 }
 
 .tabla-container {
