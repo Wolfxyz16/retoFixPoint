@@ -86,7 +86,7 @@
 
 
             <section class="sobrenosotros caja">
-                <a href="html/sobre_nosotros.html">
+                <a href="html/sobre_nosotros.php">
                     <img src="img/bibliotecatest.png" alt="Imagen sobre nosotros">
                     <section class="caja-texto">
                         <h2>Sobre Nosotros</h2>
