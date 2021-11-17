@@ -24,7 +24,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -43,7 +43,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="cabecera">
         <div class="menu">
             <a href="html/inicio.html"><img src="../img/logo_fixpoint_grisoso.png" alt="logo fixpoint"
                     id="logo-fixpoint"></a>
@@ -116,14 +116,14 @@
             <form action="../php/insertar/crear-alquiler.php" method="POST" class="form alquileres oculto">
                 <fieldset class="fieldset">
                     <legend class="titulo-formulario">Crear un alquiler</legend>
-                    <select name="usuario" id="select-user" required>
+                    <select name="usuario" id="select-user" class="select" required>
                         <?php
                             foreach ($usuarios as $usuario) {
                                 echo '<option value="'.$usuario['cod_user'].'">'.$usuario['mail'].'</option>';
                             }
                         ?>
                     </select>
-                    <select name="herramienta" id="select-herramienta" required>
+                    <select name="herramienta" id="select-herramienta" class="select" required>
                         <?php
                             foreach ($herramientas as $herr) {
                                 echo '<option value="'.$herr['cod_herramienta'].'">'.$herr['nombre'].'</option>';
@@ -133,10 +133,6 @@
                     <input type="hidden" value="<?php /*date_create( NULL ) */?>" name="fecha_actual">
                     <input type="submit" value="Crear" class="submit" name="submit">
                 </fieldset>
-            </form>
-
-            <form action="" method="POST" class="form alquileres oculto">
-                <!-- codigo de crear alquileres -->
             </form>
         </div>
     </main>
