@@ -7,6 +7,7 @@ function manuales (){
     var botones = document.getElementsByClassName("boton");
     for (let index = 0; index < botones.length; index++) {
         botones[index].addEventListener('click', descargarManual);
+        botones[index].style.marginRight = 0;
     };
 
     function descargarManual(event) {

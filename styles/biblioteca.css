@@ -98,6 +98,7 @@ h1 {
     grid-template-areas: "img info"
         "alquiler alquiler";
     align-content: space-between;
+    border: 0.2em solid #FF6961;
 }
 
 .img {
@@ -111,6 +112,10 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.alquiler > p {
+    margin-left: 1em;
 }
 
 .info {
