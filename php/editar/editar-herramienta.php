@@ -20,11 +20,12 @@
         try {
             $sentencia = $conexion -> prepare($update_herramienta);
             $sentencia -> execute($herramienta);
-            header("LOCATION: http://localhost/retofixpoint/html/admin.php");
         } catch (PDOException $e) {
             $resultado['error'] = true;
             $resultado['mensaje'] = $e->getMessage();
         }
-
+        
+        header("LOCATION: http://localhost/retofixpoint/html/admin.php");
+        
     }
 ?>
