@@ -14,7 +14,7 @@
         try {
             $sentencia = $conexion -> prepare($insert_usuario);
             $sentencia -> execute($usuario);
-            header("LOCATION: http://localhost:8010/retofixpoint/html/admin.php");
+            header("LOCATION: ../../html/admin.php");
         } catch (PDOException $e) {
             echo $e->getMessage();
         }

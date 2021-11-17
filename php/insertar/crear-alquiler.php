@@ -22,7 +22,7 @@
             echo $e->getMessage();
         }
         
-        header("LOCATION: http://localhost/retofixpoint/html/admin.php");
+        header("LOCATION: ../../html/admin.php");
 
     }
 

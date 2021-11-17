@@ -37,7 +37,7 @@
             $resultado['mensaje'] = 'Ha habido un error subiendo el manual';
         }
         
-        header("LOCATION: http://localhost/retofixpoint/html/admin.php");
+        header("LOCATION: ../../html/admin.php");
 
     }
 ?>

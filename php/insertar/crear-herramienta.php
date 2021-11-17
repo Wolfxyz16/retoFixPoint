@@ -36,7 +36,7 @@
             $resultado['mensaje'] = 'Ha habido un error subiendo la herramienta';
         }
 
-        header("LOCATION: http://localhost:8010/retofixpoint/html/admin.php");
+        header("LOCATION: ../../html/admin.php");
     }
 
 ?>
