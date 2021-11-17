@@ -95,7 +95,7 @@
             <a href="../admin.php" class="volver">Volver</a>
         </div>
         <div class="form-container">
-            <form action="../php/editar/editar-alquiler.php" method="POST" class="form alquileres visble">
+            <form action="../../php/editar/editar-alquiler.php" method="POST" class="form alquileres visble">
                 <fieldset class="fieldset">
                     <legend class="titulo-formulario">Editar alquiler</legend>
                     <label for="usuario">
@@ -127,6 +127,7 @@
                         </select>
                     </label>
                     <label for="fecha-fin">Fin del alquiler<input type="date" name="fecha_alquiler_fin" value="<?php echo $alquiler[0]['fecha_alquiler_fin']?>"></label>
+                    <input type="hidden" value="<?php echo $id ?>" name="id">
                     <input type="submit" value="Actualizar" class="submit" name="submit">
                 </fieldset>
         </div>
