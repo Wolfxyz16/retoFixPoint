@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../styles/manuales.css">
     
     <script type="module" src="../js/menu.js"></script>
-    <script type="module" src="../js/descargaManuales.js"></script>
+    <script type="module" src="../js/manuales.js"></script>
     
     <link rel="icon" type="image/png" href="../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
     <title>Manuales</title>
@@ -22,11 +22,11 @@
 <body>
 <header class="header">
         <div class="menu">
-            <a href="html/inicio.html"><img src="img/logo_fixpoint_grisoso.png" alt="logo fixpoint" id="logo-fixpoint"></a>
-            <div class="item"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
-            <div class="item"><span>Biblioteca</span></div>
-            <div class="item"><span>Manuales</span></div>
-            <div class="item"><span>Sobre Nosotros</span></div>
+            <a href="" id="a-logo-fixpoint"><img src="img/logo_fixpoint_grisoso.png" alt="logo fixpoint" id="logo-fixpoint"></a>
+            <div class="item" id="home"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+            <div class="item" id="library"><span>Biblioteca</span></div>
+            <div class="item" id="guide"><span>Manuales</span></div>
+            <div class="item" id="about"><span>Sobre Nosotros</span></div>
             <?php
                     session_start();
                     if(isset( $_SESSION['usuario']) ) {
@@ -36,7 +36,7 @@
                              print '<div class="item" id="usuario"><span id="menu-usuario">' . $_SESSION['usuario'] . ' <div id="cerrar-sesion"><span>Cerrar Sesion</span></div></span></div>';
                         }
                     } else {
-                        print '<div class="item" id="iniciosesion"><span>Inicio Sesion/Registro</span></div>';
+                        print '<div class="item" id="iniciosesion" ><span>Inicio Sesion/Registro</span></div>';
                     }
                     
                 ?>
@@ -55,38 +55,31 @@
             </div>
 
             <div class="contenedor-uno-linea">
-                <select class="tipos_herramientas">
-                    <option value="" selected disabled>Selecione el tipo de herramientas</option>
-                    <option>Martillo martilleador</option>
-                    <option>Martillo golpeante</option>
-                    <option>Martillo hidra&uacute;lico</option>
-                    <option>Martillo fulgurante</option>
-                    <option>Martillo fugaz</option>
-                    <option>Martillo destructor</option>
-                    <option>Martillo constructor</option>
-                    <option>Martillo ensamblador</option>
-                    <option>Martillo destornillante</option>
+                <select class="tipo_manual" id="tipo_manual">
+                    <option value="" selected disabled></option>
+                    <option value="Caladora">Caladora</option>
+                    <option value="Aspiradora">Aspiradora</option>
+                    <option value="Radial">Radial</option>
                 </select>
                 <div class="ordenar_por">
                     <label>Ordenar por</label>
-                    <select class="A-Z">
-                        <option value="az">A - Z</option>
-                        <option value="za">Z - A</option>
-                        <option value="disponible">Disponible</option>
+                    <select class="A-Z" id="orden">
+                        <option value="ASC">A - Z</option>
+                        <option value="DESC">Z - A</option>
                     </select>
                 </div>
             </div>
         </div>
         <section id="manuales">
             <?php
-            # Cuántos productos mostrar por página
+            // Cuántos productos mostrar por página
             $productosPorPagina = 16;
             // Por defecto es la página 1; pero si está presente en la URL, tomamos esa
             $pagina = 1;
             if (isset($_GET["pagina"])) {
                 $pagina = $_GET["pagina"];
-            }
-            # Necesitamos el conteo para saber cuántas páginas vamos a mostrar
+            };
+            // Necesitamos el conteo para saber cuántas páginas vamos a mostrar
             try {
                 include("../php/conexion.php");
                 $consultaConteo = $conexion->query("SELECT count(*) AS conteo FROM manuales");
@@ -95,15 +88,44 @@
             } catch (PDOException $e) {
                 echo '<script>console.log(' . $e->getMessage() . ')</script>';
             }
-
+            // Consulta para el contenido de los manuales y crear "tarjetas" con cada registro
             try {
                 include("../php/conexion.php");
                 $consultaManual;
-                if (!isset($_POST['enviar'])){
-                    $consultaManual = $conexion->prepare("SELECT * FROM manuales LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
-                } else{
+                if (isset($_POST['enviar'])){
+                    $pagina=1;
                     $busqueda=$_POST['buscador'];
-                    $consultaManual = $conexion->prepare("SELECT * FROM manuales WHERE titulo LIKE '%$busqueda%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                    $consultaManual=crearConsulta($busqueda, $conexion, $pagina, $productosPorPagina);
+                    $paginas=conteo($busqueda, $conexion, $pagina, $productosPorPagina);
+                } else if(isset($_GET['filtro'])) {
+                    $pagina=1;
+                    $filtro=$_GET['filtro'];
+                    $consultaManual=crearConsulta($filtro, $conexion, $pagina, $productosPorPagina);
+                    $paginas=conteo($filtro, $conexion, $pagina, $productosPorPagina);
+                } else if(isset($_GET['ordenar'])){
+                    $pagina=1;
+                    $orden=$_GET['ordenar'];
+                    $consultaManual=crearConsultaOrden($orden, $conexion, $pagina, $productosPorPagina);
+                    switch ($orden){
+                        case 'ASC':
+                            try {
+                                include("../php/conexion.php");
+                                $consultaConteo = $conexion->query("SELECT count(*) AS conteo FROM manuales ORDER BY titulo ASC");
+                                $paginas=conteoOrden($paginas, $productosPorPagina, $consultaConteo);
+                            } catch (PDOException $e) {
+                                echo '<script>console.log(' . $e->getMessage() . ')</script>';
+                            };
+                        case 'DESC':
+                            try {
+                                include("../php/conexion.php");
+                                $consultaConteo = $conexion->query("SELECT count(*) AS conteo FROM manuales ORDER BY titulo DESC");
+                                $paginas=conteoOrden($paginas, $productosPorPagina, $consultaConteo);
+                            } catch (PDOException $e) {
+                                echo '<script>console.log(' . $e->getMessage() . ')</script>';
+                            };
+                    };
+                } else {
+                    $consultaManual = $conexion->prepare("SELECT * FROM manuales LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
                 };
                 $consultaManual->execute();
                 $resultado = $consultaManual->fetchAll();
@@ -119,7 +141,36 @@
             } catch (PDOException $e) {
                 echo '<script>console.log(' . $e->getMessage() . ')</script>';
             }
-
+            function conteo($condicion, $conexion, $paginas, $productosPorPagina){
+                try {
+                    include("../php/conexion.php");
+                    $consultaConteo = $conexion->query("SELECT count(*) AS conteo FROM manuales WHERE titulo LIKE '%$condicion%'");
+                    $conteo = $consultaConteo->fetchObject()->conteo;
+                    $paginas = ceil($conteo / $productosPorPagina);
+                    return $paginas;
+                } catch (PDOException $e) {
+                    echo '<scrip?>console.log(' . $e->getMessage() . ')</script>';
+                }
+            };
+            function crearConsulta($where, $conexion, $pagina, $productosPorPagina){
+                $consultaManual = $conexion->prepare("SELECT * FROM manuales WHERE titulo LIKE '%$where%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                return $consultaManual;
+            };
+            function crearConsultaOrden($orden, $conexion, $pagina, $productosPorPagina){
+                switch ($orden){
+                    case 'ASC':
+                        $consultaManual= $conexion->prepare("SELECT * FROM manuales  ORDER BY titulo '.$orden.' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                        return $consultaManual;
+                    case 'DESC':
+                        $consultaManual= $conexion->prepare("SELECT * FROM manuales  ORDER BY titulo '.$orden.' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                        return $consultaManual;
+                };        
+            };
+            function conteoOrden($paginas, $productosPorPagina, $consultaConteo){
+                    $conteo = $consultaConteo->fetchObject()->conteo;
+                    $paginas = ceil($conteo / $productosPorPagina);
+                    return $paginas; 
+            };
             ?>
         </section>
         <div class="contenedor_final_pagina">

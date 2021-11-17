@@ -1,9 +1,10 @@
 <?php
         if(!isset($_POST['mail'])){
-            echo "<script>alert('No se ha recibido ningun email')</script>";
+            echo "<script>alert('No se ha recibido ningun email');window.location.href='../html/login.html';</script>";
+
 
         } else if (!isset($_POST['password'])) {
-            echo "<script>alert('No se ha recibido ninguna password')</script>";
+            echo "<script>alert('No se ha recibido ninguna password');window.location.href='../html/login.html';</script>";
         } else{
             inicioSesion();
         }
@@ -15,15 +16,16 @@
             
             include("conexion.php");
             $userPasswordEncryp = hash('sha512' , $contrasena);
-            $consultaUsuario=$conexion->prepare("SELECT name, surname, mail FROM usuarios  WHERE password='".$userPasswordEncryp."' AND mail='".$mail."'");
+            $consultaUsuario=$conexion->prepare("SELECT cod_user, name, surname, mail FROM usuarios  WHERE password='".$userPasswordEncryp."' AND mail='".$mail."'");
             $consultaUsuario -> execute();
             $resultado = $consultaUsuario->fetchAll();
             if(empty($resultado)){
-                echo "<script>console.log('La cuenta no existe');</script>";
+                echo "<script>alert('La cuenta no existe');window.location.href='../html/login.html';</script>";
             }else{
                 session_start();
                 foreach($resultado as $result) {
-                    $usuario =$result['name'].' '.$result['surname'];
+                    $usuario =$result['name'];
+                    $_SESSION['cod_user']=$result['cod_user'];
                     if ( $result['mail'] == 'admin' ) { 
                         $_SESSION['admin'] = TRUE; 
                     }else{
@@ -32,9 +34,10 @@
                 }
                 
                 $_SESSION['usuario']=$usuario;
+               
                 echo "<script>
                 alert('Bienvenido $usuario');
-                window.location.href='../html/inicio.php';
+                window.location.href='../';
                 </script>";
                 exit;
             }

@@ -1,8 +1,8 @@
-
 @font-face {
   font-family: fuenteFixpoint;
   src: url(/fonts/tonus-sans-heavy-italic.otf) format("opentype");
 }
+
 body {
   padding: 0;
   margin: 0;
@@ -12,28 +12,25 @@ body {
   background-color: #292929;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
 a {
   text-decoration: none;
-
 }
 
 main {
   display: grid;
   grid-template:
-      "contenedor-uno" 10%
-      "manuales"
-      "final" 8%;
+    "contenedor-uno"
+    "manuales"
+    "final";
   gap: 1em;
 }
 
 .contenedor-uno {
   grid-area: contenedor-uno;
-  /* display: grid;
-  grid-template-columns: repeat( auto-fill, 20% ); */
   justify-content: space-around;
 }
 
@@ -41,7 +38,6 @@ main {
   display: flex;
   justify-content: space-between;
   margin-left: 1%;
-
 }
 
 h1 {
@@ -69,7 +65,7 @@ h1 {
   margin-right: 0;
 }
 
-.tipos_herramientas {
+.tipo_manual {
   border-radius: 0.5em;
   background-color: #EEC51F;
   font-weight: bolder;
@@ -92,9 +88,9 @@ h1 {
 #manuales {
   display: grid;
   grid-area: manuales;
-  grid-template-columns: repeat(auto-fill, 22%);
+  grid-template-columns: repeat(auto-fill, 25em);
   justify-content: center;
-  gap: 1em;
+  gap: 5em;
 }
 
 .manual {
@@ -127,7 +123,7 @@ h1 {
   text-shadow: 2px 0 0 #FFEA96, -2px 0 0 #FFEA96, 0 2px 0 #FFEA96, 0 -2px 0 #FFEA96, 1px 1px #FFEA96, -1px -1px 0 #FFEA96, 1px -1px 0 #FFEA96, -1px 1px 0 #fff;
 }
 
-#descarga{
+#descarga {
   margin-right: 0;
   margin-bottom: 0;
 }
@@ -143,11 +139,10 @@ h1 {
 
 .contenedor-a {
   grid-area: contenedor-a;
-
   display: flex;
   justify-content: center;
   align-content: center;
-  
+
   height: 50%;
 }
 
@@ -157,64 +152,20 @@ h1 {
   height: 90%;
 }
 
-@keyframes bgchange{
-  0%{
-    color:white;
-  }
-  20%{
-     color: rgb(255,234,150);
-  }
-  40%{
-   color: rgb(238,197,31);
-  }
-  80%{
-     color: rgb(255,234,150);
-  }
-}
-
-@media (min-width: 480px) and (max-width: 1000px) {
- 
-  #manuales {
-    grid-template-columns: repeat(2, 1fr);
-    width: 60%;
-    justify-self: center;
-    column-gap: 10%;
+@keyframes bgchange {
+  0% {
+    color: white;
   }
 
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-
-
-  #parteSuperior {
-    justify-content: space-between;
-    height: 50%;
+  20% {
+    color: rgb(255, 234, 150);
   }
 
-  .buscador {
-    font-size: 10px;
-    text-align: end;
-    width: 57%;
+  40% {
+    color: rgb(238, 197, 31);
   }
 
-  #manuales {
-    grid-template-columns: repeat(1, 1fr);
-    width: 55%;
-    gap: 2%;
-    font-size: 10px;
-    justify-self: center;
-  }
-
-  .buscador>input {
-    width: 40%;
-  }
-
-  #filtros {
-    font-size: 10px;
-    gap: 13%;
-  }
-
-  #manuales>section>section>button {
-    font-size: 10px;
+  80% {
+    color: rgb(255, 234, 150);
   }
 }
