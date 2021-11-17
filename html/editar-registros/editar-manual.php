@@ -37,7 +37,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="cabecera">
         <div class="menu">
             <a href="../inicio.html"><img src="../../img/logo_fixpoint_grisoso.png" alt="logo fixpoint"
                     id="logo-fixpoint"></a>
