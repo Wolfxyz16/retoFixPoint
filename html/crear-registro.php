@@ -130,7 +130,7 @@
                             }
                         ?>
                     </select>
-                    <input type="hidden" value="<?php date_create( NULL ) ?>" name="fecha_actual">
+                    <input type="hidden" value="<?php /*date_create( NULL ) */?>" name="fecha_actual">
                     <input type="submit" value="Crear" class="submit" name="submit">
                 </fieldset>
             </form>
