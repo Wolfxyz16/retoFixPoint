@@ -31,8 +31,8 @@
             echo '<td>' . $alquiler['fecha_prealquiler'] . '</td>';
             echo '<td>' . $alquiler['fecha_alquiler_inicio'] . '</td>';
             echo '<td>' . $alquiler['fecha_alquiler_fin'] . '</td>';
-            echo '<td><img src="../img/svg/settings.svg" alt="icono engranaje editar">';
-            echo '<img src="../img/svg/trash.svg" alt="icono cubo de basura"></td>';
+            echo '<td><a href="editar-registros/editar-alquiler.php?id='. $alquiler['cod_alquiler'] . '"><img src="../img/svg/settings.svg" alt="icono engranaje editar"></a>';
+            echo '<a href="../php/borrar/borrar-alquiler.php?id='. $alquiler['cod_alquiler'] . '"><img src="../img/svg/trash.svg" alt="icono cubo de basura"></a></td>';
         echo '<tr>';
     }
     
