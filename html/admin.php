@@ -1,4 +1,3 @@
-<!-- Esta pagina la hizo Yeray -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,10 +44,17 @@
         <section class="menu_admin">
             <h2>MODO ADMIN</h2>
             <p>
-                <?php 
-                    if( isset($resultado_update) ) {
-                        echo $resultado_update['mensaje'];
-                    }
+                <?php
+                    // if( isset($_GET['resultado']) ) {
+                    //     $resultado_update = $_GET['resultado'];
+                    //     if (!$resultado_update['error']) {
+                    //         echo $resultado_update['mensaje'];
+                    //     }
+                    // }
+
+                    // if( isset($resultado_borrar) ) {
+                    //     echo $resultado_borrar['mensaje'];
+                    // }
                 ?>
             </p>
             <ul class="botones-container">
