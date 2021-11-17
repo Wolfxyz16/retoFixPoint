@@ -158,8 +158,13 @@
                                     <button class="buton" id="'.$columna['cod_herramienta'].'">Alquilar ahora</button>
                                     <div id="myModal" class="modal">
                                     <div class="modal-content">
-                                        <span class="close">&times;</span>
-                                        <p>Enhorabuena usted ha realizado la reserva correctamente. Tiene dos dias, dentro del horario, para poder recorge la herramienta solicitada. En caso de que no vaya a recogerla se cancelara la reserva.</p>
+                                        <span class="close" id="close">&times;</span>
+                                        <p id="modal_texto">¿Esta usted seguro de que desea realizar un alquiler de dicha herramienta?<br>
+                                        En caso de que desee realizarlo, tiene dos dias, dentro del horario, para recorge la herramienta solicitada.<br> En caso de no realizar la recogida se cancelara dicha reserva.</p>
+                                        <div class="botones">
+                                        <button class="close" id="modal_btn_no">No</button>
+                                        <button id="modal_btn_si">Si</button>
+                                        </div>
                                     </div>
 
                                     </div>';
