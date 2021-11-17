@@ -82,7 +82,7 @@
         </div>
 
         <div class="form-container">
-            <form action="../php/insertar/crear-herramienta.php" method="POST" class="form herramientas visible">
+            <form action="../php/insertar/crear-herramienta.php" method="POST" enctype="multipart/form-data" class="form herramientas visible">
                 <fieldset class="fieldset">
                     <legend class="titulo-formulario">Crear una herramienta</legend>
                     <label for="nombre">Nombre de la herramienta<input type="text" name="nombre" required></label>
@@ -92,7 +92,7 @@
                 </fieldset>
             </form>
             
-            <form action="../php/insertar/crear-manual.php" method="POST" class="form manuales oculto">
+            <form action="../php/insertar/crear-manual.php" method="POST" enctype="multipart/form-data" class="form manuales oculto">
                 <fieldset class="fieldset">
                     <legend class="titulo-formulario">Crear un manual</legend>
                     <label for="titulo">Titulo<input type="text" name="titulo" required></label>
