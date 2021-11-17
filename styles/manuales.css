@@ -18,22 +18,19 @@ ul{
 
 a {
   text-decoration: none;
-
 }
 
 main {
   display: grid;
   grid-template:
-      "contenedor-uno" 10%
+      "contenedor-uno"
       "manuales"
-      "final" 8%;
+      "final";
   gap: 1em;
 }
 
 .contenedor-uno {
   grid-area: contenedor-uno;
-  /* display: grid;
-  grid-template-columns: repeat( auto-fill, 20% ); */
   justify-content: space-around;
 }
 
@@ -41,7 +38,6 @@ main {
   display: flex;
   justify-content: space-between;
   margin-left: 1%;
-
 }
 
 h1 {
@@ -92,7 +88,7 @@ h1 {
 #manuales {
   display: grid;
   grid-area: manuales;
-  grid-template-columns: repeat(auto-fill, 22%);
+  grid-template-columns: repeat(auto-fill, 30em);
   justify-content: center;
   gap: 1em;
 }
@@ -143,7 +139,6 @@ h1 {
 
 .contenedor-a {
   grid-area: contenedor-a;
-
   display: flex;
   justify-content: center;
   align-content: center;
@@ -169,52 +164,5 @@ h1 {
   }
   80%{
      color: rgb(255,234,150);
-  }
-}
-
-@media (min-width: 480px) and (max-width: 1000px) {
- 
-  #manuales {
-    grid-template-columns: repeat(2, 1fr);
-    width: 60%;
-    justify-self: center;
-    column-gap: 10%;
-  }
-
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-
-
-  #parteSuperior {
-    justify-content: space-between;
-    height: 50%;
-  }
-
-  .buscador {
-    font-size: 10px;
-    text-align: end;
-    width: 57%;
-  }
-
-  #manuales {
-    grid-template-columns: repeat(1, 1fr);
-    width: 55%;
-    gap: 2%;
-    font-size: 10px;
-    justify-self: center;
-  }
-
-  .buscador>input {
-    width: 40%;
-  }
-
-  #filtros {
-    font-size: 10px;
-    gap: 13%;
-  }
-
-  #manuales>section>section>button {
-    font-size: 10px;
   }
 }
