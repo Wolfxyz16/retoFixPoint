@@ -44,6 +44,13 @@
     <main>
         <section class="menu_admin">
             <h2>MODO ADMIN</h2>
+            <p>
+                <?php 
+                    if( isset($resultado_update) ) {
+                        echo $resultado_update['mensaje'];
+                    }
+                ?>
+            </p>
             <ul class="botones-container">
                 <li class="enlace">
                     <button type="button" value="Herramientas" class="boton" id="boton-herramientas">Herramientas</input>
