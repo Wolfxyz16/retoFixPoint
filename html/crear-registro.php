@@ -116,20 +116,26 @@
             <form action="../php/insertar/crear-alquiler.php" method="POST" class="form alquileres oculto">
                 <fieldset class="fieldset">
                     <legend class="titulo-formulario">Crear un alquiler</legend>
-                    <select name="usuario" id="select-user" class="select" required>
-                        <?php
-                            foreach ($usuarios as $usuario) {
-                                echo '<option value="'.$usuario['cod_user'].'">'.$usuario['mail'].'</option>';
-                            }
-                        ?>
-                    </select>
-                    <select name="herramienta" id="select-herramienta" class="select" required>
-                        <?php
-                            foreach ($herramientas as $herr) {
-                                echo '<option value="'.$herr['cod_herramienta'].'">'.$herr['nombre'].'</option>';
-                            }
-                        ?>
-                    </select>
+                    <label for="usuario">
+                        Usuario
+                        <select name="usuario" id="select-user" class="select" required>
+                            <?php
+                                foreach ($usuarios as $usuario) {
+                                    echo '<option value="'.$usuario['cod_user'].'">'.$usuario['mail'].'</option>';
+                                }
+                            ?>
+                        </select>
+                    </label>
+                    <label for="herramienta">
+                        Herramienta
+                        <select name="herramienta" id="select-herramienta" class="select" required>
+                            <?php
+                                foreach ($herramientas as $herr) {
+                                    echo '<option value="'.$herr['cod_herramienta'].'">'.$herr['nombre'].'</option>';
+                                }
+                            ?>
+                        </select>
+                    </label>
                     <input type="hidden" value="<?php /*date_create( NULL ) */?>" name="fecha_actual">
                     <input type="submit" value="Crear" class="submit" name="submit">
                 </fieldset>
