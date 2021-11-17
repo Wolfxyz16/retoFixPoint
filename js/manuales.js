@@ -7,8 +7,10 @@ function manuales (){
     var botones = document.getElementsByClassName("boton");
     for (let index = 0; index < botones.length; index++) {
         botones[index].addEventListener('click', descargarManual);
+        if (index!=0){
         botones[index].style.marginRight = 0;
-        botones[index].style.backgroundColor = '#EEC51F'
+        botones[index].style.backgroundColor = '#EEC51F';
+        };
     };
 
     function descargarManual(event) {
