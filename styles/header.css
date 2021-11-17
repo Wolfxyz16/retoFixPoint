@@ -24,6 +24,7 @@
   animation: logocambio 7s linear infinite;
 }
 
+
 .menu {
   box-sizing: border-box;
   user-select: none;
@@ -85,7 +86,7 @@ span {
 #modo-admin{
   opacity: 0;
   position: absolute;
-  bottom: 5px;
+  top: 100px;
   color: rgba(255, 255, 255, 0.8);
   transition: opacity 0.5s ease, top 0.5s ease;
   transition-delay: 0;
@@ -96,7 +97,7 @@ span {
 #cerrar-sesion{
   opacity: 0;
   position: absolute;
-  bottom: 30px;
+  top: 80px;
   color: rgba(255, 255, 255, 0.8);
   transition: opacity 0.5s ease, top 0.5s ease;
   transition-delay: 0;
