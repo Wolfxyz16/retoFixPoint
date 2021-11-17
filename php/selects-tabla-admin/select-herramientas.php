@@ -29,8 +29,8 @@
             echo '<td>' . $herramienta['marca_y_modelo'] . '</td>';
             echo '<td>' . $herramienta['disponibilidad'] . '</td>';
             echo '<td>' . $herramienta['foto'] . '</td>';
-            echo '<td><img src="../img/svg/settings.svg" alt="icono engranaje editar">';
-            echo '<img src="../img/svg/trash.svg" alt="icono cubo de basura"></td>';
+            echo '<td><a href="editar-registros/editar-herramienta.php?id='. $herramienta['cod_herramienta'] . '"><img src="../img/svg/settings.svg" alt="icono engranaje editar"></a>';
+            echo '<a href="/editar-registros/borrar-herramienta.php?id="'. $herramienta['cod_herramienta'] . '"><img src="../img/svg/trash.svg" alt="icono cubo de basura"></a></td>';
         echo '<tr>';
     }
     echo '</tbody>';
