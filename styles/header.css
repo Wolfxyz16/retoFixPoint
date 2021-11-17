@@ -24,6 +24,7 @@
   animation: logocambio 7s linear infinite;
 }
 
+
 .menu {
   box-sizing: border-box;
   user-select: none;
@@ -32,8 +33,6 @@
   color: rgba(255, 255, 255, 0.8);
   pointer-events: none;
   animation: bgchange 7s linear infinite;
-
-  /* display: inline-block; */
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -87,7 +86,7 @@ span {
 #modo-admin{
   opacity: 0;
   position: absolute;
-  bottom: 5px;
+  top: 100px;
   color: rgba(255, 255, 255, 0.8);
   transition: opacity 0.5s ease, top 0.5s ease;
   transition-delay: 0;
@@ -98,7 +97,7 @@ span {
 #cerrar-sesion{
   opacity: 0;
   position: absolute;
-  bottom: 30px;
+  top: 80px;
   color: rgba(255, 255, 255, 0.8);
   transition: opacity 0.5s ease, top 0.5s ease;
   transition-delay: 0;
@@ -233,6 +232,8 @@ span {
   animation: hamburgerchange 7s linear infinite;
 }
 
+
+/******************************** ANIMACIONES COLORES *********************************/
 @keyframes hamburgerchange {
   0% {
     border-color: white;
@@ -284,5 +285,71 @@ span {
 
   80% {
     background-color: rgb(255, 234, 150);
+  }
+}
+
+
+/******************************** MODO TABLET *********************************/
+@media (max-width:1300px) {
+  .menu{
+    flex-flow: column;
+    justify-content: baseline;
+  }
+  #a-logo-fixpoint{
+    order: 0;
+  }
+  #label{
+    order: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  #home{
+    order: 3;
+  }
+  #library{
+    order: 4;
+  }
+  #guide{
+    order: 5;
+  }
+  #about{
+    order: 6;
+  }
+  #admin{
+    order: 7;
+  }
+  #usuario{
+    order: 7;
+  }
+  #iniciosesion{
+    order: 7;
+  }
+  #menu-admin{
+    flex-direction: row;
+    
+  }
+  #menu-usuario{
+    flex-direction: row;
+  }
+  #modo-admin{
+    bottom: unset;
+    left: 15%;
+  }
+  
+  #cerrar-sesion{
+    bottom: unset;
+    right: 15%;
+  }
+ 
+}
+
+/******************************** MODO MOVIL *********************************/
+@media (max-width:600px) {
+  #modo-admin{
+    left: 0%;
+  }
+  
+  #cerrar-sesion{
+    right: 0%;
   }
 }

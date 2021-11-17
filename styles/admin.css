@@ -24,7 +24,8 @@ body {
     font-family: fuenteFixpoint;
 }
 
-/* MAIN */
+
+/******************************** MAIN *********************************/
 main {
     display: flex;
     flex-flow: row wrap;

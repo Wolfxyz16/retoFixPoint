@@ -25,11 +25,11 @@
 <body>
     <header class="header">
         <div class="menu">
-            <a href="html/inicio.html"><img src="img/logo_fixpoint_grisoso.png" alt="logo fixpoint" id="logo-fixpoint"></a>
-            <div class="item"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
-            <div class="item"><span>Biblioteca</span></div>
-            <div class="item"><span>Manuales</span></div>
-            <div class="item"><span>Sobre Nosotros</span></div>
+            <a href="" id="a-logo-fixpoint"><img src="img/logo_fixpoint_grisoso.png" alt="logo fixpoint" id="logo-fixpoint"></a>
+            <div class="item" id="home"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+            <div class="item" id="library"><span>Biblioteca</span></div>
+            <div class="item" id="guide"><span>Manuales</span></div>
+            <div class="item" id="about"><span>Sobre Nosotros</span></div>
             <?php
                     session_start();
                     if(isset( $_SESSION['usuario']) ) {
@@ -39,7 +39,7 @@
                              print '<div class="item" id="usuario"><span id="menu-usuario">' . $_SESSION['usuario'] . ' <div id="cerrar-sesion"><span>Cerrar Sesion</span></div></span></div>';
                         }
                     } else {
-                        print '<div class="item" id="iniciosesion"><span>Inicio Sesion/Registro</span></div>';
+                        print '<div class="item" id="iniciosesion" ><span>Inicio Sesion/Registro</span></div>';
                     }
                     
                 ?>
@@ -68,9 +68,7 @@
                     <img src="img/bibliotecatest.png" alt="Imagen biblioteca">
                     <section class="caja-texto">
                         <h2>Biblioteca</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum dignissimos rem
-                            incidunt fugiat consectetur labore, consequuntur molestias aspernatur officia velit,
-                            voluptatem, culpa repellendus excepturi.</p>
+                        <p>Nuestro biblioteca dispone de un amplio abanico de herramientas restauradas disponibles a un solo paso. Haz click aquí para acceder al apartado de la biblioteca de herramientas.</p>
                     </section>
                 </a>
             </section>
@@ -81,8 +79,7 @@
                     <img src="img/bibliotecatest.png" alt="Imagen manuales">
                     <section class="caja-texto">
                         <h2>Manuales</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos expedita ullam quis! Molestiae
-                            a autem necessitatibus ex eaque facere atque iusto delectus, ut tempore sapiente.</p>
+                        <p>Alguna vez has querido reparar algo y no has sabido como. Gracias a nuestros socios disponemos de un sinfín de guías y manuales sobre la reparación de objetos cotidianos, así como de herramientas. Haz click aquí para acceder al apartado de los manuales.</p>
                     </section>
                 </a>
             </section>
@@ -93,9 +90,7 @@
                     <img src="img/bibliotecatest.png" alt="Imagen sobre nosotros">
                     <section class="caja-texto">
                         <h2>Sobre Nosotros</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora praesentium similique ipsa
-                            facere quasi iure fugiat, necessitatibus odio impedit placeat dolores, itaque quaerat ut
-                            soluta!</p>
+                        <p>Quieres tener más información sobre nosotros, no dudes en acceder a este apartado para conocer un poco sobre nuestro objetivo, visión e historia. Haz click aquí para acceder al apartado para obtener información sobre nosotros.</p>
                     </section>
                 </a>
             </section>

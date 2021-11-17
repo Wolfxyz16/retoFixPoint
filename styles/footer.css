@@ -9,7 +9,8 @@ a {
     animation: bgchange 7s linear infinite;
 }
 
-/* FOOTER */
+
+/******************************** FOOTER *********************************/
 .pie {
     font-family: FixpointLigera;
     display: flex;
@@ -42,7 +43,7 @@ a {
     height: auto;
 }
 
-/* DATA BRO */
+/* DATA */
 
 .info-footer {
     list-style: none;
@@ -84,6 +85,8 @@ a {
 .tabla-horario tr:nth-child(odd) {
     background-color: #eec51fb3;
 }
+
+/******************************** ANIMACION COLORES *********************************/
 @keyframes bgchange{
     0%{
       color:white;
@@ -99,6 +102,7 @@ a {
     }
   }
 
+/******************************** MODO MOVIL *********************************/
 @media (min-width:320px) and (max-width:615px) {
     .logos-footer {
         display: none;

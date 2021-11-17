@@ -2,6 +2,8 @@
   font-family: fuenteFixpoint;
   src: url(../fonts/tonus-sans-heavy-italic.otf) format("opentype");
 }
+
+/******************************** CSS TODOS LOS BOTONES *********************************/
 .boton{
     color: white; 
     outline: none;
