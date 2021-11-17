@@ -8,6 +8,7 @@ function manuales (){
     for (let index = 0; index < botones.length; index++) {
         botones[index].addEventListener('click', descargarManual);
         botones[index].style.marginRight = 0;
+        botones[index].style.backgroundColor = '#EEC51F'
     };
 
     function descargarManual(event) {
