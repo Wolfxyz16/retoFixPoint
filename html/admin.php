@@ -58,6 +58,7 @@
                     <button type="button" value="Alquileres" class="boton" id="boton-alquileres">Alquileres</input>
                 </li>
             </ul>
+            <a href="crear-registro.php" class="crear-registro">Crear registro</a>
         </section>
 
         <section class="tabla-container">
