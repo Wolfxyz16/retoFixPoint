@@ -223,29 +223,44 @@
             <ul class="contenedor-a">
                 <!-- Si la página actual es mayor a uno, mostramos el botón para ir una página atrás -->
                 <?php 
-                
-                
                 if ($pagina > 1) { ?>
                 <li>
-                    <a href="./biblioteca.php?pagina=<?php echo $pagina - 1; ?>">
-                        <span aria-hidden="true">&laquo;</span>
+                <?php if(isset($_POST['busqueda'])) { ?>
+                    <a href="./biblioteca.php?pagina=<?php echo $pagina - 1 ?>>&<?php $_POST['buscador']?>">
+                    <?php } else if (isset($_POST['filtro'])) {?>
+                        <a href="./biblioteca.php?pagina=<?php echo $pagina - 1 ?>>&<?php $_POST['filtro']?>">
+                    <?php } else{ ?>
+                        <a href="./biblioteca.php?pagina=<?php echo $pagina - 1 ?>">
                     </a>
+                    <?php } ?> 
+                    <span aria-hidden="true">&raquo;</span>
                 </li>
                 <?php } ?>
 
                 <!-- Mostramos enlaces para ir a todas las páginas. Es un simple ciclo for-->
                 <?php for ($x = 1; $x <= $paginas; $x++) { ?>
                 <li class="numero">
-                    <a href="./biblioteca.php?pagina=<?php echo $x ?>">
-                        <?php echo $x ?></a>
+                    <?php if(isset($_POST['busqueda'])) { ?>
+                        <a href="./biblioteca.php?pagina=<?php echo $x ?>&<?php $_POST['buscador']?>"><?php echo $x ?></a>
+                    <?php } else if (isset($_POST['filtro'])) {?>
+                        <a href="./biblioteca.php?pagina=<?php echo $x ?>&<?php $_POST['filtro']?>"><?php echo $x ?></a>
+                    <?php } else{ ?>
+                        <a href="./biblioteca.php?pagina=<?php echo $x ?>"><?php echo $x ?></a>
+                    <?php } ?>  
                 </li>
                 <?php } ?>
                 <!-- Si la página actual es menor al total de páginas, mostramos un botón para ir una página adelante -->
                 <?php if ($pagina < $paginas) { ?>
                 <li>
-                    <a href="./biblioteca.php?pagina=<?php echo $pagina + 1 ?>">
-                        <span aria-hidden="true">&raquo;</span>
+                <?php if(isset($_POST['busqueda'])) { ?>
+                    <a href="./biblioteca.php?pagina=<?php echo $pagina + 1 ?>>&<?php $_POST['buscador']?>">
+                    <?php } else if (isset($_POST['filtro'])) {?>
+                        <a href="./biblioteca.php?pagina=<?php echo $pagina + 1 ?>>&<?php $_POST['filtro']?>">
+                    <?php } else{ ?>
+                        <a href="./biblioteca.php?pagina=<?php echo $pagina + 1 ?>">
                     </a>
+                    <?php } ?> 
+                    <span aria-hidden="true">&raquo;</span>
                 </li>
                 <?php } ?>
             </ul>
