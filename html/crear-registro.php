@@ -1,3 +1,28 @@
+<?php
+    $query_usuarios = 'SELECT cod_user,mail FROM usuarios';
+    $query_herramientas = 'SELECT cod_herramienta,nombre FROM herramientas';
+
+    include("../php/conexion.php");
+
+    try{
+        $consulta = $conexion->prepare($query_usuarios);
+        $consulta -> execute();
+        $usuarios = $consulta -> fetchAll();
+        echo '<script>console.log("Consulta array de usuarios exitosa");</script>';
+    } catch(PDOException $e) {
+        echo '<script>console.log("' . $e->getMessage() .'");</script>';
+    }
+
+    try{
+        $consulta = $conexion->prepare($query_herramientas);
+        $consulta -> execute();
+        $herramientas = $consulta -> fetchAll();
+        echo '<script>console.log("Consulta array de herramientas exitosa");</script>';
+    } catch(PDOException $e) {
+        echo '<script>console.log("' . $e->getMessage() .'");</script>';
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,6 +109,28 @@
                     <label for="apellido">Apellido<input type="text" name="apellido" required></label>
                     <label for="mail">Email<input type="email" name="mail" required></label>
                     <label for="password">Contrase&ntilde;a<input type="password" name="password" required></label>
+                    <input type="submit" value="Crear" class="submit" name="submit">
+                </fieldset>
+            </form>
+
+            <form action="../php/insertar/crear-alquiler.php" method="POST" class="form alquileres oculto">
+                <fieldset class="fieldset">
+                    <legend class="titulo-formulario">Crear un alquiler</legend>
+                    <select name="usuario" id="select-user" required>
+                        <?php
+                            foreach ($usuarios as $usuario) {
+                                echo '<option value="'.$usuario['cod_user'].'">'.$usuario['mail'].'</option>';
+                            }
+                        ?>
+                    </select>
+                    <select name="herramienta" id="select-herramienta" required>
+                        <?php
+                            foreach ($herramientas as $herr) {
+                                echo '<option value="'.$herr['cod_herramienta'].'">'.$herr['nombre'].'</option>';
+                            }
+                        ?>
+                    </select>
+                    <input type="hidden" value="<?php date_create( NULL ) ?>" name="fecha_actual">
                     <input type="submit" value="Crear" class="submit" name="submit">
                 </fieldset>
             </form>
