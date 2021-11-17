@@ -24,7 +24,7 @@
             }else{
                 session_start();
                 foreach($resultado as $result) {
-                    $usuario =$result['name'].' '.$result['surname'];
+                    $usuario =$result['name'];
                     $_SESSION['cod_user']=$result['cod_user'];
                     if ( $result['mail'] == 'admin' ) { 
                         $_SESSION['admin'] = TRUE; 

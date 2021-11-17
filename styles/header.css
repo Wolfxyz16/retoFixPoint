@@ -32,7 +32,6 @@
   color: rgba(255, 255, 255, 0.8);
   pointer-events: none;
   animation: bgchange 7s linear infinite;
-  /* display: inline-block; */
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -286,7 +285,7 @@ span {
   }
 }
 
-@media (min-width:320px) and (max-width:1300px) {
+@media (max-width:1300px) {
   .menu{
     flex-flow: column;
     justify-content: baseline;
@@ -320,5 +319,30 @@ span {
   #iniciosesion{
     order: 7;
   }
+  #menu-admin{
+    flex-direction: row;
+    
+  }
+  #menu-usuario{
+    flex-direction: row;
+  }
+  #modo-admin{
+    bottom: unset;
+    left: 15%;
+  }
+  
+  #cerrar-sesion{
+    bottom: unset;
+    right: 15%;
+  }
  
+}
+@media (max-width:600px) {
+  #modo-admin{
+    left: 0%;
+  }
+  
+  #cerrar-sesion{
+    right: 0%;
+  }
 }

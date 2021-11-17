@@ -16,7 +16,7 @@ function accesoDesdeIndex() {
         });
     }else if(document.getElementById('iniciosesion')){
         document.getElementById('iniciosesion').addEventListener('click', function () {
-                location.href = "html/biblioteca.php";
+            location.href = "./html/biblioteca.php";
         });
     }
     for (let i = 0; i < items.length; i++) {
