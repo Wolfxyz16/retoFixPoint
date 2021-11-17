@@ -95,7 +95,7 @@
             <a href="../admin.php" class="volver">Volver</a>
         </div>
         <div class="form-container">
-            <form action="../php/insertar/crear-alquiler.php" method="POST" class="form alquileres visble">
+            <form action="../php/editar/editar-alquiler.php" method="POST" class="form alquileres visble">
                 <fieldset class="fieldset">
                     <legend class="titulo-formulario">Editar alquiler</legend>
                     <label for="usuario">
