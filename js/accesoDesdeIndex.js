@@ -1,6 +1,6 @@
 function accesoDesdeIndex() {
     var items = document.getElementsByClassName('item');
-    var sitios_web = ["", "html/biblioteca.php", "html/login.html", "html/sobre_nosotros.php"];
+    var sitios_web = ["", "html/biblioteca.php", "html/manuales.php", "html/sobre_nosotros.php"];
     if(document.getElementById('admin')){
         document.getElementById('modo-admin').addEventListener('click', function () {
             location.href = location.href+"/html/admin.php";
@@ -16,7 +16,7 @@ function accesoDesdeIndex() {
         });
     }else if(document.getElementById('iniciosesion')){
         document.getElementById('iniciosesion').addEventListener('click', function () {
-                location.href = "html/biblioteca.php";
+            window.location.replace("http://stackoverflow.com");
         });
     }
     for (let i = 0; i < items.length; i++) {
