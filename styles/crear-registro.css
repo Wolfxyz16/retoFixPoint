@@ -1,9 +1,15 @@
+@font-face {
+    font-family: fuenteFixpoint;
+    src: url(/fonts/tonus-sans-regular.otf) format("opentype");
+}
+
 ::selection {
     color: #EEC51F;
     background-color: #292929;
 }
 
 body {
+    font-family: fuenteFixpoint;
     width:100%;
     overflow-x: hidden;
     padding: 0;
