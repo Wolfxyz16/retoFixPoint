@@ -25,7 +25,7 @@
             $resultado['mensaje'] = $e->getMessage();
         }
         
-        header("LOCATION: http://localhost/retofixpoint/html/admin.php?resultado=$resultado_update");
+        header("LOCATION: ../../html/admin.php?resultado=$resultado_update");
 
     }
 ?>
