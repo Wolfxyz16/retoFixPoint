@@ -153,7 +153,14 @@
                 }
             };
             function crearConsulta($where, $conexion, $pagina, $productosPorPagina){
-                $consultaManual = $conexion->prepare("SELECT * FROM manuales WHERE titulo LIKE '%$where%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                $conteoManuales= $conexion->query("SELECT count(*) AS conteo FROM manuales WHERE titulo LIKE '%$where%'");
+                $conteo = $conteoManuales->fetchObject()->conteo;
+                if($conteo==false){
+                    echo "<script>alert('No se encuentra ningun elemento: $where')</script>";
+                    $consultaManual=$conexion->prepare("SELECT * FROM manuales LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                } else{
+                    $consultaManual = $conexion->prepare("SELECT * FROM manuales WHERE titulo LIKE '%$where%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                };
                 return $consultaManual;
             };
             function crearConsultaOrden($orden, $conexion, $pagina, $productosPorPagina){

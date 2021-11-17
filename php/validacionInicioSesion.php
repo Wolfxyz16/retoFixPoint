@@ -15,6 +15,7 @@
             $contrasena = $_POST['password'];
             
             include("conexion.php");
+            /*3NCr1pT4r la contraseña*/
             $userPasswordEncryp = hash('sha512' , $contrasena);
             $consultaUsuario=$conexion->prepare("SELECT cod_user, name, surname, mail FROM usuarios  WHERE password='".$userPasswordEncryp."' AND mail='".$mail."'");
             $consultaUsuario -> execute();
@@ -24,6 +25,7 @@
             }else{
                 session_start();
                 foreach($resultado as $result) {
+                    /*Guardamos el nombre del usuario en una variable*/ 
                     $usuario =$result['name'];
                     $_SESSION['cod_user']=$result['cod_user'];
                     if ( $result['mail'] == 'admin' ) { 

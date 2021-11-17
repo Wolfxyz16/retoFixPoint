@@ -23,7 +23,8 @@ a {
     color: black;
 }
 
-/* SLIDER */
+
+/******************************** SLIDER *********************************/
 .slider {
     position: relative;
     height: 60vh;
@@ -40,7 +41,8 @@ a {
 }
 
 
-/* MAIN */
+
+/******************************** MAIN *********************************/
 .cuerpo {
     display: flex;
     flex-flow: column nowrap;
@@ -113,6 +115,7 @@ a {
     border: none;
 }
 
+/******************************** MODO MOVIL *********************************/
 @media (max-width:470px) {
     .caja-texto>p {
         display: none;

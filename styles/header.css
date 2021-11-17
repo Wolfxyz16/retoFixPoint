@@ -1,6 +1,6 @@
 @font-face {
   font-family: fuenteFixpoint;
-  src: url(fonts/tonus-sans-heavy-italic.otf) format("opentype");
+  src: url(../fonts/tonus-sans-heavy-italic.otf) format("opentype");
 }
 
 /******************************** HEADER *********************************/
@@ -23,6 +23,7 @@
   background-color: white;
   animation: logocambio 7s linear infinite;
 }
+
 
 .menu {
   box-sizing: border-box;
@@ -85,7 +86,7 @@ span {
 #modo-admin{
   opacity: 0;
   position: absolute;
-  bottom: 5px;
+  top: 100px;
   color: rgba(255, 255, 255, 0.8);
   transition: opacity 0.5s ease, top 0.5s ease;
   transition-delay: 0;
@@ -96,7 +97,7 @@ span {
 #cerrar-sesion{
   opacity: 0;
   position: absolute;
-  bottom: 30px;
+  top: 80px;
   color: rgba(255, 255, 255, 0.8);
   transition: opacity 0.5s ease, top 0.5s ease;
   transition-delay: 0;
@@ -231,6 +232,8 @@ span {
   animation: hamburgerchange 7s linear infinite;
 }
 
+
+/******************************** ANIMACIONES COLORES *********************************/
 @keyframes hamburgerchange {
   0% {
     border-color: white;
@@ -285,6 +288,8 @@ span {
   }
 }
 
+
+/******************************** MODO TABLET *********************************/
 @media (max-width:1300px) {
   .menu{
     flex-flow: column;
@@ -337,6 +342,8 @@ span {
   }
  
 }
+
+/******************************** MODO MOVIL *********************************/
 @media (max-width:600px) {
   #modo-admin{
     left: 0%;

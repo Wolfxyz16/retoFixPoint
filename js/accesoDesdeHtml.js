@@ -9,20 +9,19 @@ function accesoDesdeHtml() {
             location.href = "admin.php";
         });
         document.getElementById('cerrar-sesion').addEventListener('click', function () {
-            sessionStorage.removeItem('usuario');
-            location.href = "../";
+            location.href = "../php/cerrarSesion.php";
         });
     }else if(document.getElementById('usuario')){
         document.getElementById('cerrar-sesion').addEventListener('click', function () {
             sessionStorage.removeItem('usuario');
-            location.href = "../";
+            location.href = "../php/cerrarSesion.php";
         });
     }else if(document.getElementById('iniciosesion')){
         document.getElementById('iniciosesion').addEventListener('click', function () {
             location.href = "login.html";
         });
     }
-    for (let i = 0; i < items.length; i++) {
+    for (let i = 0; i < items.length-1; i++) {
         items[i].addEventListener('click', function () {
             location.href = sitios_web[i];
         });

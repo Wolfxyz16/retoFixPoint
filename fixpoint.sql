@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-10-2021 a las 08:26:53
+-- Tiempo de generación: 16-11-2021 a las 18:45:40
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.10
 
@@ -21,8 +21,7 @@ SET time_zone = "+00:00";
 -- Base de datos: `fixpoint`
 --
 
-CREATE DATABASE fixpoint;
-USE fixpoint;
+-- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `alquileres`
@@ -48,7 +47,7 @@ CREATE TABLE `herramientas` (
   `nombre` varchar(100) NOT NULL,
   `marca_y_modelo` varchar(100) DEFAULT NULL,
   `foto` varchar(100) NOT NULL,
-  `disponibilidad` enum('Disponible','No Disponible') DEFAULT NULL
+  `disponibilidad` enum('Disponible','No Disponible') DEFAULT 'Disponible'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -154,7 +153,10 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`cod_user`, `name`, `surname`, `mail`, `password`) VALUES
-(1, 'Administrador', 'Administrador', 'admin', '527a16f01a7530ee9e4f52d3d2d7907fbfdd90c6be3e91516df17a8d97803c7580c8092eb57c6b38193f1e865948fd51b552d17d201a28ad5542cb6debb4378f');
+(1, 'Administrador', 'Administrador', 'admin', '527a16f01a7530ee9e4f52d3d2d7907fbfdd90c6be3e91516df17a8d97803c7580c8092eb57c6b38193f1e865948fd51b552d17d201a28ad5542cb6debb4378f'),
+(2, 'Yeray', 'Li Loaiza', 'yeray@fixpoint.com', 'd7a425798f8c7df455a36016520075b6e246161fb5dd69afe86c6faf2847c36bd76fb47b3191beb8434df1f5bddac4a068c4502ae9522d54a8c0a4cabc94c6ce'),
+(4, 'Eneko', 'Garcia Vilamor', 'eneko@fixpoint.com', 'f52b26b378db1d1a5ebc2a5ab00b02f207167f928c76f57b2609c52b5d41a7d0f337616c1aac0d31fd7c6d0c9d4003831b885a9ce71e2400b1099fc44c08c26d'),
+(5, 'Ekaitz', 'Garcia', 'ekaitz@fixpoint.com', '324cb7a6df1b485afb2dd7c37f9c828a13f489471d6342ea1914ee1fb1bfe2e7b68895443cce41cdc394545590ee9b71640693d397421f9be3853369617f68ea');
 
 --
 -- Índices para tablas volcadas
@@ -213,7 +215,7 @@ ALTER TABLE `manuales`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `cod_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `cod_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas

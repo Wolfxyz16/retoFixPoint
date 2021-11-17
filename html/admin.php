@@ -1,4 +1,3 @@
-<!-- Esta pagina la hizo Yeray -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,11 +18,11 @@
 <body>
     <header class="header">
         <div class="menu">
-            <a href="html/inicio.html"><img src="img/logo_fixpoint_grisoso.png" alt="logo fixpoint" id="logo-fixpoint"></a>
-            <div class="item"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
-            <div class="item"><span>Biblioteca</span></div>
-            <div class="item"><span>Manuales</span></div>
-            <div class="item"><span>Sobre Nosotros</span></div>
+            <a href="" id="a-logo-fixpoint"><img src="img/logo_fixpoint_grisoso.png" alt="logo fixpoint" id="logo-fixpoint"></a>
+            <div class="item" id="home"><span><img src="img/logo_fixpoint_simple.png" id="logo_redireccion_inicio"></span></div>
+            <div class="item" id="library"><span>Biblioteca</span></div>
+            <div class="item" id="guide"><span>Manuales</span></div>
+            <div class="item" id="about"><span>Sobre Nosotros</span></div>
             <?php
                     session_start();
                     if(isset( $_SESSION['usuario']) ) {
@@ -33,7 +32,7 @@
                              print '<div class="item" id="usuario"><span id="menu-usuario">' . $_SESSION['usuario'] . ' <div id="cerrar-sesion"><span>Cerrar Sesion</span></div></span></div>';
                         }
                     } else {
-                        print '<div class="item" id="iniciosesion"><span>Inicio Sesion/Registro</span></div>';
+                        print '<div class="item" id="iniciosesion" ><span>Inicio Sesion/Registro</span></div>';
                     }
                     
                 ?>
@@ -44,6 +43,20 @@
     <main>
         <section class="menu_admin">
             <h2>MODO ADMIN</h2>
+            <p>
+                <?php
+                    // if( isset($_GET['resultado']) ) {
+                    //     $resultado_update = $_GET['resultado'];
+                    //     if (!$resultado_update['error']) {
+                    //         echo $resultado_update['mensaje'];
+                    //     }
+                    // }
+
+                    // if( isset($resultado_borrar) ) {
+                    //     echo $resultado_borrar['mensaje'];
+                    // }
+                ?>
+            </p>
             <ul class="botones-container">
                 <li class="enlace">
                     <button type="button" value="Herramientas" class="boton" id="boton-herramientas">Herramientas</input>
@@ -58,6 +71,7 @@
                     <button type="button" value="Alquileres" class="boton" id="boton-alquileres">Alquileres</input>
                 </li>
             </ul>
+            <a href="crear-registro.php" class="crear-registro">Crear registro</a>
         </section>
 
         <section class="tabla-container">
@@ -77,12 +91,6 @@
             <table id="tabla-alquileres" class="tabla">
                 <?php include_once('../php/selects-tabla-admin/select-alquileres.php');?>
             </table>
-
-            <section class="navegacion-container">
-                <a href="#" class="anterior navegacion">&laquo; Anterior</a>
-                <a href="#" class="crear navegacion">Crear nuevo registro</a>
-                <a href="#" class="siguiente navegacion">Siguiente &raquo;</a>
-            </section>
         </section>
     </main>
 </body>
