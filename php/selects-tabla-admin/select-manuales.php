@@ -32,7 +32,7 @@
             echo '<td>' . $manual['aprobado'] . '</td>';
             echo '<td>' . $manual['portada'] . '</td>';
             echo '<td><a href="editar-registros/editar-manual.php?id='. $manual['cod_manual'] . '"><img src="../img/svg/settings.svg" alt="icono engranaje editar"></a>';
-            echo '<a href="../php/borrar/borrar-manual.php?id="'. $manual['cod_manual'] . '"><img src="../img/svg/trash.svg" alt="icono cubo de basura"></a></td>';
+            echo '<a href="../php/borrar/borrar-manual.php?id='. $manual['cod_manual'] . '"><img src="../img/svg/trash.svg" alt="icono cubo de basura"></a></td>';
         echo '<tr>';
     }
 
