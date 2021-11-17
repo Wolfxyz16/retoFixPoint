@@ -20,6 +20,7 @@ a {
   text-decoration: none;
 }
 
+/******************************** MAIN *********************************/
 main {
   display: grid;
   grid-template:
@@ -152,6 +153,7 @@ h1 {
   height: 90%;
 }
 
+/******************************** ANIMACION COLORES *********************************/
 @keyframes bgchange {
   0% {
     color: white;

@@ -232,6 +232,8 @@ span {
   animation: hamburgerchange 7s linear infinite;
 }
 
+
+/******************************** ANIMACIONES COLORES *********************************/
 @keyframes hamburgerchange {
   0% {
     border-color: white;
@@ -286,6 +288,8 @@ span {
   }
 }
 
+
+/******************************** MODO TABLET *********************************/
 @media (max-width:1300px) {
   .menu{
     flex-flow: column;
@@ -338,6 +342,8 @@ span {
   }
  
 }
+
+/******************************** MODO MOVIL *********************************/
 @media (max-width:600px) {
   #modo-admin{
     left: 0%;

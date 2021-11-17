@@ -17,6 +17,7 @@ a {
 
 }
 
+/******************************** MAIN *********************************/
 main {
     display: grid;
     grid-template:
@@ -251,6 +252,7 @@ ul {
     cursor: not-allowed;
 }
 
+/******************************** ANIMACIONES COLORES *********************************/
 @keyframes bgchange {
     0% {
         color: white;
