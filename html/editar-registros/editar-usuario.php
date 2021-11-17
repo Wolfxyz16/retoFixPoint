@@ -14,7 +14,6 @@
         $consulta -> execute();
         $usuario = $consulta -> fetchAll();
         echo '<script>console.log("Consulta individual realizada con exito");</script>';
-        echo '<script>console.log("' . print_r($usuario) . '");</script>';
     } catch(PDOException $e) {
         echo '<script>console.log("' . $e->getMessage() .'");</script>';
     }
