@@ -20,7 +20,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="../../styles/crear-registro.css" type="text/css">
 
     <link rel="icon" type="image/png" href="../../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
-    <title>Editar usuario</title>
+    <title>Editar <?php echo $usuario[0]['name']?></title>
 </head>
 
 <body>
