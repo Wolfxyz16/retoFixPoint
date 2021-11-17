@@ -39,6 +39,12 @@ function biblioteca () {
     filtroOrden.addEventListener('change', function (){
         location.href=biblioteca+'?ordenar='+filtroOrden.value;
     });
+
+    var imagenes=document.getElementsByClassName("img_her");
+    for (let index = 0; index < imagenes.length; index++) {
+        imagenes[index].width=195;
+        imagenes[index].height=146;
+    };
 };
 
     

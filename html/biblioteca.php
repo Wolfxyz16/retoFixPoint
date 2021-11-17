@@ -146,7 +146,7 @@
                 foreach ($resultado as $columna) {
                     echo '<div class="her">
                             <div class="img">
-                            <img src="' . $columna['foto'] . '">
+                            <img class="img_her" src="' . $columna['foto'] . '">
                             </div>
                             <div class="info">
                                 <p>' . $columna['nombre'] . '<br>

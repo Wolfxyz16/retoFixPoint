@@ -1,8 +1,8 @@
-
 @font-face {
   font-family: fuenteFixpoint;
   src: url(/fonts/tonus-sans-heavy-italic.otf) format("opentype");
 }
+
 body {
   padding: 0;
   margin: 0;
@@ -12,7 +12,7 @@ body {
   background-color: #292929;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
@@ -23,9 +23,9 @@ a {
 main {
   display: grid;
   grid-template:
-      "contenedor-uno"
-      "manuales"
-      "final";
+    "contenedor-uno"
+    "manuales"
+    "final";
   gap: 1em;
 }
 
@@ -88,9 +88,9 @@ h1 {
 #manuales {
   display: grid;
   grid-area: manuales;
-  grid-template-columns: repeat(auto-fill, 30em);
+  grid-template-columns: repeat(auto-fill, 25em);
   justify-content: center;
-  gap: 1em;
+  gap: 5em;
 }
 
 .manual {
@@ -123,7 +123,7 @@ h1 {
   text-shadow: 2px 0 0 #FFEA96, -2px 0 0 #FFEA96, 0 2px 0 #FFEA96, 0 -2px 0 #FFEA96, 1px 1px #FFEA96, -1px -1px 0 #FFEA96, 1px -1px 0 #FFEA96, -1px 1px 0 #fff;
 }
 
-#descarga{
+#descarga {
   margin-right: 0;
   margin-bottom: 0;
 }
@@ -142,7 +142,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-content: center;
-  
+
   height: 50%;
 }
 
@@ -152,17 +152,20 @@ h1 {
   height: 90%;
 }
 
-@keyframes bgchange{
-  0%{
-    color:white;
+@keyframes bgchange {
+  0% {
+    color: white;
   }
-  20%{
-     color: rgb(255,234,150);
+
+  20% {
+    color: rgb(255, 234, 150);
   }
-  40%{
-   color: rgb(238,197,31);
+
+  40% {
+    color: rgb(238, 197, 31);
   }
-  80%{
-     color: rgb(255,234,150);
+
+  80% {
+    color: rgb(255, 234, 150);
   }
 }
