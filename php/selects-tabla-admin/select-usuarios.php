@@ -28,7 +28,7 @@
             echo '<td>' . $usuario['surname'] . '</td>';
             echo '<td>' . $usuario['mail'] . '</td>';
             echo '<td><a href="editar-registros/editar-usuario.php?id='. $usuario['cod_user'] . '"><img src="../img/svg/settings.svg" alt="icono engranaje editar"></a>';
-            echo '<a href="/editar-registros/borrar-usuario.php?id="'. $usuario['cod_user'] . '"><img src="../img/svg/trash.svg" alt="icono cubo de basura"></a></td>';
+            echo '<a href="../php/borrar/borrar-usuario.php?id="'. $usuario['cod_user'] . '"><img src="../img/svg/trash.svg" alt="icono cubo de basura"></a></td>';
         echo '<tr>';
     }
 
