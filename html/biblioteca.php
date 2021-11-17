@@ -189,7 +189,14 @@
                 }
             };
             function crearConsulta($where, $conexion, $pagina, $productosPorPagina){
-                $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas WHERE nombre LIKE '%$where%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                $conteoHerramientas= $conexion->query("SELECT count(*) AS conteo FROM herramientas WHERE nombre LIKE '%$where%'");
+                $conteo = $conteoHerramientas->fetchObject()->conteo;
+                if($conteo==false){
+                    echo "<script>alert('No se encuentra ningun elemento: $where')</script>";
+                    $consultaHerramienta=$conexion->prepare("SELECT * FROM herramientas LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                } else{
+                    $consultaHerramienta = $conexion->prepare("SELECT * FROM herramientas WHERE nombre LIKE '%$where%' LIMIT " . (($pagina - 1) * $productosPorPagina)  . "," . $productosPorPagina);
+                };
                 return $consultaHerramienta;
             };
             function crearConsultaOrden($orden, $conexion, $pagina, $productosPorPagina){
