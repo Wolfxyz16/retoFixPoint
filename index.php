@@ -68,9 +68,7 @@
                     <img src="img/bibliotecatest.png" alt="Imagen biblioteca">
                     <section class="caja-texto">
                         <h2>Biblioteca</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum dignissimos rem
-                            incidunt fugiat consectetur labore, consequuntur molestias aspernatur officia velit,
-                            voluptatem, culpa repellendus excepturi.</p>
+                        <p>Nuestro biblioteca dispone de un amplio abanico de herramientas restauradas disponibles a un solo paso. Haz click aquí para acceder al apartado de la biblioteca de herramientas.</p>
                     </section>
                 </a>
             </section>
@@ -81,8 +79,7 @@
                     <img src="img/bibliotecatest.png" alt="Imagen manuales">
                     <section class="caja-texto">
                         <h2>Manuales</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos expedita ullam quis! Molestiae
-                            a autem necessitatibus ex eaque facere atque iusto delectus, ut tempore sapiente.</p>
+                        <p>Alguna vez has querido reparar algo y no has sabido como. Gracias a nuestros socios disponemos de un sinfín de guías y manuales sobre la reparación de objetos cotidianos, así como de herramientas. Haz click aquí para acceder al apartado de los manuales.</p>
                     </section>
                 </a>
             </section>
@@ -93,9 +90,7 @@
                     <img src="img/bibliotecatest.png" alt="Imagen sobre nosotros">
                     <section class="caja-texto">
                         <h2>Sobre Nosotros</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora praesentium similique ipsa
-                            facere quasi iure fugiat, necessitatibus odio impedit placeat dolores, itaque quaerat ut
-                            soluta!</p>
+                        <p>Quieres tener más información sobre nosotros, no dudes en acceder a este apartado para conocer un poco sobre nuestro objetivo, visión e historia. Haz click aquí para acceder al apartado para obtener información sobre nosotros.</p>
                     </section>
                 </a>
             </section>
