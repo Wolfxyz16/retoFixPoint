@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="../../styles/crear-registro.css" type="text/css">
 
     <link rel="icon" type="image/png" href="../../img/logo_fixpoint_simple.png" sizes="16x16 24x24 36x36 48x48">
-    <title>Editar manual <?php echo $herramienta[0]['nombre'] ?></title>
+    <title>Editar herramienta <?php echo $herramienta[0]['nombre'] ?></title>
 </head>
 
 <body>
@@ -74,6 +74,7 @@
                     <label for="nombre">Nombre de la herramienta<input type="text" name="nombre" value="<?php echo $herramienta[0]['nombre'] ?>"></label>
                     <label for="marca_modelo">Marca y modelo<input type="text" name="marca_modelo" value="<?php echo $herramienta[0]['marca_y_modelo'] ?>"></label>
                     <label for="foto">Foto<input type="file" name="foto" value="<?php echo $herramienta[0]['foto'] ?>"></label>
+                    <input type="hidden" value="<?php echo $herramienta[0]['cod_herramienta']?>" name="id">
                     <input type="submit" value="Actualizar" class="submit" name="submit">
                 </fieldset>
             </form>

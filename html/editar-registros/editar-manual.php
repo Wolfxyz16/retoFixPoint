@@ -74,6 +74,7 @@
                     <label for="titulo">Titulo<input type="text" name="titulo" value="<?php echo $manual[0]['titulo']?>"></label>
                     <label for="portada">Portada<input type="file" name="portada" value="<?php echo $manual[0]['portada']?>"></label>
                     <label for="fichero">Fichero<input type="file" name="fichero" value="<?php echo $manual[0]['fichero']?>"></label>
+                    <input type="hidden" value="<?php echo $manual[0]['cod_manual']?>" name="id">
                     <input type="submit" value="Actualizar" class="submit" name="submit">
                 </fieldset>
             </form>
