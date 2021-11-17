@@ -170,28 +170,36 @@ ul {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #FFEA96;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    text-align: center;
+    font-family: fuenteFixpoint;
 }
 
-.close {
+.botones{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+#close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+#close:hover,
+#close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
-.buton {
+.buton, #modal_btn_no, #modal_btn_si{
     color: black;
     outline: none;
     background: transparent;
@@ -199,7 +207,6 @@ ul {
     border-radius: 2em;
     font-family: fuenteFixpoint;
     text-align: center;
-    padding-top: 1.5%;
     letter-spacing: 0.0625em;
     text-transform: uppercase;
     line-height: 2;
