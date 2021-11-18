@@ -86,7 +86,7 @@
         </div>
 
         <div class="img_con_texto">
-            <img src="../img/acercade.jpg" alt="objetivo">
+            <img src="../img/objetivo.jpg" alt="objetivo">
             <div class="mensaje">
                 <h1 class="titulo">Objetivo</h1>
                 <p class="texto">
