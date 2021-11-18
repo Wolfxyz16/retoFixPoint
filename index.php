@@ -65,7 +65,7 @@
         <article class="accesos">
             <section class="biblioteca caja">
                 <a href="html/biblioteca.php">
-                    <img src="img/bibliotecatest.png" alt="Imagen biblioteca">
+                    <img src="img/herramientas.jpg" alt="Imagen biblioteca">
                     <section class="caja-texto">
                         <h2>Biblioteca</h2>
                         <p>Nuestro biblioteca dispone de un amplio abanico de herramientas restauradas disponibles a un solo paso. Haz click aquí para acceder al apartado de la biblioteca de herramientas.</p>
@@ -76,7 +76,7 @@
 
             <section class="manuales caja">
                 <a href="html/manuales.php">
-                    <img src="img/bibliotecatest.png" alt="Imagen manuales">
+                    <img src="img/manuales.jpg" alt="Imagen manuales">
                     <section class="caja-texto">
                         <h2>Manuales</h2>
                         <p>Alguna vez has querido reparar algo y no has sabido como. Gracias a nuestros socios disponemos de un sinfín de guías y manuales sobre la reparación de objetos cotidianos, así como de herramientas. Haz click aquí para acceder al apartado de los manuales.</p>
@@ -87,7 +87,7 @@
 
             <section class="sobrenosotros caja">
                 <a href="html/sobre_nosotros.php">
-                    <img src="img/bibliotecatest.png" alt="Imagen sobre nosotros">
+                    <img src="img/sobre_nosotros.jpg" alt="Imagen sobre nosotros">
                     <section class="caja-texto">
                         <h2>Sobre Nosotros</h2>
                         <p>Quieres tener más información sobre nosotros, no dudes en acceder a este apartado para conocer un poco sobre nuestro objetivo, visión e historia. Haz click aquí para acceder al apartado para obtener información sobre nosotros.</p>
