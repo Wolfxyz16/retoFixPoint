@@ -1,6 +1,6 @@
 <?php
-    session_start();
-    session_destroy();
+    session_start();//abrimos sesion
+    session_destroy();//cerramos sesion
     header("Location: ../");
-    die();
+    die();//destruimos el php
 ?>
