@@ -2,6 +2,7 @@
   function alquilerHerrammienta() {
     try {
         include("../php/conexion.php");
+        //Insert alquiler
         $insert = $conexion->prepare('INSERT INTO alquileres (cod_user, cod_herramienta, fecha_prealquiler) VALUES (:usuario, :herramienta, :fecha)');
         session_start();
         $usuarios = $_SESSION['cod_user'];
@@ -16,6 +17,7 @@
         include("../php/conexion.php");
         $id = $_GET['id'];
         $disponibilidad='No Disponible';
+        //Actualizar alquiler
         $update=$conexion->prepare('UPDATE herramientas SET disponibilidad = :disponibilidad WHERE cod_herramienta = :id');
         $update->execute( array('id'=>$id, 'disponibilidad'=>$disponibilidad));
         header('Location: ../html/biblioteca.php');
